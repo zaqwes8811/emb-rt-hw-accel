@@ -1,4 +1,4 @@
-fec-correction
+spec emb
 ==============
 
-Коррекция фек потока
+Embedded. Real time. HW acceleration. SoC 

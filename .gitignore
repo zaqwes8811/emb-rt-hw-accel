@@ -28,3 +28,10 @@
 *.exe
 *.out
 *.app
+
+# dvrs
+*.mod.c
+*.ko
+*.symvers
+*.cmd
+*.order

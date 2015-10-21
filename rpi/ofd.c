@@ -11,7 +11,7 @@ static int __init ofd_init(void) /* Constructor */
 static void __exit ofd_exit(void) /* Destructor */
 {
     printk(KERN_INFO "Alvida: ofd unregistered");
-}
+} 
 
 module_init(ofd_init);
 module_exit(ofd_exit);

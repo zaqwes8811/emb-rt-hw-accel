@@ -1,8 +1,8 @@
 #!/bin/bash
 
-export RPI_ROOT=/home/zaqwes/emb-rpi/buildroot-2014.11
-export CCPREFIX=$RPI_ROOT/output/host/usr/bin/arm-buildroot-linux-uclibcgnueabi-
-export KERNEL_SRC=$RPI_ROOT/output/build/linux-rpi-3.12.y
+export RPI_ROOT=/home/zaqwes/emb-rpi/buildroot-2014.11/output
+export CCPREFIX=$RPI_ROOT/host/usr/bin/arm-buildroot-linux-uclibcgnueabi-
+export KERNEL_SRC=$RPI_ROOT/build/linux-c256eb9968c8997dce47350d2075e42f1b3991d3
 
 # make mrproper
 

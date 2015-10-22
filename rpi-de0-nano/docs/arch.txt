@@ -1,2 +1,9 @@
+Impl. details:
 - see as PICe device if possible
+  http://electronics.stackexchange.com/questions/97085/gpio-pcie-programing
+  GPIO - "couple MHz" even less
 - user fpga external ram
+- use Avalon internal
+
+Global target:
+- speed up algorithms(opencv, etc.) with SIMD/Multicores/GPU/FPGA

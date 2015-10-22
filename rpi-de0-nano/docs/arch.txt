@@ -1,0 +1,2 @@
+- see as PICe device if possible
+- user fpga external ram

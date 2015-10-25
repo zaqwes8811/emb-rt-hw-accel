@@ -27,8 +27,9 @@ static struct file_operations fops =
 		.open = dev_open
 };
 
-static int __init ofd_init(void)
+static int __init ebbchar_int(void)
 {
+//	majorNu
     printk(KERN_INFO "Namaskar: ofd registered");
     return 0;
 }
@@ -38,6 +39,6 @@ static void __exit ofd_exit(void)
     printk(KERN_INFO "Alvida: ofd unregistered");
 } 
 
-module_init(ofd_init);
+module_init(ebbchar_int);
 module_exit(ofd_exit);
 

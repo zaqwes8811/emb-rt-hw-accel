@@ -7,3 +7,12 @@ Impl. details:
 
 Global target:
 - speed up algorithms(opencv, etc.) with SIMD/Multicores/GPU/FPGA
+
+Можно USB
+- внешная физика и дрова, можно без raspbery - дрова писать не нужно
+  да и не думаю что потяну
+- взять стек и через выводы fpga подключить
+
+Можно разделить
+- дрова писать учиться на gpio
+- обработка данных - USB

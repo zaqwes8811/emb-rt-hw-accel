@@ -1,0 +1,122 @@
+# vsim -L work -t ns work.in_fsm_testbench 
+# Start time: 21:30:42 on Oct 30,2015
+# Loading work.in_fsm_testbench
+# Loading work.in_fsm
+add wave
+# wrong number of args for "add wave".
+# Usage: add wave [-allowconstants] [-clampanalog {0|1}] [-color <standard_color_name>] [-depth <level>] [-divider <divider_name>...] [-expand <signal_name>] [-format <type> | -<format>] [-group <group_name> [<sig_name1>...]] [-height <pixels>] [[-in] [-out] [-inout] | [-ports]] [-internal] [-label <name>] [-max <real_num>] [-min <real_num>] [-noupdate] [-numdynitem <int>] [-position <location>] [-queueends] [-radix <type> | -<radix_type>] [-radixenumnumeric | -radixenumsymbolic] [-recursive] [-startdynitem <int>] [-time] [<object_name>...] [{<object_name> {sig1 sig2 ...}}] 
+add wave *
+run 800
+ls
+# compile.do
+# derekmolloy.ie
+# docs
+# in_fsm.v
+# learn
+# transcript
+# vsim.wlf
+# work
+compild.do
+# invalid command name "compild.do"
+do compild.do
+# Cannot open macro file: compild.do
+do compile.do
+# vsim 
+# Start time: 21:35:19 on Oct 30,2015
+# Loading work.in_fsm_testbench
+# Loading work.in_fsm
+do compile.do
+# vsim 
+# Start time: 22:19:56 on Oct 30,2015
+# Loading work.in_fsm_testbench
+# Loading work.in_fsm
+do compile.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 22:20:11 on Oct 30,2015
+# vlog -reportprogress 300 in_fsm.v 
+# -- Compiling module in_fsm
+# ** Warning: in_fsm.v(18): (vlog-2283) Extra semicolon in $unit (global) scope.
+# -- Compiling module in_fsm_testbench
+# ** Warning: in_fsm.v(47): (vlog-2283) Extra semicolon in $unit (global) scope.
+# 
+# Top level modules:
+# 	in_fsm_testbench
+# End time: 22:20:11 on Oct 30,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# vsim 
+# Start time: 22:20:12 on Oct 30,2015
+# Loading work.in_fsm_testbench
+# Loading work.in_fsm
+do compile.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 22:20:44 on Oct 30,2015
+# vlog -reportprogress 300 in_fsm.v 
+# -- Compiling module in_fsm
+# ** Warning: in_fsm.v(18): (vlog-2283) Extra semicolon in $unit (global) scope.
+# -- Compiling module in_fsm_testbench
+# ** Warning: in_fsm.v(48): (vlog-2283) Extra semicolon in $unit (global) scope.
+# 
+# Top level modules:
+# 	in_fsm_testbench
+# End time: 22:20:44 on Oct 30,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# vsim 
+# Start time: 22:20:44 on Oct 30,2015
+# Loading work.in_fsm_testbench
+# Loading work.in_fsm
+do compile.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 22:21:11 on Oct 30,2015
+# vlog -reportprogress 300 in_fsm.v 
+# -- Compiling module in_fsm
+# ** Warning: in_fsm.v(18): (vlog-2283) Extra semicolon in $unit (global) scope.
+# -- Compiling module in_fsm_testbench
+# ** Warning: in_fsm.v(52): (vlog-2283) Extra semicolon in $unit (global) scope.
+# 
+# Top level modules:
+# 	in_fsm_testbench
+# End time: 22:21:11 on Oct 30,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# vsim 
+# Start time: 22:21:11 on Oct 30,2015
+# Loading work.in_fsm_testbench
+# Loading work.in_fsm
+do compile.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 22:22:08 on Oct 30,2015
+# vlog -reportprogress 300 in_fsm.v 
+# -- Compiling module in_fsm
+# ** Warning: in_fsm.v(18): (vlog-2283) Extra semicolon in $unit (global) scope.
+# -- Compiling module in_fsm_testbench
+# ** Warning: in_fsm.v(52): (vlog-2283) Extra semicolon in $unit (global) scope.
+# 
+# Top level modules:
+# 	in_fsm_testbench
+# End time: 22:22:08 on Oct 30,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# vsim 
+# Start time: 22:22:08 on Oct 30,2015
+# Loading work.in_fsm_testbench
+# Loading work.in_fsm
+# ** Error: Missing signal name or pattern.
+# Error in macro ./compile.do line 7
+# Missing signal name or pattern.
+#     while executing
+# "add wave * -radix unsigned"
+do compile.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 22:22:21 on Oct 30,2015
+# vlog -reportprogress 300 in_fsm.v 
+# -- Compiling module in_fsm
+# ** Warning: in_fsm.v(18): (vlog-2283) Extra semicolon in $unit (global) scope.
+# -- Compiling module in_fsm_testbench
+# ** Warning: in_fsm.v(52): (vlog-2283) Extra semicolon in $unit (global) scope.
+# 
+# Top level modules:
+# 	in_fsm_testbench
+# End time: 22:22:21 on Oct 30,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# vsim 
+# Start time: 22:22:21 on Oct 30,2015
+# Loading work.in_fsm_testbench
+# Loading work.in_fsm

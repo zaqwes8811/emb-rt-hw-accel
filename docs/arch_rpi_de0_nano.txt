@@ -1,0 +1,91 @@
+//
+//
+// Global target
+//
+//
+- First!!:
+  пописать дрова для linux - ldd, etc.
+  уверенное знание Verilog/FPGA
+
+  fpga железо можно попроще
+- Second:
+  speed up algorithms(opencv, etc.) with SIMD/Multicores/GPU/FPGA
+
+//
+//
+// FPGA <-> CPU
+//
+//
+- see as PICe device if possible
+  http://electronics.stackexchange.com/questions/97085/gpio-pcie-programing
+  GPIO - "couple MHz" even less - похоже не правда
+- user fpga external ram
+- use Avalon internal
+
+Можно USB
+- внешная физика и дрова, можно без raspbery - дрова писать не нужно
+  да и не думаю что потяну
+- взять стек и через выводы fpga подключить
+
+Можно разделить
+- дрова писать учиться на gpio
+- обработка данных - USB
+
+!! можно через GPIO
+
+fixme: нужны пробелы между пакетами, хотя бы пара тактов, не разделить
+если идут части байтов
+
+можно сделать DMA на стороне fpga, а читать как в SPI, но по прерыванию
+очередь с приема, очередь на передачу с генерацией прерывания
+
+Observer Avalon In.
+многие модули имеют выход прерывания
+
+//
+//
+// Challenge
+//
+//
+- "The primary goal is to establish a reliable link-up between CPU and FPGA."
+http://www.eetimes.com/document.asp?doc_id=1274649
+если через GPIO - занимаем процессор отношение=вычисления/IO должно быть очень маленьким
+https://www.altera.co.jp/ja_JP/pdfs/literature/hb/nios2/external_processor_if.pdf
+
+fixme: Av-ST or/and Av-MM ?
+fixme: зачем адреса?
+fixme: прочитать и понять откуда столько проблем? в даташите алтеры
+  можно прямо соединить
+http://robotics.ee.uwa.edu.au/theses/2009-Embedded-FPGA-Geier.pdf
+
+- "The secondary goal is the development of an internal storage 
+architecture for the FPGA."
+
+- захват сигнала, шина не будет 8 бит в одну сторону 8 в другую
+
+- device as slave (?) генерирует только прерывание, но сама данные не шлет
+- один тактовый сигнал от мастера, и на чтение и на запись(?), он может дрожать и сильно
+
+- Two clock domains(?) 
+
+//
+//
+// Try components
+//
+//
+- http://robotics.ee.uwa.edu.au/theses/2009-Embedded-Stereo-Dietrich.pdf
+- calc histogram 
+- http://robotics.ee.uwa.edu.au/theses/
+- http://robotics.ee.uwa.edu.au/theses/2012-SIMD-Rose.pdf
+
+//
+//
+// Plan:
+//
+//
+- подумать над интерфейсом - сложно, наверное очень
+- писать софтовые ядра с Avalon интерфейсом - учить Verilog
+- писать простые драйвера - обработка прерывании ипт
+- через какое-то время понять как можно состыковать в железе
+- использовать стандартные интерфейсы - SPI/I2C...
+- свой С++/STL аллокатор

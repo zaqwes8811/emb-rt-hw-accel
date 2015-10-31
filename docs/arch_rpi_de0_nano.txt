@@ -13,7 +13,7 @@
 
 //
 //
-// FPGA <-> CPU
+// FPGA <-> CPU Challenge
 //
 //
 - see as PICe device if possible
@@ -31,7 +31,7 @@
 - дрова писать учиться на gpio
 - обработка данных - USB
 
-!! можно через GPIO
+!! можно через GPIO, похоже нет - забъет процессор
 
 fixme: нужны пробелы между пакетами, хотя бы пара тактов, не разделить
 если идут части байтов
@@ -39,16 +39,11 @@ fixme: нужны пробелы между пакетами, хотя бы па
 можно сделать DMA на стороне fpga, а читать как в SPI, но по прерыванию
 очередь с приема, очередь на передачу с генерацией прерывания
 
-Observer Avalon In.
-многие модули имеют выход прерывания
-
-//
-//
-// Challenge
-//
-//
 - "The primary goal is to establish a reliable link-up between CPU and FPGA."
 http://www.eetimes.com/document.asp?doc_id=1274649
+- spi в этих трех нету 
+"DMA is not possible using a PIO interface,"
+"In essence, the embedded processor becomes a glorified data mover"
 если через GPIO - занимаем процессор отношение=вычисления/IO должно быть очень маленьким
 https://www.altera.co.jp/ja_JP/pdfs/literature/hb/nios2/external_processor_if.pdf
 
@@ -70,6 +65,14 @@ architecture for the FPGA."
 
 //
 //
+// In fpga
+//
+//
+Observer Avalon In.
+многие модули имеют выход прерывания
+
+//
+//
 // Try components
 //
 //
@@ -83,9 +86,11 @@ architecture for the FPGA."
 // Plan:
 //
 //
-- подумать над интерфейсом - сложно, наверное очень
 - писать софтовые ядра с Avalon интерфейсом - учить Verilog
 - писать простые драйвера - обработка прерывании ипт
+- использовать стандартные интерфейсы - SPI/USB/?
+// Troubles:
+- подумать над интерфейсом - сложно, наверное очень
 - через какое-то время понять как можно состыковать в железе
-- использовать стандартные интерфейсы - SPI/I2C...
+  на высокой скорости
 - свой С++/STL аллокатор

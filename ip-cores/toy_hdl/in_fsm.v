@@ -1,4 +1,87 @@
-module in_fsm(
+// fixme: clock gating - возможно делить частоту через ena плохо
+//
+// http://electronics.stackexchange.com/questions/73398/gated-clocks-and-clock-enables-in-fpga-and-asics
+//
+//
+// learn
+//
+
+// fixme: syn 4 tgrs - why?
+// https://www.altera.com/support/support-resources/design-examples/design-software/verilog/ver-state-machine.html
+
+module in_fsm (
+output reg gnt,
+input dly, done, req, clk, rst_n);
+
+// fixme: it's make hot?
+parameter [1:0] IDLE = 2'b00,
+				BBUSY = 2'b01,
+				BWAIT = 2'b10,
+				BFREE = 2'b11;
+
+reg [1:0] state;
+reg [1:0] next;  // fixme: во что синтезируется?
+
+always @(posedge clk
+	//or posedge rst_n
+	) begin
+	// always <= !!!
+	//if (!rst_n) 
+	// if (rst_n) 
+	// 	state <= IDLE;
+	// else 
+		state <= next;
+end
+
+// "For combinational blocks 
+//	(blocks that contain no registers or latches)"
+// "the sensitivity list must include every 
+//  signal that is !!!read by the process."
+always @(state or dly or done or req) begin
+	// intitialize outputs to avoid latches?
+	next = 2'bx;
+	gnt = 1'b0;
+
+	case (state)
+		IDLE: 
+			if (req)
+				next = BBUSY;
+			else
+				next = IDLE;
+		BBUSY: begin
+			gnt = 1'b1;
+			if (!done)
+				next = BBUSY;
+			else begin
+				if ( dly )
+					next = BWAIT;
+				else
+					next = BFREE;
+			end
+		end
+		BWAIT: begin
+			gnt = 1'b1;
+			if (!dly)
+				next = BFREE;
+			else begin
+				next = BWAIT;
+			end
+		end
+		BFREE: 
+			if ( req )
+				next = BBUSY;
+			else 
+				next = IDLE;
+	endcase
+end
+
+endmodule
+
+// bad
+//always @(a)
+	//c <= a or b;  // no in sensitive list
+	
+module in_fsm_(
 	clk,
 	rst_a,
 	ena,
@@ -11,9 +94,13 @@ module in_fsm(
 	snk  // snk
 );
 
+`define BUS_SIZE 8
+
 input clk;
 input rst_a;
-input [7:0] src;
+input ena;
+output ready;
+input [`BUS_SIZE-1:0] src;
 
 output snk;
 
@@ -32,7 +119,7 @@ output snk;
 
 // data queue
 
-endmodule;
+endmodule
 
 //
 //
@@ -60,11 +147,12 @@ always @(posedge clk) begin
 	source <= source + 1;
 end
 
-in_fsm U0 (
+in_fsm_ U0 (
 	.clk(clk),
 	.rst_a(rst_a),
 	.src(source),
 	.snk(o_event)
 );
 
-endmodule;
+endmodule
+

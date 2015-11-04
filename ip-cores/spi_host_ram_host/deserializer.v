@@ -9,6 +9,11 @@
 // fixme: syn 4 tgrs - why?
 // https://www.altera.com/support/support-resources/design-examples/design-software/verilog/ver-state-machine.html
 
+// Design:
+//   1. принимаем пакет с заголовком и контрольной суммой через SPI
+//   прерывание это не очень хорошая идея, хотя... 
+//   в SPI линия все равно не входит
+
 module in_fsm (
 output reg gnt,
 input dly, done, req, clk, rst_n);

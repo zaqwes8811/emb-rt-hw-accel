@@ -1,0 +1,22 @@
+//
+//
+// In fpga
+//
+//
+Observer Avalon In.
+многие модули имеют выход прерывания
+
+//
+//
+// Try components
+//
+//
+- http://robotics.ee.uwa.edu.au/theses/2009-Embedded-Stereo-Dietrich.pdf
+- calc histogram 
+- http://robotics.ee.uwa.edu.au/theses/
+- http://robotics.ee.uwa.edu.au/theses/2012-SIMD-Rose.pdf
+- Рунге-Кутт
+- десереализатор
+- DSP фильтры
+- blurring
+- из крусов по CUDA

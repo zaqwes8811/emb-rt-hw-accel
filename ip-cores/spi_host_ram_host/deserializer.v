@@ -14,6 +14,17 @@
 //   прерывание это не очень хорошая идея, хотя... 
 //   в SPI линия все равно не входит
 
+
+// fixme: как игнорировать биты по mosi когда читаю?
+//   z состояние? high-impedance
+//
+// http://www.cypress.com/file/132126/download - rx/tx irq
+//
+//   просто ничего не передавать - интерфейс полностью синхронный
+// http://digitaltimingdiagrams.com/static/articles/SPI.html#/SPIinterfaceDEF
+// http://ee.hawaii.edu/~tep/EE491E/Notes/HC11A8/HC11A8_SPI.pdf
+// http://www.analog.com/media/en/technical-documentation/application-notes/AN-1248.pdf
+
 module in_fsm (
 output reg gnt,
 input dly, done, req, clk, rst_n);

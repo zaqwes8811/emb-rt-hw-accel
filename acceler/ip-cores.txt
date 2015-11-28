@@ -20,3 +20,4 @@ Observer Avalon In.
 - DSP фильтры
 - blurring
 - из крусов по CUDA
+- fpu

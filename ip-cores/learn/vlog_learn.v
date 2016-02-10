@@ -1,3 +1,6 @@
+// всетаки мыслить 76 серией похоже стоит так уже строго
+//   это ограничивает
+
 // fixme: = and <=
 //   = - blocked assign - comb. logic
 //   = - ...
@@ -94,7 +97,8 @@ always @ (posedge clk) begin
 	//
 	// Неблокирующее присваивание обозначает, что ко 
 	// входу регистра в левой части присваивания 
-	// подключается выход комбинаторной схемы, описываемой в правой части выражения. 
+	// подключается выход комбинаторной схемы, 
+	// описываемой в правой части выражения. 
 	if (swap_en) begin
 		reg_a <= reg_b;
 		reg_b <= reg_a;
@@ -160,4 +164,207 @@ module other();
 
 endmodule
 
+////////////// RMM ///////////////////////
 
+// sigle clk and single rst
+
+// Poor
+assign clk_p1 = clk and p1_gate;
+always @(posedge clk_p1) begin
+end
+
+// Rec
+always @(posedge clk) begin
+	if( p1_gate == 1'b1 ) begin
+		
+	end
+end
+
+// Poor
+always @( posedge clk or posedge rst or posedge a) begin
+	if( rst || a ) begin
+		reg_sigs <= 1'b0;
+	else begin
+		
+	end 
+end
+
+// Rec
+assign z_rst = rst || a;
+always @( posedge clk or posedge z_rst ) begin
+	if( z_rst ) begin
+		reg_sigs <= 1'b0;
+	end
+end
+
+
+// async rst
+always @(posedge clk or posedge rst_a) begin
+	if( rst_a == 1'b1 ) begin
+		
+	end
+end
+
+// avoid latches
+always @( a or b ) begin
+	if( a == 1'b1 )
+		q <= b;
+	// no else
+end
+
+// VHDL
+process( c )
+begin
+	case c is
+		when '0' => q <= '1'; z <= '0';
+		when others => q <= '0';  // no z in this branch
+	end case
+end process
+
+always @(d) begin
+	case ( d )
+		2'b00: z <= 1'b1;
+		2'b01: z <= 1'b0;
+		2'b10: z <= 1'b1; s <= 1'b1;  // no s in all branches
+		// miss variant (?)
+	endcase
+end
+
+// Assign default values at the beginning of a process
+// Assign outputs for all input conditions
+// For VHDL, use else (instead of elsif ) for the final priority branch
+
+// poor
+always @( g or a or b) begin
+	if( g == 1'b1 )
+		q <= 0;
+	else if ( a == 1'b1 )
+		q <= b;
+end
+
+// rec
+always @( g1 or g2 or a or b ) begin
+	q <= 1'b0;  // !!!
+	if( g1 == 1'b1 )
+		q <= a;
+	else if( g2 == 1'b1 )
+		q <= b;
+end
+
+// Specify Complete Sensitivity Lists
+process (a)
+begin
+	c <= a or b;  // wrong
+end
+
+always @(a) 
+	c <= a or b;
+
+
+// combination
+// !!! sensitivity list must include every 
+//   signal that is read by the process
+always @( a or inc_dec ) begin
+	if( inc_dec == 0 )
+		sum = a+1;
+	else begin
+		sum = a - 1;
+	end
+end
+
+// seq
+always @(posedge clk) begin
+	q <= d;
+end
+
+// block/nonbl
+//When writing synthesizable code, always use nonblocking
+//assignments in always@ (posedge clk) blocks
+always @( posedge clk ) begin
+	b <= a;
+	a <= b;
+end
+
+// Code sequential logic, including state machines, with !!!one sequential
+//sequential process. Improve readability by generating complex intermediate variables
+//outside of the sequential process with assign statements
+
+// State machine
+
+reg [1:0] state;
+parameter S0 = 2'b00, 
+	S1 = 2'b01,
+	S2 = 2'b10,
+	S3 = 2'b11
+
+// intermediate
+assign rdy = in_rdy && !wait_1 && ( state == S3 )
+
+always @( negedge rst_n or posedge clk ) begin
+	if( !rst_n ) begin
+		state <= S0;
+		out1 <= 1'b0;
+	end else begin
+		case ( state )
+			S0: if( input1 ) begin
+				state <= S2;
+				out1 <= 1'b1;
+			end else begin
+				state <= S1;
+				out1 <= 1'b0;
+			end
+			S1: if( rdy ) state <= S2;
+			S2: state <= S3;
+			S3: state <= S0;
+		endcase
+	end
+end
+assign out2 = (state == S1) || ( state == S2 );
+
+// Не лучший вариант кодирования
+
+// a)
+... combination
+// b)
+always @ (posedge clk) state <= next_state;
+
+//!!! keep fsm and non fsm logic in sep. modules
+
+// !!! Locate Related Combinational Logic in a Single Module
+
+
+Design example ( MIT )
+http://csg.csail.mit.edu/6.375/6_375_2006_www/handouts/lectures/L03-Verilog-Design-Examples.pdf
+
+
+
+// http://inst.eecs.berkeley.edu/~cs150/sp12/resources/FSM.pdf
+//
+// always@( * ) blocks are used to describe Combinational Logic, or Logic Gates. Only = (blocking)
+//assignments should be used in an always@( * ) block. Never use <= (non-blocking) assignments in
+//always@( * ) blocks. Only use always@( * ) block when you want to infer an element(s) that changes
+//its value as soon as one or more of its inputs change.
+
+//
+Specifying an FSM’s transition behavior is done in 3 steps. 
+- First, we must choose how to store the
+information that will tell the FSM what the next state should be on 
+the next rising edge. 
+- Second, we
+must create a physical means of transitioning from the CurrentState to the next state. 
+- Third, we must
+implement the conditional-transitioning mechanism that will choose 
+what the next state should be and
+under what conditions a transition should be made.
+
+назначены должны быть все - и в блок и неблок
+
+// !!! это прямо типы блоков!!
+always @(*)  // comb.
+	// все к чему присваиваем должно быть во всех ветках!
+	// Тут важно чтобы не было триггеров, в послед. они должны быть
+	// Так а нерегистрам похоже можно присваивать и так?
+always @(posedge clk or posedge rst_a)  // seq.
+	// все к чему присваиваем должно быть во всех ветках!? не уверен
+
+могут быть race conditions

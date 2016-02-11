@@ -1,0 +1,8 @@
+# vsim sum_tb 
+# Start time: 22:16:13 on Feb 11,2016
+# Loading work.sum_tb
+# Loading work.splitter
+add wave *
+run 1000
+# End time: 22:16:29 on Feb 11,2016, Elapsed time: 0:00:16
+# Errors: 0, Warnings: 0

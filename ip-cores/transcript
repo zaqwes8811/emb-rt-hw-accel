@@ -1,8 +1,69 @@
 # vsim sum_tb 
-# Start time: 22:16:13 on Feb 11,2016
+# Start time: 23:16:57 on Feb 11,2016
 # Loading work.sum_tb
 # Loading work.splitter
 add wave *
-run 1000
-# End time: 22:16:29 on Feb 11,2016, Elapsed time: 0:00:16
+run 10000
+vlog f
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 23:25:28 on Feb 11,2016
+# vlog -reportprogress 300 f 
+# ** Error: (vlog-7) Failed to open design unit file "f" in read mode.
+# No such file or directory. (errno = ENOENT)
+# End time: 23:25:28 on Feb 11,2016, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# /home/zaqwes/altera/15.0/modelsim_ase/linuxaloem/vlog failed.
+vlog fsm/*.v
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 23:25:36 on Feb 11,2016
+# vlog -reportprogress 300 fsm/base_fsm.v fsm/testbench_base_fsm.v 
+# -- Compiling module splitter
+# -- Compiling module shift
+# -- Compiling module sum_tb
+# 
+# Top level modules:
+# 	shift
+# 	sum_tb
+# End time: 23:25:36 on Feb 11,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim sum_tb
+# vsim 
+# Start time: 23:25:42 on Feb 11,2016
+# Loading work.sum_tb
+# Loading work.splitter
+run 10000
+add wave *
+run 10000
+vlog fsm/*.v
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 23:26:55 on Feb 11,2016
+# vlog -reportprogress 300 fsm/base_fsm.v fsm/testbench_base_fsm.v 
+# -- Compiling module splitter
+# ** Error: fsm/base_fsm.v(81): Register is illegal in left-hand side of continuous assignment
+# -- Compiling module shift
+# -- Compiling module sum_tb
+# End time: 23:26:55 on Feb 11,2016, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# /home/zaqwes/altera/15.0/modelsim_ase/linuxaloem/vlog failed.
+vlog fsm/*.v
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 23:27:04 on Feb 11,2016
+# vlog -reportprogress 300 fsm/base_fsm.v fsm/testbench_base_fsm.v 
+# -- Compiling module splitter
+# -- Compiling module shift
+# -- Compiling module sum_tb
+# 
+# Top level modules:
+# 	shift
+# 	sum_tb
+# End time: 23:27:04 on Feb 11,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim sum_tb
+# vsim 
+# Start time: 23:27:07 on Feb 11,2016
+# Loading work.sum_tb
+# Loading work.splitter
+add wave *
+run 10000
+# End time: 23:48:02 on Feb 11,2016, Elapsed time: 0:20:55
 # Errors: 0, Warnings: 0

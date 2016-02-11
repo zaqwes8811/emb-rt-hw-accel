@@ -9,6 +9,11 @@
 // Нужен инверсный сигнал такта, но буфферизовывать 
 //   основной такт не стоит. Сделаю регист на выходе.
 
+// сигнал от микросхемы будет асинхронный, так что нужнен 
+//   синхронизатор для предоптвр. метастабильности
+
+// Art of Hardware....
+
 module splitter( 
 	clk, rst_a, ena, 
 	sclk_n, cs_n 
@@ -16,7 +21,7 @@ module splitter(
 
 input clk, ena, rst_a;
 output /*reg*/ sclk_n;
-output reg cs_n;
+output cs_n;
 reg tmp;
 
 wire sclk_n_w;
@@ -40,7 +45,7 @@ localparam IDLE = 2'b00,
 always @(*) begin
 	next_state = state;
 	// sclk_n_w = 0;
-	tmp = !clk;
+	// tmp = !clk;
 	case( state )
 		IDLE: begin
 			// хотя важно только после ресета
@@ -55,25 +60,33 @@ always @(*) begin
 	endcase
 end
 
+// always @( posedge clk ) begin
+	
+// end
+
 always @(posedge clk or posedge rst_a) begin
 	if (rst_a) begin
-		tmp0 <= 1;
-		cs_n <= 1;
+		tmp <= 1;
+		// cs_n <= 1;
 		state <= IDLE;		
 	end 
 	else begin
-		if( ena ) begin
-			tmp0 <= tmp;	
-			cs_n <= cs_n_w;
-			state <= next_state;
-		end
-		// fixme: ветка не нужна? похоже нет
+		// tmp0 <= tmp;	
+		tmp <= tmp + 1'b1;
+		// cs_n <= cs_n_w;
+		state <= next_state;
 	end
 end
 
-assign sclk_n = tmp0;
+// обязательная вещь - нужно отделять клок о генер. комб логики
+always @( posedge clk ) begin
+	tmp0 <= tmp;
+end
 
-// in one
+assign sclk_n = tmp0;
+assign cs_n = tmp;
+
+// in one?
 //always @ (posedge clk or posedge rst_a) begin
 //	//if( rst_a )  // fixme: need done
 //end

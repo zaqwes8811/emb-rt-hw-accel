@@ -1,21 +1,6 @@
-# vsim sum_tb 
-# Start time: 23:16:57 on Feb 11,2016
-# Loading work.sum_tb
-# Loading work.splitter
-add wave *
-run 10000
-vlog f
+vlog fsm/*v
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 23:25:28 on Feb 11,2016
-# vlog -reportprogress 300 f 
-# ** Error: (vlog-7) Failed to open design unit file "f" in read mode.
-# No such file or directory. (errno = ENOENT)
-# End time: 23:25:28 on Feb 11,2016, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-# /home/zaqwes/altera/15.0/modelsim_ase/linuxaloem/vlog failed.
-vlog fsm/*.v
-# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 23:25:36 on Feb 11,2016
+# Start time: 16:08:32 on Feb 13,2016
 # vlog -reportprogress 300 fsm/base_fsm.v fsm/testbench_base_fsm.v 
 # -- Compiling module splitter
 # -- Compiling module shift
@@ -24,30 +9,19 @@ vlog fsm/*.v
 # Top level modules:
 # 	shift
 # 	sum_tb
-# End time: 23:25:36 on Feb 11,2016, Elapsed time: 0:00:00
+# End time: 16:08:32 on Feb 13,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vsim sum_tb
 # vsim 
-# Start time: 23:25:42 on Feb 11,2016
+# Start time: 16:08:46 on Feb 13,2016
 # Loading work.sum_tb
 # Loading work.splitter
-run 10000
 add wave *
-run 10000
-vlog fsm/*.v
+run 100
+run 1000
+vlog fsm/*v
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 23:26:55 on Feb 11,2016
-# vlog -reportprogress 300 fsm/base_fsm.v fsm/testbench_base_fsm.v 
-# -- Compiling module splitter
-# ** Error: fsm/base_fsm.v(81): Register is illegal in left-hand side of continuous assignment
-# -- Compiling module shift
-# -- Compiling module sum_tb
-# End time: 23:26:55 on Feb 11,2016, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-# /home/zaqwes/altera/15.0/modelsim_ase/linuxaloem/vlog failed.
-vlog fsm/*.v
-# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 23:27:04 on Feb 11,2016
+# Start time: 16:09:44 on Feb 13,2016
 # vlog -reportprogress 300 fsm/base_fsm.v fsm/testbench_base_fsm.v 
 # -- Compiling module splitter
 # -- Compiling module shift
@@ -56,14 +30,354 @@ vlog fsm/*.v
 # Top level modules:
 # 	shift
 # 	sum_tb
-# End time: 23:27:04 on Feb 11,2016, Elapsed time: 0:00:00
+# End time: 16:09:44 on Feb 13,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vsim sum_tb
 # vsim 
-# Start time: 23:27:07 on Feb 11,2016
+# Start time: 16:09:49 on Feb 13,2016
+# Loading work.sum_tb
+# Loading work.splitter
+add wave *
+run 1000
+vlog fsm/*v
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:13:58 on Feb 13,2016
+# vlog -reportprogress 300 fsm/base_fsm.v fsm/testbench_base_fsm.v 
+# -- Compiling module splitter
+# -- Compiling module shift
+# -- Compiling module sum_tb
+# 
+# Top level modules:
+# 	shift
+# 	sum_tb
+# End time: 16:13:58 on Feb 13,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim sum_tb
+# vsim 
+# Start time: 16:14:01 on Feb 13,2016
+# Loading work.sum_tb
+# Loading work.splitter
+add wave *
+run 1000
+run 1000
+run 1000
+vlog fsm/*v
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:16:01 on Feb 13,2016
+# vlog -reportprogress 300 fsm/base_fsm.v fsm/testbench_base_fsm.v 
+# -- Compiling module splitter
+# -- Compiling module shift
+# -- Compiling module sum_tb
+# 
+# Top level modules:
+# 	shift
+# 	sum_tb
+# End time: 16:16:01 on Feb 13,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim sum_tb
+# vsim 
+# Start time: 16:16:04 on Feb 13,2016
+# Loading work.sum_tb
+# Loading work.splitter
+add wave *
+run 1000
+run 10000
+run 10000
+vlog fsm/*v
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:17:41 on Feb 13,2016
+# vlog -reportprogress 300 fsm/base_fsm.v fsm/testbench_base_fsm.v 
+# -- Compiling module splitter
+# -- Compiling module shift
+# -- Compiling module sum_tb
+# 
+# Top level modules:
+# 	shift
+# 	sum_tb
+# End time: 16:17:41 on Feb 13,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim sum_tb
+# vsim 
+# Start time: 16:17:44 on Feb 13,2016
 # Loading work.sum_tb
 # Loading work.splitter
 add wave *
 run 10000
-# End time: 23:48:02 on Feb 11,2016, Elapsed time: 0:20:55
+vlog fsm/*v
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:18:34 on Feb 13,2016
+# vlog -reportprogress 300 fsm/base_fsm.v fsm/testbench_base_fsm.v 
+# -- Compiling module splitter
+# -- Compiling module shift
+# -- Compiling module sum_tb
+# 
+# Top level modules:
+# 	shift
+# 	sum_tb
+# End time: 16:18:34 on Feb 13,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim sum_tb
+# vsim 
+# Start time: 16:18:36 on Feb 13,2016
+# Loading work.sum_tb
+# Loading work.splitter
+run 10000
+add wave *
+run 10000
+vlog fsm/*v
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:26:55 on Feb 13,2016
+# vlog -reportprogress 300 fsm/base_fsm.v fsm/testbench_base_fsm.v 
+# -- Compiling module splitter
+# -- Compiling module shift
+# -- Compiling module sum_tb
+# 
+# Top level modules:
+# 	shift
+# 	sum_tb
+# End time: 16:26:55 on Feb 13,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim sum_tb
+# vsim 
+# Start time: 16:26:58 on Feb 13,2016
+# Loading work.sum_tb
+# Loading work.splitter
+add wave *
+run 10000
+vlog fsm/*v
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:34:19 on Feb 13,2016
+# vlog -reportprogress 300 fsm/base_fsm.v fsm/testbench_base_fsm.v 
+# -- Compiling module splitter
+# -- Compiling module sum_tb
+# 
+# Top level modules:
+# 	sum_tb
+# End time: 16:34:19 on Feb 13,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim sum_tb
+# vsim 
+# Start time: 16:34:22 on Feb 13,2016
+# Loading work.sum_tb
+# Loading work.splitter
+add wave *
+run 10000
+vlog fsm/*v
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:35:49 on Feb 13,2016
+# vlog -reportprogress 300 fsm/base_fsm.v fsm/testbench_base_fsm.v 
+# -- Compiling module splitter
+# -- Compiling module sum_tb
+# 
+# Top level modules:
+# 	sum_tb
+# End time: 16:35:49 on Feb 13,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim sum_tb
+# vsim 
+# Start time: 16:35:51 on Feb 13,2016
+# Loading work.sum_tb
+# Loading work.splitter
+add wave *
+run 10000
+vlog fsm/*v
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:36:35 on Feb 13,2016
+# vlog -reportprogress 300 fsm/base_fsm.v fsm/testbench_base_fsm.v 
+# -- Compiling module splitter
+# -- Compiling module sum_tb
+# 
+# Top level modules:
+# 	sum_tb
+# End time: 16:36:35 on Feb 13,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim sum_tb
+# vsim 
+# Start time: 16:36:37 on Feb 13,2016
+# Loading work.sum_tb
+# Loading work.splitter
+add wave *
+run 10000
+vlog fsm/*v
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:37:49 on Feb 13,2016
+# vlog -reportprogress 300 fsm/base_fsm.v fsm/testbench_base_fsm.v 
+# -- Compiling module splitter
+# -- Compiling module sum_tb
+# 
+# Top level modules:
+# 	sum_tb
+# End time: 16:37:49 on Feb 13,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim sum_tb
+# vsim 
+# Start time: 16:37:51 on Feb 13,2016
+# Loading work.sum_tb
+# Loading work.splitter
+add wave *
+run 10000
+vlog fsm/*v
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:38:32 on Feb 13,2016
+# vlog -reportprogress 300 fsm/base_fsm.v fsm/testbench_base_fsm.v 
+# -- Compiling module splitter
+# -- Compiling module sum_tb
+# 
+# Top level modules:
+# 	sum_tb
+# End time: 16:38:32 on Feb 13,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim sum_tb
+# vsim 
+# Start time: 16:38:34 on Feb 13,2016
+# Loading work.sum_tb
+# Loading work.splitter
+add wave *
+run 10000
+vlog fsm/*v
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:39:18 on Feb 13,2016
+# vlog -reportprogress 300 fsm/base_fsm.v fsm/testbench_base_fsm.v 
+# -- Compiling module splitter
+# -- Compiling module sum_tb
+# 
+# Top level modules:
+# 	sum_tb
+# End time: 16:39:18 on Feb 13,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim sum_tb
+# vsim 
+# Start time: 16:39:20 on Feb 13,2016
+# Loading work.sum_tb
+# Loading work.splitter
+add wave *
+run 10000
+vlog fsm/*v
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:39:45 on Feb 13,2016
+# vlog -reportprogress 300 fsm/base_fsm.v fsm/testbench_base_fsm.v 
+# -- Compiling module splitter
+# -- Compiling module sum_tb
+# 
+# Top level modules:
+# 	sum_tb
+# End time: 16:39:45 on Feb 13,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim sum_tb
+# vsim 
+# Start time: 16:39:47 on Feb 13,2016
+# Loading work.sum_tb
+# Loading work.splitter
+add wave *
+run 10000
+vlog fsm/*v
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:40:42 on Feb 13,2016
+# vlog -reportprogress 300 fsm/base_fsm.v fsm/testbench_base_fsm.v 
+# -- Compiling module splitter
+# -- Compiling module sum_tb
+# 
+# Top level modules:
+# 	sum_tb
+# End time: 16:40:42 on Feb 13,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim sum_tb
+# vsim 
+# Start time: 16:40:44 on Feb 13,2016
+# Loading work.sum_tb
+# Loading work.splitter
+add wave *
+run 10000
+vlog fsm/*v
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 19:54:45 on Feb 13,2016
+# vlog -reportprogress 300 fsm/base_fsm.v fsm/testbench_base_fsm.v 
+# -- Compiling module splitter
+# -- Compiling module sum_tb
+# 
+# Top level modules:
+# 	sum_tb
+# End time: 19:54:45 on Feb 13,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim sum_tb
+# vsim 
+# Start time: 19:54:47 on Feb 13,2016
+# Loading work.sum_tb
+# Loading work.splitter
+run 10000
+add wave *
+run 10000
+vlog fsm/*v
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 19:59:08 on Feb 13,2016
+# vlog -reportprogress 300 fsm/base_fsm.v fsm/testbench_base_fsm.v 
+# -- Compiling module splitter
+# -- Compiling module sum_tb
+# 
+# Top level modules:
+# 	sum_tb
+# End time: 19:59:08 on Feb 13,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim sum_tb
+# vsim 
+# Start time: 19:59:11 on Feb 13,2016
+# Loading work.sum_tb
+# Loading work.splitter
+add wave *
+run 10000
+vlog fsm/*v
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 19:59:53 on Feb 13,2016
+# vlog -reportprogress 300 fsm/base_fsm.v fsm/testbench_base_fsm.v 
+# -- Compiling module splitter
+# -- Compiling module sum_tb
+# 
+# Top level modules:
+# 	sum_tb
+# End time: 19:59:53 on Feb 13,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim sum_tb
+# vsim 
+# Start time: 19:59:56 on Feb 13,2016
+# Loading work.sum_tb
+# Loading work.splitter
+add wave *
+run 10000
+vlog fsm/*v
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 20:56:47 on Feb 13,2016
+# vlog -reportprogress 300 fsm/base_fsm.v fsm/testbench_base_fsm.v 
+# -- Compiling module splitter
+# -- Compiling module sum_tb
+# 
+# Top level modules:
+# 	sum_tb
+# End time: 20:56:47 on Feb 13,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim sum_tb
+# vsim 
+# Start time: 20:56:50 on Feb 13,2016
+# Loading work.sum_tb
+# Loading work.splitter
+add wave *
+run 10000
+vlog fsm/*v
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 20:57:57 on Feb 13,2016
+# vlog -reportprogress 300 fsm/base_fsm.v fsm/testbench_base_fsm.v 
+# -- Compiling module splitter
+# -- Compiling module sum_tb
+# 
+# Top level modules:
+# 	sum_tb
+# End time: 20:57:57 on Feb 13,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim sum_tb
+# vsim 
+# Start time: 20:58:00 on Feb 13,2016
+# Loading work.sum_tb
+# Loading work.splitter
+add wave *
+run 10000
+# End time: 21:38:00 on Feb 13,2016, Elapsed time: 0:40:00
 # Errors: 0, Warnings: 0

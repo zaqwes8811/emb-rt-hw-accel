@@ -14,96 +14,97 @@
 
 // Art of Hardware....
 
+// Не нужно изгяляться над клоком
+// выход счетчика и регистр на выходе, чтобы не дребезжал
+// нужно защелкнуть выход
+
+// Multiply always blocks
+//   http://electronics.stackexchange.com/questions/29601/why-cant-regs-be-assigned-to-multiple-always-blocks-in-synthesizable-verilog
+//   http://electronics.stackexchange.com/questions/29553/how-are-verilog-always-statements-implemented-in-hardware
+
+//"One important restriction that pops up is that every reg variable 
+//can only be assigned to in at most one always 
+//statement. In other words, regs have affinity to always blocks."
+//
+// Т.е. писать можно только в одном, но читать в любом?
+
 module splitter( 
 	clk, rst_a, ena, 
-	sclk_n, cs_n 
+	sclk_n, cs_n,
+
+	from_device
 );
 
-input clk, ena, rst_a;
-output /*reg*/ sclk_n;
-output cs_n;
-reg tmp;
+input clk, ena, rst_a;  // это не простые сигналы, нужно очень хорошо
+	// понимать как с ними иметь дело
+output reg sclk_n;
+output reg cs_n;
+input from_device;  // нужно защелкнуть
 
-wire sclk_n_w;
-wire cs_n_w;  // frames по 16 бит
+reg clk_n_work;
+reg cs_n_work;
+reg clk_tmp;
+wire clk_mask;
 
-reg [3:0] state;
-reg [3:0] next_state;
-reg [3:0] iter;  // wr bit iter
-reg [11:0] sample;  // shift reg
-reg tmp0;
+
+// state
+reg [4:0] cntr_curr;
+reg [4:0] cntr_next;
+reg [3:0] state_curr;
+reg [3:0] state_next;
+// state
 
 localparam IDLE = 2'b00, 
 	CS_N_WAIT = 2'b01,
 	S2 = 2'b10,
 	S3 = 2'b11;
 
-// Не нужно изгяляться над клоком
-// выход счетчика и регистр на выходе, чтобы не дребезжал
-
-// assign sclk_n_w = !clk;
 always @(*) begin
-	next_state = state;
-	// sclk_n_w = 0;
-	// tmp = !clk;
-	case( state )
+	state_next = state_curr;
+	cntr_next = cntr_curr;
+	cs_n_work = 1;
+	case( state_curr )
 		IDLE: begin
-			// хотя важно только после ресета
-			// sclk_n_w = 1;
-			next_state = CS_N_WAIT;
+			cs_n_work = 1;
+			cntr_next = 0;
+			state_next = CS_N_WAIT;
 		end
 		CS_N_WAIT: begin
-			// sclk_n_w = 0;
-			//cs_n_w = 0;  // wrong
-			next_state = IDLE;
+			if( cntr_curr < 16 ) begin
+				cs_n_work = 0;				
+				cntr_next = cntr_next + 1'b1;
+			end
+			else begin
+				state_next = IDLE;
+			end
 		end
 	endcase
 end
 
-// always @( posedge clk ) begin
-	
-// end
-
+// если отдельные блоки, то могут быть гонки
 always @(posedge clk or posedge rst_a) begin
 	if (rst_a) begin
-		tmp <= 1;
-		// cs_n <= 1;
-		state <= IDLE;		
+		state_curr <= IDLE;	
+		clk_n_work <= 1;
 	end 
 	else begin
-		// tmp0 <= tmp;	
-		tmp <= tmp + 1'b1;
-		// cs_n <= cs_n_w;
-		state <= next_state;
+		state_curr <= state_next;
+
+		cntr_curr <= cntr_next;
+		// кажется так нельзя
+		clk_n_work <= clk_n_work + 1'b1;  // ??
 	end
 end
 
-// обязательная вещь - нужно отделять клок о генер. комб логики
-always @( posedge clk ) begin
-	tmp0 <= tmp;
+always @( posedge clk or posedge rst_a ) begin
+	if( rst_a ) begin
+		sclk_n <= 1;
+		cs_n <= 1;
+	end
+	else begin
+		sclk_n <= ~(clk_n_work & ~(cs_n & cs_n_work));
+		cs_n <= cs_n_work;
+	end
 end
 
-assign sclk_n = tmp0;
-assign cs_n = tmp;
-
-// in one?
-//always @ (posedge clk or posedge rst_a) begin
-//	//if( rst_a )  // fixme: need done
-//end
-
-// output fsm
-
-endmodule
-
-//////////////////////////////////////////
-
-module shift (clk, si, so);
-input        clk,si;
-output       so;
-reg    [7:0] tmp;
-always @(posedge clk) begin
-   tmp    <= tmp << 1;
-   tmp[0] <= si;
-end
-assign so = tmp[7];
 endmodule

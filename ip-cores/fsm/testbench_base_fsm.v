@@ -7,18 +7,18 @@ module sum_tb;
 
 wire sclk_n;
 wire cs_n;
-reg rst;
+reg start;
 reg from_device;
 wire just_test;
 wire [7:0] just_test_bus;
 
-wire [`W-1:0] div;
+wire [`W-1:0] clk_scaler;
 
 // stimuls
 reg clk;
 
 // fixme: пока просто по модулю 8 
-assign div = 6;//`DIV_MAX - 1;
+assign clk_scaler = 6;//`DIV_MAX - 1;
 
 initial begin
 	clk = 0;
@@ -30,9 +30,9 @@ initial begin
 // fixme: понять и возможно переделать
 // http://www.sunburst-design.com/papers/CummingsSNUG2003Boston_Resets.pdf
 // !!!
-	rst <= 1; // time 0 nonblocking assignment
+	start <= 1; // time 0 nonblocking assignment
  	@(posedge clk); // Wait to get past time 0
- 	@(negedge clk) rst = 0; // rst_n low for one clock cycle
+ 	@(negedge clk) start = 0; // rst_n low for one clock cycle
 
 end
 
@@ -46,8 +46,8 @@ always @( posedge clk ) begin
 end
 
 
-splitter s0( 
-	.clk( clk ), .rst( rst ), .div( div ), 
+base_fsm s0( 
+	.clk( clk ), .start( start ), .clk_scaler( clk_scaler ), 
 	.sclk_n(sclk_n), .cs_n( cs_n ), 
 	.from_device(from_device), .just_test( just_test ),
 	.just_test_bus( just_test_bus ) );

@@ -1,5 +1,20 @@
 **/work/
 
+*/db
+*/incremental_db
+*/synthesis
+*/output_files
+*/simulation
+db
+incremental_db
+synthesis
+output_files
+simulation
+*~*
+*.o
+*.d
+
+
 *.bak
 
 # Compiled Object files

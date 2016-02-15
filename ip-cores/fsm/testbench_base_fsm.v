@@ -3,6 +3,8 @@
 
 `include "const.v"
 
+`define SCALE 6
+
 module sum_tb;
 
 wire sclk_n;
@@ -18,7 +20,8 @@ wire [`W-1:0] clk_scaler;
 reg clk;
 
 // fixme: пока просто по модулю 8 
-assign clk_scaler = 6;//`DIV_MAX - 1;
+
+assign clk_scaler = 6-1;//`DIV_MAX - 1;
 
 initial begin
 	clk = 0;

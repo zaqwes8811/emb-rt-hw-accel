@@ -19,6 +19,8 @@
 
 // ресет добавляет довольно много логики!
 
+//ftp://ftp.altera.com/up/pub/Altera_Material/12.1/Tutorials/DE0-Nano/Using_DE0-Nano_ADC.pdf
+
 `include "const.v"
 
 module base_fsm( 
@@ -39,6 +41,7 @@ output reg cs_n;
 input from_device;  // нужно защелкнуть
 output just_test;
 
+wire [`W-1:0] half_scaler;
 reg curr_sclk_n;
 reg nxt_sclk_n;
 reg nxt_cs_n;
@@ -52,8 +55,8 @@ reg [3:0] nxt_state;
 
 localparam IDLE = 2'b00, 
 	CS_N_WAIT = 2'b01,
-	S2 = 2'b10,
-	S3 = 2'b11;
+	WR_ADDR = 2'b10,
+	RD_RESP = 2'b11;
 
 always @(*) begin
 	nxt_state = curr_state;
@@ -65,21 +68,30 @@ always @(*) begin
 			nxt_cs_n = 1;
 			nxt_sclk_n = 1;
 			nxt_trans_cntr = 0;
-			nxt_state = CS_N_WAIT;
+			nxt_state = WR_ADDR;
 		end
-		CS_N_WAIT: begin
-			if( nxt_trans_cntr < `PKG_SIZE*2 ) begin
-				nxt_cs_n = 0;
-			end
-			else begin
-				nxt_state = IDLE;
+		// CS_N_WAIT: begin
+		// 	nxt_state = WR_ADDR;
+		// end
+
+		WR_ADDR: begin
+			nxt_cs_n = 0;		
+			if( nxt_trans_cntr == `PKG_SIZE*2 ) begin
+				nxt_state = RD_RESP;
 			end
 						
 			nxt_sclk_n = ~curr_sclk_n;
+
+			// fixme: может быть обнулять?
 			nxt_trans_cntr = curr_trans_cntr + 1'b1;
+		end
+		RD_RESP: begin
+			nxt_state = IDLE;
 		end
 	endcase
 end
+
+// fixme: Для чтения нужен положительный перепад - нормальный клок
 
 always @( posedge clk ) begin
 	if( start ) begin
@@ -107,14 +119,9 @@ initial begin
 	clk_scaler_cntr <= 0;
 end
 
-// scaler
-// fixme: нужно в два раза быстрее
-// fixme: ena сдвинут на такт, проблема ли это?
-// не если без триггера то ена будет получена из большого
-//   количества комбинационной логики
-// fixme: счет с нуля! и еще сдвигаем
+assign half_scaler = clk_scaler[`W-1:1];
 always @( posedge clk ) begin
-	if( clk_scaler_cntr == clk_scaler ) begin  
+	if( clk_scaler_cntr == half_scaler ) begin  
 		ena <= 1;
 		clk_scaler_cntr <= 0;
 	end
@@ -124,7 +131,7 @@ always @( posedge clk ) begin
 	end
 end
 
-// assign just_test = ena;
-// assign just_test_bus = nxt_trans_cntr;
+assign just_test = ena;
+assign just_test_bus = clk_scaler_cntr;
 
 endmodule

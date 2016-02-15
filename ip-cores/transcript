@@ -1,271 +1,331 @@
-do all.do
+vlog fsm/*.v
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 22:25:52 on Feb 14,2016
+# Start time: 20:09:12 on Feb 15,2016
+# vlog -reportprogress 300 fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
+# -- Compiling module base_fsm
+# ** Error: fsm/base_fsm.v(117): (vlog-2884) Out of bounds access.  Bit number 7 of part-select into 'clk_scaler' is out of bounds.
+# -- Compiling module sum_tb
+# End time: 20:09:12 on Feb 15,2016, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# /home/zaqwes/altera/15.0/modelsim_ase/linuxaloem/vlog failed.
+vlog fsm/*.v
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 20:09:34 on Feb 15,2016
 # vlog -reportprogress 300 fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
 # -- Compiling module base_fsm
 # -- Compiling module sum_tb
 # 
 # Top level modules:
-# 	base_fsm
 # 	sum_tb
-# End time: 22:25:52 on Feb 14,2016, Elapsed time: 0:00:00
+# End time: 20:09:34 on Feb 15,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+do all.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 20:09:41 on Feb 15,2016
+# vlog -reportprogress 300 fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
+# -- Compiling module base_fsm
+# -- Compiling module sum_tb
+# 
+# Top level modules:
+# 	sum_tb
+# End time: 20:09:41 on Feb 15,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim 
-# Start time: 22:25:52 on Feb 14,2016
-# Loading work.sum_tb
-# Loading work.splitter
-# ** Error: (vsim-3063) fsm/testbench_base_fsm.v(49): Port 'start' not found in the connected module (2nd connection).
-#         Region: /sum_tb/s0
-# ** Error: (vsim-3063) fsm/testbench_base_fsm.v(49): Port 'clk_scaler' not found in the connected module (3rd connection).
-#         Region: /sum_tb/s0
-# Error loading design
-# Error: Error loading design
-#        Pausing macro execution
-# MACRO ./all.do PAUSED at line 2
-do all.do
-# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 22:27:02 on Feb 14,2016
-# vlog -reportprogress 300 fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
-# -- Compiling module base_fsm
-# -- Compiling module sum_tb
-# 
-# Top level modules:
-# 	base_fsm
-# 	sum_tb
-# End time: 22:27:02 on Feb 14,2016, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Loading work.sum_tb
-# Loading work.splitter
-# ** Error: (vsim-3063) fsm/testbench_base_fsm.v(49): Port 'start' not found in the connected module (2nd connection).
-#         Region: /sum_tb/s0
-# ** Error: (vsim-3063) fsm/testbench_base_fsm.v(49): Port 'clk_scaler' not found in the connected module (3rd connection).
-#         Region: /sum_tb/s0
-# Error loading design
-# Error: Error loading design
-#        Pausing macro execution
-# MACRO ./all.do PAUSED at line 2
-do all.do
-# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 22:27:26 on Feb 14,2016
-# vlog -reportprogress 300 fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
-# -- Compiling module base_fsm
-# -- Compiling module sum_tb
-# 
-# Top level modules:
-# 	base_fsm
-# 	sum_tb
-# End time: 22:27:26 on Feb 14,2016, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Loading work.sum_tb
-# Loading work.splitter
-# ** Error: (vsim-3063) fsm/testbench_base_fsm.v(49): Port 'start' not found in the connected module (2nd connection).
-#         Region: /sum_tb/s0
-# ** Error: (vsim-3063) fsm/testbench_base_fsm.v(49): Port 'clk_scaler' not found in the connected module (3rd connection).
-#         Region: /sum_tb/s0
-# Error loading design
-# Error: Error loading design
-#        Pausing macro execution
-# MACRO ./all.do PAUSED at line 2
-do all.do
-# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 22:27:55 on Feb 14,2016
-# vlog -reportprogress 300 fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
-# -- Compiling module base_fsm
-# -- Compiling module sum_tb
-# 
-# Top level modules:
-# 	base_fsm
-# 	sum_tb
-# End time: 22:27:55 on Feb 14,2016, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Loading work.sum_tb
-# Loading work.splitter
-# ** Error: (vsim-3063) fsm/testbench_base_fsm.v(49): Port 'start' not found in the connected module (2nd connection).
-#         Region: /sum_tb/s0
-# ** Error: (vsim-3063) fsm/testbench_base_fsm.v(49): Port 'clk_scaler' not found in the connected module (3rd connection).
-#         Region: /sum_tb/s0
-# Error loading design
-# Error: Error loading design
-#        Pausing macro execution
-# MACRO ./all.do PAUSED at line 2
-do all.do
-# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 22:28:37 on Feb 14,2016
-# vlog -reportprogress 300 fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
-# -- Compiling module base_fsm
-# -- Compiling module sum_tb
-# 
-# Top level modules:
-# 	sum_tb
-# End time: 22:28:37 on Feb 14,2016, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
+# Start time: 20:09:42 on Feb 15,2016
 # Loading work.sum_tb
 # Loading work.base_fsm
 do all.do
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 22:29:50 on Feb 14,2016
+# Start time: 20:10:29 on Feb 15,2016
 # vlog -reportprogress 300 fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
 # -- Compiling module base_fsm
 # -- Compiling module sum_tb
 # 
 # Top level modules:
 # 	sum_tb
-# End time: 22:29:50 on Feb 14,2016, Elapsed time: 0:00:00
+# End time: 20:10:30 on Feb 15,2016, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vsim 
-# Start time: 22:29:50 on Feb 14,2016
+# Start time: 20:10:30 on Feb 15,2016
 # Loading work.sum_tb
 # Loading work.base_fsm
 do all.do
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 22:31:34 on Feb 14,2016
+# Start time: 20:11:26 on Feb 15,2016
 # vlog -reportprogress 300 fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
 # -- Compiling module base_fsm
 # -- Compiling module sum_tb
 # 
 # Top level modules:
 # 	sum_tb
-# End time: 22:31:34 on Feb 14,2016, Elapsed time: 0:00:00
+# End time: 20:11:26 on Feb 15,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim 
-# Start time: 22:31:35 on Feb 14,2016
-# Loading work.sum_tb
-# Loading work.base_fsm
-# A time value could not be extracted from the current line
-do all.do
-# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 22:32:36 on Feb 14,2016
-# vlog -reportprogress 300 fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
-# -- Compiling module base_fsm
-# -- Compiling module sum_tb
-# 
-# Top level modules:
-# 	sum_tb
-# End time: 22:32:36 on Feb 14,2016, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vsim 
-# Start time: 22:32:37 on Feb 14,2016
+# Start time: 20:11:26 on Feb 15,2016
 # Loading work.sum_tb
 # Loading work.base_fsm
 do all.do
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 22:33:48 on Feb 14,2016
+# Start time: 20:12:18 on Feb 15,2016
 # vlog -reportprogress 300 fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
 # -- Compiling module base_fsm
 # -- Compiling module sum_tb
 # 
 # Top level modules:
 # 	sum_tb
-# End time: 22:33:48 on Feb 14,2016, Elapsed time: 0:00:00
+# End time: 20:12:18 on Feb 15,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim 
-# Start time: 22:33:48 on Feb 14,2016
+# Start time: 20:12:18 on Feb 15,2016
 # Loading work.sum_tb
 # Loading work.base_fsm
 do all.do
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 22:34:42 on Feb 14,2016
+# Start time: 20:18:12 on Feb 15,2016
 # vlog -reportprogress 300 fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
 # -- Compiling module base_fsm
 # -- Compiling module sum_tb
 # 
 # Top level modules:
 # 	sum_tb
-# End time: 22:34:43 on Feb 14,2016, Elapsed time: 0:00:01
+# End time: 20:18:12 on Feb 15,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim 
-# Start time: 22:34:43 on Feb 14,2016
+# Start time: 20:18:13 on Feb 15,2016
 # Loading work.sum_tb
 # Loading work.base_fsm
 do all.do
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 22:35:49 on Feb 14,2016
+# Start time: 20:18:39 on Feb 15,2016
 # vlog -reportprogress 300 fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
 # -- Compiling module base_fsm
 # -- Compiling module sum_tb
 # 
 # Top level modules:
 # 	sum_tb
-# End time: 22:35:49 on Feb 14,2016, Elapsed time: 0:00:00
+# End time: 20:18:39 on Feb 15,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim 
-# Start time: 22:35:49 on Feb 14,2016
+# Start time: 20:18:39 on Feb 15,2016
 # Loading work.sum_tb
 # Loading work.base_fsm
 do all.do
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 22:36:31 on Feb 14,2016
+# Start time: 20:22:05 on Feb 15,2016
+# vlog -reportprogress 300 fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
+# -- Compiling module base_fsm
+# ** Error: fsm/base_fsm.v(75): near "case": syntax error, unexpected case
+# -- Compiling module sum_tb
+# End time: 20:22:05 on Feb 15,2016, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: /home/zaqwes/altera/15.0/modelsim_ase/linuxaloem/vlog failed.
+# Error in macro ./all.do line 1
+# /home/zaqwes/altera/15.0/modelsim_ase/linuxaloem/vlog failed.
+#     while executing
+# "vlog fsm/*.v"
+do all.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 20:22:16 on Feb 15,2016
 # vlog -reportprogress 300 fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
 # -- Compiling module base_fsm
 # -- Compiling module sum_tb
 # 
 # Top level modules:
 # 	sum_tb
-# End time: 22:36:31 on Feb 14,2016, Elapsed time: 0:00:00
+# End time: 20:22:16 on Feb 15,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim 
-# Start time: 22:36:31 on Feb 14,2016
+# Start time: 20:22:17 on Feb 15,2016
 # Loading work.sum_tb
 # Loading work.base_fsm
 do all.do
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 22:38:01 on Feb 14,2016
+# Start time: 20:23:16 on Feb 15,2016
 # vlog -reportprogress 300 fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
 # -- Compiling module base_fsm
 # -- Compiling module sum_tb
 # 
 # Top level modules:
 # 	sum_tb
-# End time: 22:38:01 on Feb 14,2016, Elapsed time: 0:00:00
+# End time: 20:23:16 on Feb 15,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim 
-# Start time: 22:38:01 on Feb 14,2016
+# Start time: 20:23:17 on Feb 15,2016
 # Loading work.sum_tb
 # Loading work.base_fsm
 do all.do
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 22:38:28 on Feb 14,2016
+# Start time: 20:23:43 on Feb 15,2016
 # vlog -reportprogress 300 fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
 # -- Compiling module base_fsm
 # -- Compiling module sum_tb
 # 
 # Top level modules:
 # 	sum_tb
-# End time: 22:38:28 on Feb 14,2016, Elapsed time: 0:00:00
+# End time: 20:23:43 on Feb 15,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim 
-# Start time: 22:38:28 on Feb 14,2016
+# Start time: 20:23:43 on Feb 15,2016
 # Loading work.sum_tb
 # Loading work.base_fsm
 do all.do
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 22:39:40 on Feb 14,2016
+# Start time: 20:24:31 on Feb 15,2016
 # vlog -reportprogress 300 fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
 # -- Compiling module base_fsm
 # -- Compiling module sum_tb
 # 
 # Top level modules:
 # 	sum_tb
-# End time: 22:39:40 on Feb 14,2016, Elapsed time: 0:00:00
+# End time: 20:24:31 on Feb 15,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim 
-# Start time: 22:39:41 on Feb 14,2016
+# Start time: 20:24:31 on Feb 15,2016
 # Loading work.sum_tb
 # Loading work.base_fsm
 do all.do
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 22:43:07 on Feb 14,2016
+# Start time: 20:25:32 on Feb 15,2016
 # vlog -reportprogress 300 fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
 # -- Compiling module base_fsm
 # -- Compiling module sum_tb
 # 
 # Top level modules:
 # 	sum_tb
-# End time: 22:43:08 on Feb 14,2016, Elapsed time: 0:00:01
+# End time: 20:25:32 on Feb 15,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim 
-# Start time: 22:43:08 on Feb 14,2016
+# Start time: 20:25:32 on Feb 15,2016
 # Loading work.sum_tb
 # Loading work.base_fsm
-# End time: 22:51:20 on Feb 14,2016, Elapsed time: 0:08:12
+do all.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 21:27:21 on Feb 15,2016
+# vlog -reportprogress 300 fsm/adv_book.v fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
+# -- Compiling module mult8
+# -- Compiling module mult8_rollup
+# ** Error: fsm/adv_book.v(48): near ":": syntax error, unexpected ':', expecting ';'
+# -- Compiling module lowpassfir
+# ** Error: fsm/adv_book.v(94): near "case": syntax error, unexpected case, expecting ';'
+# ** Error: fsm/adv_book.v(106): near "else": syntax error, unexpected else
+# -- Compiling module sum_tb
+# ** Error: fsm/adv_book.v(58): near "EOF": syntax error, unexpected end of source code
+# End time: 21:27:21 on Feb 15,2016, Elapsed time: 0:00:00
+# Errors: 4, Warnings: 0
+# ** Error: /home/zaqwes/altera/15.0/modelsim_ase/linuxaloem/vlog failed.
+# Error in macro ./all.do line 1
+# /home/zaqwes/altera/15.0/modelsim_ase/linuxaloem/vlog failed.
+#     while executing
+# "vlog fsm/*.v"
+do all.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 21:27:39 on Feb 15,2016
+# vlog -reportprogress 300 fsm/adv_book.v fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
+# -- Compiling module mult8
+# -- Compiling module mult8_rollup
+# -- Compiling module lowpassfir
+# ** Error: fsm/adv_book.v(94): near "case": syntax error, unexpected case, expecting ';'
+# ** Error: fsm/adv_book.v(106): near "else": syntax error, unexpected else
+# -- Compiling module sum_tb
+# ** Error: fsm/adv_book.v(58): near "EOF": syntax error, unexpected end of source code
+# End time: 21:27:39 on Feb 15,2016, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+# ** Error: /home/zaqwes/altera/15.0/modelsim_ase/linuxaloem/vlog failed.
+# Error in macro ./all.do line 1
+# /home/zaqwes/altera/15.0/modelsim_ase/linuxaloem/vlog failed.
+#     while executing
+# "vlog fsm/*.v"
+do all.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 21:27:58 on Feb 15,2016
+# vlog -reportprogress 300 fsm/adv_book.v fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
+# -- Compiling module mult8
+# -- Compiling module mult8_rollup
+# -- Compiling module lowpassfir
+# ** Error: fsm/adv_book.v(94): near "case": syntax error, unexpected case, expecting ';'
+# ** Error: fsm/adv_book.v(106): near "else": syntax error, unexpected else
+# -- Compiling module sum_tb
+# ** Error: fsm/adv_book.v(58): near "EOF": syntax error, unexpected end of source code
+# End time: 21:27:58 on Feb 15,2016, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+# ** Error: /home/zaqwes/altera/15.0/modelsim_ase/linuxaloem/vlog failed.
+# Error in macro ./all.do line 1
+# /home/zaqwes/altera/15.0/modelsim_ase/linuxaloem/vlog failed.
+#     while executing
+# "vlog fsm/*.v"
+do all.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 21:29:22 on Feb 15,2016
+# vlog -reportprogress 300 fsm/adv_book.v fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
+# -- Compiling module mult8
+# -- Compiling module mult8_rollup
+# ** Error: fsm/adv_book.v(33): (vlog-2730) Undefined variable: 'done'.
+# -- Compiling module lowpassfir
+# ** Error: fsm/adv_book.v(96): near "case": syntax error, unexpected case, expecting ';'
+# ** Error: fsm/adv_book.v(108): near "else": syntax error, unexpected else
+# -- Compiling module sum_tb
+# End time: 21:29:22 on Feb 15,2016, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+# ** Error: /home/zaqwes/altera/15.0/modelsim_ase/linuxaloem/vlog failed.
+# Error in macro ./all.do line 1
+# /home/zaqwes/altera/15.0/modelsim_ase/linuxaloem/vlog failed.
+#     while executing
+# "vlog fsm/*.v"
+do all.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 21:30:30 on Feb 15,2016
+# vlog -reportprogress 300 fsm/adv_book.v fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
+# -- Compiling module mult8
+# -- Compiling module mult8_rollup
+# ** Error: fsm/adv_book.v(33): (vlog-2730) Undefined variable: 'done'.
+# -- Compiling module lowpassfir
+# -- Compiling module base_fsm
+# -- Compiling module sum_tb
+# End time: 21:30:30 on Feb 15,2016, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: /home/zaqwes/altera/15.0/modelsim_ase/linuxaloem/vlog failed.
+# Error in macro ./all.do line 1
+# /home/zaqwes/altera/15.0/modelsim_ase/linuxaloem/vlog failed.
+#     while executing
+# "vlog fsm/*.v"
+do all.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 21:31:08 on Feb 15,2016
+# vlog -reportprogress 300 fsm/adv_book.v fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
+# -- Compiling module mult8
+# -- Compiling module mult8_rollup
+# ** Error: fsm/adv_book.v(54): (vlog-2110) Illegal reference to net "product".
+# ** Error: fsm/adv_book.v(56): (vlog-2110) Illegal reference to net "product".
+# -- Compiling module lowpassfir
+# -- Compiling module base_fsm
+# -- Compiling module sum_tb
+# End time: 21:31:08 on Feb 15,2016, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+# ** Error: /home/zaqwes/altera/15.0/modelsim_ase/linuxaloem/vlog failed.
+# Error in macro ./all.do line 1
+# /home/zaqwes/altera/15.0/modelsim_ase/linuxaloem/vlog failed.
+#     while executing
+# "vlog fsm/*.v"
+do all.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 21:31:27 on Feb 15,2016
+# vlog -reportprogress 300 fsm/adv_book.v fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
+# -- Compiling module mult8
+# -- Compiling module mult8_rollup
+# -- Compiling module lowpassfir
+# -- Compiling module base_fsm
+# -- Compiling module sum_tb
+# 
+# Top level modules:
+# 	mult8
+# 	mult8_rollup
+# 	lowpassfir
+# 	sum_tb
+# End time: 21:31:27 on Feb 15,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 21:31:29 on Feb 15,2016
+# Loading work.sum_tb
+# Loading work.base_fsm
+# End time: 21:34:02 on Feb 15,2016, Elapsed time: 0:02:33
 # Errors: 0, Warnings: 0

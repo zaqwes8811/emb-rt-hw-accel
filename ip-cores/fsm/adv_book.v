@@ -58,6 +58,7 @@ always @(posedge clk) begin
 end
 endmodule
 
+// к железу все равно близко!
 // 2.2
 module lowpassfir(
 	output reg [7:0] filtout,
@@ -84,7 +85,12 @@ wire multdone;
 wire [7:0] multout;
 
 //.... mult instance
+mult8x8 mult8x8(.clk(clk), .dat1(multdat),
+	.dat2(multcoeff), .start(multstart),
+	.done(multdone), .multout(multout));
 
+
+// комбинация seq and comb logic
 always @( posedge clk ) begin
 	multdonedelay <= multdone;
 

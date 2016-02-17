@@ -47,8 +47,8 @@ reg irq_d;
 reg irq_q;
 reg irq_2q;
 reg [`W-1:0] clk_dvdr_cntr;
-reg [5:0] trans_iter_q;
-reg [5:0] trans_iter_d;
+reg [5:0] iter_q;
+reg [5:0] iter_d;
 
 reg addr;
 reg [2:0] addr_reg;
@@ -74,7 +74,7 @@ always @(*) begin
 	state_d = state_q;
 	cs_n_d = 1;
 	sclk_cntr_d = sclk_cntr_q;
-	trans_iter_d = trans_iter_q;
+	iter_d = iter_q;
 	rd_ena = 0;
 	irq_d = 0;
 	addr = 0;
@@ -82,18 +82,18 @@ always @(*) begin
 		IDLE: begin
 			cs_n_d = 1;
 			sclk_cntr_d = 1;
-			trans_iter_d = 0;
+			iter_d = 0;
 			state_d = WAIT_WR_ADDR;
 		end
 		WAIT_WR_ADDR: begin
 			cs_n_d = 0;	
-			if( trans_iter_d == 2*2 ) begin
+			if( iter_d == 2*2 ) begin
 				state_d = WR_ADDR;
 			end
 		end
 		WR_ADDR: begin
 			cs_n_d = 0;		
-			if( trans_iter_d == 5*2 ) begin
+			if( iter_d == 5*2 ) begin
 				rd_ena = 1;
 				state_d = RD_RESP;
 			end
@@ -103,7 +103,7 @@ always @(*) begin
 		end
 		RD_RESP: begin
 			rd_ena = 1;
-			if( trans_iter_d == `PKG_SIZE*2 ) begin
+			if( iter_d == `PKG_SIZE*2 ) begin
 				cs_n_d = 1;
 				irq_d = 1;
 				state_d = IDLE;
@@ -117,7 +117,7 @@ always @(*) begin
 	if( state_q == WAIT_WR_ADDR ||
 			state_q == WR_ADDR ||
 			state_q == RD_RESP ) begin
-		trans_iter_d = trans_iter_q + 1'b1;
+		iter_d = iter_q + 1'b1;
 		sclk_cntr_d = ~sclk_cntr_q;
 	end
 end
@@ -139,7 +139,7 @@ always @( posedge clk ) begin
 	end
 
 	if( ena ) begin
-		trans_iter_q <= trans_iter_d;
+		iter_q <= iter_d;
 		sclk_cntr_q <= sclk_cntr_d;
 
 		sclk_n <= sclk_n_d;
@@ -149,6 +149,7 @@ always @( posedge clk ) begin
 	// rd
 	enadelayed <= ena & sclk_n_d & rd_ena;
 	if( enadelayed ) begin
+		// fixme: bad! need synchronizer
 		data_d <= { data_d[10:0], from_device };
 	end
 

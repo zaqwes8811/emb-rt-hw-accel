@@ -24,114 +24,152 @@
 `include "const.v"
 
 module base_fsm( 
-	clk, start, clk_scaler, 
-	sclk_n, cs_n,
+	// Ins
+	input clk, start,  // это не простые сигналы, нужно очень хорошо
+		// понимать как с ними иметь дело
+	input [`W-1:0] clk_scaler,
+	input from_device,  // нужно защелкнуть
 
-	from_device,
-	just_test,
-	just_test_bus
+	// Outs
+	output reg sclk_n,
+	output reg cs_n,
+	output reg [11:0] data,
+	output reg irq,
+	output test0,
+	output test1
 );
 
-input clk, start;  // это не простые сигналы, нужно очень хорошо
-	// понимать как с ними иметь дело
-input [`W-1:0] clk_scaler;
-output [7:0] just_test_bus;
-output reg sclk_n;
-output reg cs_n;
-input from_device;  // нужно защелкнуть
-output just_test;
+reg sclk_cntr_q;
+reg sclk_cntr_d;
+reg cs_n_d;
+reg ena, enadelayed, rd_ena;
+reg irq_d;
+reg irq_q;
+reg irq_2q;
+reg [`W-1:0] clk_dvdr_cntr;
+reg [5:0] trans_iter_q;
+reg [5:0] trans_iter_d;
 
-wire [`W-1:0] half_scaler;
-reg curr_sclk_n;
-reg nxt_sclk_n;
-reg nxt_cs_n;
-reg ena;
-reg [`W-1:0] clk_scaler_cntr;
-reg [5:0] curr_trans_cntr;
-reg [5:0] nxt_trans_cntr;
+reg addr;
+reg [2:0] addr_reg;
 
-reg [3:0] curr_state;
-reg [3:0] nxt_state;
+reg [3:0] state_q;
+reg [3:0] state_d;
+reg [11:0] data_d;
 
 localparam IDLE = 2'b00, 
-	CS_N_WAIT = 2'b01,
+	WAIT_WR_ADDR = 2'b01,
 	WR_ADDR = 2'b10,
 	RD_RESP = 2'b11;
 
-always @(*) begin
-	nxt_state = curr_state;
-	nxt_cs_n = 1;
-	nxt_sclk_n = curr_sclk_n;
-	nxt_trans_cntr = curr_trans_cntr;
-	case( curr_state )
-		IDLE: begin
-			nxt_cs_n = 1;
-			nxt_sclk_n = 1;
-			nxt_trans_cntr = 0;
-			nxt_state = WR_ADDR;
-		end
-		// CS_N_WAIT: begin
-		// 	nxt_state = WR_ADDR;
-		// end
-
-		WR_ADDR: begin
-			nxt_cs_n = 0;		
-			if( nxt_trans_cntr == `PKG_SIZE*2 ) begin
-				nxt_state = RD_RESP;
-			end
-						
-			nxt_sclk_n = ~curr_sclk_n;
-
-			// fixme: может быть обнулять?
-			nxt_trans_cntr = curr_trans_cntr + 1'b1;
-		end
-		RD_RESP: begin
-			nxt_state = IDLE;
-		end
-	endcase
+initial begin
+	ena <= 0;
+	clk_dvdr_cntr <= 0;
 end
 
-// fixme: Для чтения нужен положительный перепад - нормальный клок
+wire sclk_n_d = ~(sclk_cntr_d & ~( cs_n & cs_n_d ));
+wire [`W-1:0] half_scaler = clk_scaler[`W-1:1];
+
+always @(*) begin
+	state_d = state_q;
+	cs_n_d = 1;
+	sclk_cntr_d = sclk_cntr_q;
+	trans_iter_d = trans_iter_q;
+	rd_ena = 0;
+	irq_d = 0;
+	addr = 0;
+	case( state_q )
+		IDLE: begin
+			cs_n_d = 1;
+			sclk_cntr_d = 1;
+			trans_iter_d = 0;
+			state_d = WAIT_WR_ADDR;
+		end
+		WAIT_WR_ADDR: begin
+			cs_n_d = 0;	
+			if( trans_iter_d == 2*2 ) begin
+				state_d = WR_ADDR;
+			end
+		end
+		WR_ADDR: begin
+			cs_n_d = 0;		
+			if( trans_iter_d == 5*2 ) begin
+				rd_ena = 1;
+				state_d = RD_RESP;
+			end
+
+			// fixme: не очень ясно как
+			addr = 1;	// fixme: make normal
+		end
+		RD_RESP: begin
+			rd_ena = 1;
+			if( trans_iter_d == `PKG_SIZE*2 ) begin
+				cs_n_d = 1;
+				irq_d = 1;
+				state_d = IDLE;
+			end
+			else begin
+				cs_n_d = 0;
+			end
+		end
+	endcase
+
+	if( state_q == WAIT_WR_ADDR ||
+			state_q == WR_ADDR ||
+			state_q == RD_RESP ) begin
+		trans_iter_d = trans_iter_q + 1'b1;
+		sclk_cntr_d = ~sclk_cntr_q;
+	end
+end
 
 always @( posedge clk ) begin
 	if( start ) begin
-		curr_state <= IDLE;
+		state_q <= IDLE;
 	end 
 	else begin 
 		if( ena ) begin
-			curr_state <= nxt_state;
+			state_q <= state_d;
 		end
 	end
 end
 
 always @( posedge clk ) begin
-	if( ena ) begin
-		curr_trans_cntr <= nxt_trans_cntr;
-		curr_sclk_n <= nxt_sclk_n;
-
-		sclk_n <= ~(nxt_sclk_n & ~( cs_n & nxt_cs_n ));
-		cs_n <= nxt_cs_n;
+	if( start ) begin  // sclk & ena ? and wr_ena
+		addr_reg <= 7; // fixme: не очень ясно что дальше делать?
 	end
-end
 
-initial begin
-	ena <= 0;
-	clk_scaler_cntr <= 0;
-end
+	if( ena ) begin
+		trans_iter_q <= trans_iter_d;
+		sclk_cntr_q <= sclk_cntr_d;
 
-assign half_scaler = clk_scaler[`W-1:1];
-always @( posedge clk ) begin
-	if( clk_scaler_cntr == half_scaler ) begin  
+		sclk_n <= sclk_n_d;
+		cs_n <= cs_n_d;
+	end
+
+	// rd
+	enadelayed <= ena & sclk_n_d & rd_ena;
+	if( enadelayed ) begin
+		data_d <= { data_d[10:0], from_device };
+	end
+
+	irq_q <= irq_d;
+	irq_2q <= irq_q & enadelayed;
+	if( irq_2q ) begin
+		data <= data_d;
+	end
+	irq <= irq_2q;
+
+	// div
+	if( clk_dvdr_cntr == half_scaler ) begin  
 		ena <= 1;
-		clk_scaler_cntr <= 0;
+		clk_dvdr_cntr <= 0;
 	end
 	else begin
 		ena <= 0;
-		clk_scaler_cntr <= clk_scaler_cntr + 1'b1;
+		clk_dvdr_cntr <= clk_dvdr_cntr + 1'b1;
 	end
 end
 
-assign just_test = ena;
-assign just_test_bus = clk_scaler_cntr;
-
+assign test0 = addr;
+assign test1 = enadelayed;
 endmodule

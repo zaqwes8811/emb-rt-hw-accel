@@ -11,16 +11,15 @@ wire sclk_n;
 wire cs_n;
 reg start;
 reg from_device;
-wire just_test;
-wire [7:0] just_test_bus;
-
+wire test0, test1;
+wire [11:0] data;
 wire [`W-1:0] clk_scaler;
+wire irq;
 
 // stimuls
 reg clk;
 
 // fixme: пока просто по модулю 8 
-
 assign clk_scaler = 6-1;//`DIV_MAX - 1;
 
 initial begin
@@ -52,7 +51,9 @@ end
 base_fsm s0( 
 	.clk( clk ), .start( start ), .clk_scaler( clk_scaler ), 
 	.sclk_n(sclk_n), .cs_n( cs_n ), 
-	.from_device(from_device), .just_test( just_test ),
-	.just_test_bus( just_test_bus ) );
+	.from_device(from_device), 
+	.test0( test0 ),
+	.test1( test1 ),
+	.data( data ), .irq( irq ) );
 
 endmodule

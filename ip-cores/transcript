@@ -1,314 +1,6 @@
-vlog fsm/*.v
-# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 20:09:12 on Feb 15,2016
-# vlog -reportprogress 300 fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
-# -- Compiling module base_fsm
-# ** Error: fsm/base_fsm.v(117): (vlog-2884) Out of bounds access.  Bit number 7 of part-select into 'clk_scaler' is out of bounds.
-# -- Compiling module sum_tb
-# End time: 20:09:12 on Feb 15,2016, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-# /home/zaqwes/altera/15.0/modelsim_ase/linuxaloem/vlog failed.
-vlog fsm/*.v
-# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 20:09:34 on Feb 15,2016
-# vlog -reportprogress 300 fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
-# -- Compiling module base_fsm
-# -- Compiling module sum_tb
-# 
-# Top level modules:
-# 	sum_tb
-# End time: 20:09:34 on Feb 15,2016, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
 do all.do
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 20:09:41 on Feb 15,2016
-# vlog -reportprogress 300 fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
-# -- Compiling module base_fsm
-# -- Compiling module sum_tb
-# 
-# Top level modules:
-# 	sum_tb
-# End time: 20:09:41 on Feb 15,2016, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vsim 
-# Start time: 20:09:42 on Feb 15,2016
-# Loading work.sum_tb
-# Loading work.base_fsm
-do all.do
-# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 20:10:29 on Feb 15,2016
-# vlog -reportprogress 300 fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
-# -- Compiling module base_fsm
-# -- Compiling module sum_tb
-# 
-# Top level modules:
-# 	sum_tb
-# End time: 20:10:30 on Feb 15,2016, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# vsim 
-# Start time: 20:10:30 on Feb 15,2016
-# Loading work.sum_tb
-# Loading work.base_fsm
-do all.do
-# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 20:11:26 on Feb 15,2016
-# vlog -reportprogress 300 fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
-# -- Compiling module base_fsm
-# -- Compiling module sum_tb
-# 
-# Top level modules:
-# 	sum_tb
-# End time: 20:11:26 on Feb 15,2016, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vsim 
-# Start time: 20:11:26 on Feb 15,2016
-# Loading work.sum_tb
-# Loading work.base_fsm
-do all.do
-# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 20:12:18 on Feb 15,2016
-# vlog -reportprogress 300 fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
-# -- Compiling module base_fsm
-# -- Compiling module sum_tb
-# 
-# Top level modules:
-# 	sum_tb
-# End time: 20:12:18 on Feb 15,2016, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vsim 
-# Start time: 20:12:18 on Feb 15,2016
-# Loading work.sum_tb
-# Loading work.base_fsm
-do all.do
-# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 20:18:12 on Feb 15,2016
-# vlog -reportprogress 300 fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
-# -- Compiling module base_fsm
-# -- Compiling module sum_tb
-# 
-# Top level modules:
-# 	sum_tb
-# End time: 20:18:12 on Feb 15,2016, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vsim 
-# Start time: 20:18:13 on Feb 15,2016
-# Loading work.sum_tb
-# Loading work.base_fsm
-do all.do
-# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 20:18:39 on Feb 15,2016
-# vlog -reportprogress 300 fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
-# -- Compiling module base_fsm
-# -- Compiling module sum_tb
-# 
-# Top level modules:
-# 	sum_tb
-# End time: 20:18:39 on Feb 15,2016, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vsim 
-# Start time: 20:18:39 on Feb 15,2016
-# Loading work.sum_tb
-# Loading work.base_fsm
-do all.do
-# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 20:22:05 on Feb 15,2016
-# vlog -reportprogress 300 fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
-# -- Compiling module base_fsm
-# ** Error: fsm/base_fsm.v(75): near "case": syntax error, unexpected case
-# -- Compiling module sum_tb
-# End time: 20:22:05 on Feb 15,2016, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-# ** Error: /home/zaqwes/altera/15.0/modelsim_ase/linuxaloem/vlog failed.
-# Error in macro ./all.do line 1
-# /home/zaqwes/altera/15.0/modelsim_ase/linuxaloem/vlog failed.
-#     while executing
-# "vlog fsm/*.v"
-do all.do
-# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 20:22:16 on Feb 15,2016
-# vlog -reportprogress 300 fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
-# -- Compiling module base_fsm
-# -- Compiling module sum_tb
-# 
-# Top level modules:
-# 	sum_tb
-# End time: 20:22:16 on Feb 15,2016, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vsim 
-# Start time: 20:22:17 on Feb 15,2016
-# Loading work.sum_tb
-# Loading work.base_fsm
-do all.do
-# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 20:23:16 on Feb 15,2016
-# vlog -reportprogress 300 fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
-# -- Compiling module base_fsm
-# -- Compiling module sum_tb
-# 
-# Top level modules:
-# 	sum_tb
-# End time: 20:23:16 on Feb 15,2016, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vsim 
-# Start time: 20:23:17 on Feb 15,2016
-# Loading work.sum_tb
-# Loading work.base_fsm
-do all.do
-# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 20:23:43 on Feb 15,2016
-# vlog -reportprogress 300 fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
-# -- Compiling module base_fsm
-# -- Compiling module sum_tb
-# 
-# Top level modules:
-# 	sum_tb
-# End time: 20:23:43 on Feb 15,2016, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vsim 
-# Start time: 20:23:43 on Feb 15,2016
-# Loading work.sum_tb
-# Loading work.base_fsm
-do all.do
-# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 20:24:31 on Feb 15,2016
-# vlog -reportprogress 300 fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
-# -- Compiling module base_fsm
-# -- Compiling module sum_tb
-# 
-# Top level modules:
-# 	sum_tb
-# End time: 20:24:31 on Feb 15,2016, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vsim 
-# Start time: 20:24:31 on Feb 15,2016
-# Loading work.sum_tb
-# Loading work.base_fsm
-do all.do
-# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 20:25:32 on Feb 15,2016
-# vlog -reportprogress 300 fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
-# -- Compiling module base_fsm
-# -- Compiling module sum_tb
-# 
-# Top level modules:
-# 	sum_tb
-# End time: 20:25:32 on Feb 15,2016, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vsim 
-# Start time: 20:25:32 on Feb 15,2016
-# Loading work.sum_tb
-# Loading work.base_fsm
-do all.do
-# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 21:27:21 on Feb 15,2016
-# vlog -reportprogress 300 fsm/adv_book.v fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
-# -- Compiling module mult8
-# -- Compiling module mult8_rollup
-# ** Error: fsm/adv_book.v(48): near ":": syntax error, unexpected ':', expecting ';'
-# -- Compiling module lowpassfir
-# ** Error: fsm/adv_book.v(94): near "case": syntax error, unexpected case, expecting ';'
-# ** Error: fsm/adv_book.v(106): near "else": syntax error, unexpected else
-# -- Compiling module sum_tb
-# ** Error: fsm/adv_book.v(58): near "EOF": syntax error, unexpected end of source code
-# End time: 21:27:21 on Feb 15,2016, Elapsed time: 0:00:00
-# Errors: 4, Warnings: 0
-# ** Error: /home/zaqwes/altera/15.0/modelsim_ase/linuxaloem/vlog failed.
-# Error in macro ./all.do line 1
-# /home/zaqwes/altera/15.0/modelsim_ase/linuxaloem/vlog failed.
-#     while executing
-# "vlog fsm/*.v"
-do all.do
-# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 21:27:39 on Feb 15,2016
-# vlog -reportprogress 300 fsm/adv_book.v fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
-# -- Compiling module mult8
-# -- Compiling module mult8_rollup
-# -- Compiling module lowpassfir
-# ** Error: fsm/adv_book.v(94): near "case": syntax error, unexpected case, expecting ';'
-# ** Error: fsm/adv_book.v(106): near "else": syntax error, unexpected else
-# -- Compiling module sum_tb
-# ** Error: fsm/adv_book.v(58): near "EOF": syntax error, unexpected end of source code
-# End time: 21:27:39 on Feb 15,2016, Elapsed time: 0:00:00
-# Errors: 3, Warnings: 0
-# ** Error: /home/zaqwes/altera/15.0/modelsim_ase/linuxaloem/vlog failed.
-# Error in macro ./all.do line 1
-# /home/zaqwes/altera/15.0/modelsim_ase/linuxaloem/vlog failed.
-#     while executing
-# "vlog fsm/*.v"
-do all.do
-# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 21:27:58 on Feb 15,2016
-# vlog -reportprogress 300 fsm/adv_book.v fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
-# -- Compiling module mult8
-# -- Compiling module mult8_rollup
-# -- Compiling module lowpassfir
-# ** Error: fsm/adv_book.v(94): near "case": syntax error, unexpected case, expecting ';'
-# ** Error: fsm/adv_book.v(106): near "else": syntax error, unexpected else
-# -- Compiling module sum_tb
-# ** Error: fsm/adv_book.v(58): near "EOF": syntax error, unexpected end of source code
-# End time: 21:27:58 on Feb 15,2016, Elapsed time: 0:00:00
-# Errors: 3, Warnings: 0
-# ** Error: /home/zaqwes/altera/15.0/modelsim_ase/linuxaloem/vlog failed.
-# Error in macro ./all.do line 1
-# /home/zaqwes/altera/15.0/modelsim_ase/linuxaloem/vlog failed.
-#     while executing
-# "vlog fsm/*.v"
-do all.do
-# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 21:29:22 on Feb 15,2016
-# vlog -reportprogress 300 fsm/adv_book.v fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
-# -- Compiling module mult8
-# -- Compiling module mult8_rollup
-# ** Error: fsm/adv_book.v(33): (vlog-2730) Undefined variable: 'done'.
-# -- Compiling module lowpassfir
-# ** Error: fsm/adv_book.v(96): near "case": syntax error, unexpected case, expecting ';'
-# ** Error: fsm/adv_book.v(108): near "else": syntax error, unexpected else
-# -- Compiling module sum_tb
-# End time: 21:29:22 on Feb 15,2016, Elapsed time: 0:00:00
-# Errors: 3, Warnings: 0
-# ** Error: /home/zaqwes/altera/15.0/modelsim_ase/linuxaloem/vlog failed.
-# Error in macro ./all.do line 1
-# /home/zaqwes/altera/15.0/modelsim_ase/linuxaloem/vlog failed.
-#     while executing
-# "vlog fsm/*.v"
-do all.do
-# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 21:30:30 on Feb 15,2016
-# vlog -reportprogress 300 fsm/adv_book.v fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
-# -- Compiling module mult8
-# -- Compiling module mult8_rollup
-# ** Error: fsm/adv_book.v(33): (vlog-2730) Undefined variable: 'done'.
-# -- Compiling module lowpassfir
-# -- Compiling module base_fsm
-# -- Compiling module sum_tb
-# End time: 21:30:30 on Feb 15,2016, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-# ** Error: /home/zaqwes/altera/15.0/modelsim_ase/linuxaloem/vlog failed.
-# Error in macro ./all.do line 1
-# /home/zaqwes/altera/15.0/modelsim_ase/linuxaloem/vlog failed.
-#     while executing
-# "vlog fsm/*.v"
-do all.do
-# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 21:31:08 on Feb 15,2016
-# vlog -reportprogress 300 fsm/adv_book.v fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
-# -- Compiling module mult8
-# -- Compiling module mult8_rollup
-# ** Error: fsm/adv_book.v(54): (vlog-2110) Illegal reference to net "product".
-# ** Error: fsm/adv_book.v(56): (vlog-2110) Illegal reference to net "product".
-# -- Compiling module lowpassfir
-# -- Compiling module base_fsm
-# -- Compiling module sum_tb
-# End time: 21:31:08 on Feb 15,2016, Elapsed time: 0:00:00
-# Errors: 2, Warnings: 0
-# ** Error: /home/zaqwes/altera/15.0/modelsim_ase/linuxaloem/vlog failed.
-# Error in macro ./all.do line 1
-# /home/zaqwes/altera/15.0/modelsim_ase/linuxaloem/vlog failed.
-#     while executing
-# "vlog fsm/*.v"
-do all.do
-# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 21:31:27 on Feb 15,2016
+# Start time: 20:00:04 on Feb 17,2016
 # vlog -reportprogress 300 fsm/adv_book.v fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
 # -- Compiling module mult8
 # -- Compiling module mult8_rollup
@@ -321,11 +13,1204 @@ do all.do
 # 	mult8_rollup
 # 	lowpassfir
 # 	sum_tb
-# End time: 21:31:27 on Feb 15,2016, Elapsed time: 0:00:00
+# End time: 20:00:04 on Feb 17,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim 
-# Start time: 21:31:29 on Feb 15,2016
+# Start time: 20:00:04 on Feb 17,2016
 # Loading work.sum_tb
 # Loading work.base_fsm
-# End time: 21:34:02 on Feb 15,2016, Elapsed time: 0:02:33
+do all.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 20:02:21 on Feb 17,2016
+# vlog -reportprogress 300 fsm/adv_book.v fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
+# -- Compiling module mult8
+# -- Compiling module mult8_rollup
+# -- Compiling module lowpassfir
+# -- Compiling module base_fsm
+# -- Compiling module sum_tb
+# 
+# Top level modules:
+# 	mult8
+# 	mult8_rollup
+# 	lowpassfir
+# 	sum_tb
+# End time: 20:02:21 on Feb 17,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 20:02:21 on Feb 17,2016
+# Loading work.sum_tb
+# Loading work.base_fsm
+do all.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 20:03:32 on Feb 17,2016
+# vlog -reportprogress 300 fsm/adv_book.v fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
+# -- Compiling module mult8
+# -- Compiling module mult8_rollup
+# -- Compiling module lowpassfir
+# -- Compiling module base_fsm
+# -- Compiling module sum_tb
+# 
+# Top level modules:
+# 	mult8
+# 	mult8_rollup
+# 	lowpassfir
+# 	sum_tb
+# End time: 20:03:32 on Feb 17,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 20:03:33 on Feb 17,2016
+# Loading work.sum_tb
+# Loading work.base_fsm
+do all.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 20:04:06 on Feb 17,2016
+# vlog -reportprogress 300 fsm/adv_book.v fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
+# -- Compiling module mult8
+# -- Compiling module mult8_rollup
+# -- Compiling module lowpassfir
+# -- Compiling module base_fsm
+# -- Compiling module sum_tb
+# 
+# Top level modules:
+# 	mult8
+# 	mult8_rollup
+# 	lowpassfir
+# 	sum_tb
+# End time: 20:04:06 on Feb 17,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 20:04:06 on Feb 17,2016
+# Loading work.sum_tb
+# Loading work.base_fsm
+do all.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 20:09:17 on Feb 17,2016
+# vlog -reportprogress 300 fsm/adv_book.v fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
+# -- Compiling module mult8
+# -- Compiling module mult8_rollup
+# -- Compiling module lowpassfir
+# -- Compiling module base_fsm
+# -- Compiling module sum_tb
+# 
+# Top level modules:
+# 	mult8
+# 	mult8_rollup
+# 	lowpassfir
+# 	sum_tb
+# End time: 20:09:17 on Feb 17,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 20:09:18 on Feb 17,2016
+# Loading work.sum_tb
+# Loading work.base_fsm
+do all.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 20:10:16 on Feb 17,2016
+# vlog -reportprogress 300 fsm/adv_book.v fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
+# -- Compiling module mult8
+# -- Compiling module mult8_rollup
+# -- Compiling module lowpassfir
+# -- Compiling module base_fsm
+# -- Compiling module sum_tb
+# 
+# Top level modules:
+# 	mult8
+# 	mult8_rollup
+# 	lowpassfir
+# 	sum_tb
+# End time: 20:10:16 on Feb 17,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 20:10:16 on Feb 17,2016
+# Loading work.sum_tb
+# Loading work.base_fsm
+do all.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 20:10:41 on Feb 17,2016
+# vlog -reportprogress 300 fsm/adv_book.v fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
+# -- Compiling module mult8
+# -- Compiling module mult8_rollup
+# -- Compiling module lowpassfir
+# -- Compiling module base_fsm
+# -- Compiling module sum_tb
+# 
+# Top level modules:
+# 	mult8
+# 	mult8_rollup
+# 	lowpassfir
+# 	sum_tb
+# End time: 20:10:42 on Feb 17,2016, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 20:10:42 on Feb 17,2016
+# Loading work.sum_tb
+# Loading work.base_fsm
+do all.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 20:11:56 on Feb 17,2016
+# vlog -reportprogress 300 fsm/adv_book.v fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
+# -- Compiling module mult8
+# -- Compiling module mult8_rollup
+# -- Compiling module lowpassfir
+# -- Compiling module base_fsm
+# -- Compiling module sum_tb
+# 
+# Top level modules:
+# 	mult8
+# 	mult8_rollup
+# 	lowpassfir
+# 	sum_tb
+# End time: 20:11:56 on Feb 17,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 20:11:57 on Feb 17,2016
+# Loading work.sum_tb
+# Loading work.base_fsm
+do all.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 20:12:21 on Feb 17,2016
+# vlog -reportprogress 300 fsm/adv_book.v fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
+# -- Compiling module mult8
+# -- Compiling module mult8_rollup
+# -- Compiling module lowpassfir
+# -- Compiling module base_fsm
+# -- Compiling module sum_tb
+# 
+# Top level modules:
+# 	mult8
+# 	mult8_rollup
+# 	lowpassfir
+# 	sum_tb
+# End time: 20:12:21 on Feb 17,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 20:12:22 on Feb 17,2016
+# Loading work.sum_tb
+# Loading work.base_fsm
+do all.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 20:13:02 on Feb 17,2016
+# vlog -reportprogress 300 fsm/adv_book.v fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
+# -- Compiling module mult8
+# -- Compiling module mult8_rollup
+# -- Compiling module lowpassfir
+# -- Compiling module base_fsm
+# -- Compiling module sum_tb
+# 
+# Top level modules:
+# 	mult8
+# 	mult8_rollup
+# 	lowpassfir
+# 	sum_tb
+# End time: 20:13:02 on Feb 17,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 20:13:02 on Feb 17,2016
+# Loading work.sum_tb
+# Loading work.base_fsm
+do all.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 20:13:29 on Feb 17,2016
+# vlog -reportprogress 300 fsm/adv_book.v fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
+# -- Compiling module mult8
+# -- Compiling module mult8_rollup
+# -- Compiling module lowpassfir
+# -- Compiling module base_fsm
+# -- Compiling module sum_tb
+# 
+# Top level modules:
+# 	mult8
+# 	mult8_rollup
+# 	lowpassfir
+# 	sum_tb
+# End time: 20:13:29 on Feb 17,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 20:13:29 on Feb 17,2016
+# Loading work.sum_tb
+# Loading work.base_fsm
+do all.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 20:13:55 on Feb 17,2016
+# vlog -reportprogress 300 fsm/adv_book.v fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
+# -- Compiling module mult8
+# -- Compiling module mult8_rollup
+# -- Compiling module lowpassfir
+# -- Compiling module base_fsm
+# -- Compiling module sum_tb
+# 
+# Top level modules:
+# 	mult8
+# 	mult8_rollup
+# 	lowpassfir
+# 	sum_tb
+# End time: 20:13:55 on Feb 17,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 20:13:56 on Feb 17,2016
+# Loading work.sum_tb
+# Loading work.base_fsm
+do all.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 20:14:52 on Feb 17,2016
+# vlog -reportprogress 300 fsm/adv_book.v fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
+# -- Compiling module mult8
+# -- Compiling module mult8_rollup
+# -- Compiling module lowpassfir
+# -- Compiling module base_fsm
+# -- Compiling module sum_tb
+# 
+# Top level modules:
+# 	mult8
+# 	mult8_rollup
+# 	lowpassfir
+# 	sum_tb
+# End time: 20:14:52 on Feb 17,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 20:14:53 on Feb 17,2016
+# Loading work.sum_tb
+# Loading work.base_fsm
+do all.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 20:21:17 on Feb 17,2016
+# vlog -reportprogress 300 fsm/adv_book.v fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
+# -- Compiling module mult8
+# -- Compiling module mult8_rollup
+# -- Compiling module lowpassfir
+# -- Compiling module base_fsm
+# -- Compiling module sum_tb
+# 
+# Top level modules:
+# 	mult8
+# 	mult8_rollup
+# 	lowpassfir
+# 	sum_tb
+# End time: 20:21:17 on Feb 17,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 20:21:17 on Feb 17,2016
+# Loading work.sum_tb
+# Loading work.base_fsm
+do all.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 20:22:38 on Feb 17,2016
+# vlog -reportprogress 300 fsm/adv_book.v fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
+# -- Compiling module mult8
+# -- Compiling module mult8_rollup
+# -- Compiling module lowpassfir
+# -- Compiling module base_fsm
+# -- Compiling module sum_tb
+# 
+# Top level modules:
+# 	mult8
+# 	mult8_rollup
+# 	lowpassfir
+# 	sum_tb
+# End time: 20:22:38 on Feb 17,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 20:22:38 on Feb 17,2016
+# Loading work.sum_tb
+# Loading work.base_fsm
+do all.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 20:23:03 on Feb 17,2016
+# vlog -reportprogress 300 fsm/adv_book.v fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
+# -- Compiling module mult8
+# -- Compiling module mult8_rollup
+# -- Compiling module lowpassfir
+# -- Compiling module base_fsm
+# -- Compiling module sum_tb
+# 
+# Top level modules:
+# 	mult8
+# 	mult8_rollup
+# 	lowpassfir
+# 	sum_tb
+# End time: 20:23:03 on Feb 17,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 20:23:03 on Feb 17,2016
+# Loading work.sum_tb
+# Loading work.base_fsm
+do all.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 20:27:06 on Feb 17,2016
+# vlog -reportprogress 300 fsm/adv_book.v fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
+# -- Compiling module mult8
+# -- Compiling module mult8_rollup
+# -- Compiling module lowpassfir
+# -- Compiling module base_fsm
+# -- Compiling module sum_tb
+# 
+# Top level modules:
+# 	mult8
+# 	mult8_rollup
+# 	lowpassfir
+# 	sum_tb
+# End time: 20:27:06 on Feb 17,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 20:27:06 on Feb 17,2016
+# Loading work.sum_tb
+# Loading work.base_fsm
+do all.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 20:27:48 on Feb 17,2016
+# vlog -reportprogress 300 fsm/adv_book.v fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
+# -- Compiling module mult8
+# -- Compiling module mult8_rollup
+# -- Compiling module lowpassfir
+# -- Compiling module base_fsm
+# -- Compiling module sum_tb
+# 
+# Top level modules:
+# 	mult8
+# 	mult8_rollup
+# 	lowpassfir
+# 	sum_tb
+# End time: 20:27:48 on Feb 17,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 20:27:49 on Feb 17,2016
+# Loading work.sum_tb
+# Loading work.base_fsm
+do all.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 20:28:22 on Feb 17,2016
+# vlog -reportprogress 300 fsm/adv_book.v fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
+# -- Compiling module mult8
+# -- Compiling module mult8_rollup
+# -- Compiling module lowpassfir
+# -- Compiling module base_fsm
+# -- Compiling module sum_tb
+# 
+# Top level modules:
+# 	mult8
+# 	mult8_rollup
+# 	lowpassfir
+# 	sum_tb
+# End time: 20:28:22 on Feb 17,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 20:28:22 on Feb 17,2016
+# Loading work.sum_tb
+# Loading work.base_fsm
+do all.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 20:43:25 on Feb 17,2016
+# vlog -reportprogress 300 fsm/adv_book.v fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
+# -- Compiling module mult8
+# -- Compiling module mult8_rollup
+# -- Compiling module lowpassfir
+# -- Compiling module base_fsm
+# ** Error: fsm/base_fsm.v(39): near ")": Missing port in ansi port list.
+# -- Compiling module sum_tb
+# End time: 20:43:25 on Feb 17,2016, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: /home/zaqwes/altera/15.0/modelsim_ase/linuxaloem/vlog failed.
+# Error in macro ./all.do line 1
+# /home/zaqwes/altera/15.0/modelsim_ase/linuxaloem/vlog failed.
+#     while executing
+# "vlog fsm/*.v"
+do all.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 20:43:38 on Feb 17,2016
+# vlog -reportprogress 300 fsm/adv_book.v fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
+# -- Compiling module mult8
+# -- Compiling module mult8_rollup
+# -- Compiling module lowpassfir
+# -- Compiling module base_fsm
+# -- Compiling module sum_tb
+# 
+# Top level modules:
+# 	mult8
+# 	mult8_rollup
+# 	lowpassfir
+# 	sum_tb
+# End time: 20:43:38 on Feb 17,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 20:43:38 on Feb 17,2016
+# Loading work.sum_tb
+# Loading work.base_fsm
+do all.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 20:44:49 on Feb 17,2016
+# vlog -reportprogress 300 fsm/adv_book.v fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
+# -- Compiling module mult8
+# -- Compiling module mult8_rollup
+# -- Compiling module lowpassfir
+# -- Compiling module base_fsm
+# -- Compiling module sum_tb
+# 
+# Top level modules:
+# 	mult8
+# 	mult8_rollup
+# 	lowpassfir
+# 	sum_tb
+# End time: 20:44:49 on Feb 17,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 20:44:49 on Feb 17,2016
+# Loading work.sum_tb
+# Loading work.base_fsm
+do all.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 20:45:20 on Feb 17,2016
+# vlog -reportprogress 300 fsm/adv_book.v fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
+# -- Compiling module mult8
+# -- Compiling module mult8_rollup
+# -- Compiling module lowpassfir
+# -- Compiling module base_fsm
+# -- Compiling module sum_tb
+# 
+# Top level modules:
+# 	mult8
+# 	mult8_rollup
+# 	lowpassfir
+# 	sum_tb
+# End time: 20:45:20 on Feb 17,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 20:45:20 on Feb 17,2016
+# Loading work.sum_tb
+# Loading work.base_fsm
+do all.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 20:47:35 on Feb 17,2016
+# vlog -reportprogress 300 fsm/adv_book.v fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
+# -- Compiling module mult8
+# -- Compiling module mult8_rollup
+# -- Compiling module lowpassfir
+# -- Compiling module base_fsm
+# -- Compiling module sum_tb
+# 
+# Top level modules:
+# 	mult8
+# 	mult8_rollup
+# 	lowpassfir
+# 	sum_tb
+# End time: 20:47:35 on Feb 17,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 20:47:36 on Feb 17,2016
+# Loading work.sum_tb
+# Loading work.base_fsm
+do all.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 20:55:01 on Feb 17,2016
+# vlog -reportprogress 300 fsm/adv_book.v fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
+# -- Compiling module mult8
+# -- Compiling module mult8_rollup
+# -- Compiling module lowpassfir
+# -- Compiling module base_fsm
+# -- Compiling module sum_tb
+# 
+# Top level modules:
+# 	mult8
+# 	mult8_rollup
+# 	lowpassfir
+# 	sum_tb
+# End time: 20:55:01 on Feb 17,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 20:55:02 on Feb 17,2016
+# Loading work.sum_tb
+# Loading work.base_fsm
+do all.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 20:55:54 on Feb 17,2016
+# vlog -reportprogress 300 fsm/adv_book.v fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
+# -- Compiling module mult8
+# -- Compiling module mult8_rollup
+# -- Compiling module lowpassfir
+# -- Compiling module base_fsm
+# -- Compiling module sum_tb
+# 
+# Top level modules:
+# 	mult8
+# 	mult8_rollup
+# 	lowpassfir
+# 	sum_tb
+# End time: 20:55:54 on Feb 17,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 20:55:54 on Feb 17,2016
+# Loading work.sum_tb
+# Loading work.base_fsm
+do all.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 20:57:45 on Feb 17,2016
+# vlog -reportprogress 300 fsm/adv_book.v fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
+# -- Compiling module mult8
+# -- Compiling module mult8_rollup
+# -- Compiling module lowpassfir
+# -- Compiling module base_fsm
+# -- Compiling module sum_tb
+# 
+# Top level modules:
+# 	mult8
+# 	mult8_rollup
+# 	lowpassfir
+# 	sum_tb
+# End time: 20:57:45 on Feb 17,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 20:57:46 on Feb 17,2016
+# Loading work.sum_tb
+# Loading work.base_fsm
+do all.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 20:59:23 on Feb 17,2016
+# vlog -reportprogress 300 fsm/adv_book.v fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
+# -- Compiling module mult8
+# -- Compiling module mult8_rollup
+# -- Compiling module lowpassfir
+# -- Compiling module base_fsm
+# -- Compiling module sum_tb
+# 
+# Top level modules:
+# 	mult8
+# 	mult8_rollup
+# 	lowpassfir
+# 	sum_tb
+# End time: 20:59:23 on Feb 17,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 20:59:23 on Feb 17,2016
+# Loading work.sum_tb
+# Loading work.base_fsm
+do all.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 21:00:33 on Feb 17,2016
+# vlog -reportprogress 300 fsm/adv_book.v fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
+# -- Compiling module mult8
+# -- Compiling module mult8_rollup
+# -- Compiling module lowpassfir
+# -- Compiling module base_fsm
+# -- Compiling module sum_tb
+# 
+# Top level modules:
+# 	mult8
+# 	mult8_rollup
+# 	lowpassfir
+# 	sum_tb
+# End time: 21:00:33 on Feb 17,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 21:00:33 on Feb 17,2016
+# Loading work.sum_tb
+# Loading work.base_fsm
+do all.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 21:02:02 on Feb 17,2016
+# vlog -reportprogress 300 fsm/adv_book.v fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
+# -- Compiling module mult8
+# -- Compiling module mult8_rollup
+# -- Compiling module lowpassfir
+# -- Compiling module base_fsm
+# -- Compiling module sum_tb
+# 
+# Top level modules:
+# 	mult8
+# 	mult8_rollup
+# 	lowpassfir
+# 	sum_tb
+# End time: 21:02:02 on Feb 17,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 21:02:02 on Feb 17,2016
+# Loading work.sum_tb
+# Loading work.base_fsm
+do all.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 21:02:25 on Feb 17,2016
+# vlog -reportprogress 300 fsm/adv_book.v fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
+# -- Compiling module mult8
+# -- Compiling module mult8_rollup
+# -- Compiling module lowpassfir
+# -- Compiling module base_fsm
+# -- Compiling module sum_tb
+# 
+# Top level modules:
+# 	mult8
+# 	mult8_rollup
+# 	lowpassfir
+# 	sum_tb
+# End time: 21:02:25 on Feb 17,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 21:02:25 on Feb 17,2016
+# Loading work.sum_tb
+# Loading work.base_fsm
+do all.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 21:03:30 on Feb 17,2016
+# vlog -reportprogress 300 fsm/adv_book.v fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
+# -- Compiling module mult8
+# -- Compiling module mult8_rollup
+# -- Compiling module lowpassfir
+# -- Compiling module base_fsm
+# -- Compiling module sum_tb
+# 
+# Top level modules:
+# 	mult8
+# 	mult8_rollup
+# 	lowpassfir
+# 	sum_tb
+# End time: 21:03:30 on Feb 17,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 21:03:30 on Feb 17,2016
+# Loading work.sum_tb
+# Loading work.base_fsm
+do all.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 21:03:59 on Feb 17,2016
+# vlog -reportprogress 300 fsm/adv_book.v fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
+# -- Compiling module mult8
+# -- Compiling module mult8_rollup
+# -- Compiling module lowpassfir
+# -- Compiling module base_fsm
+# -- Compiling module sum_tb
+# 
+# Top level modules:
+# 	mult8
+# 	mult8_rollup
+# 	lowpassfir
+# 	sum_tb
+# End time: 21:03:59 on Feb 17,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 21:03:59 on Feb 17,2016
+# Loading work.sum_tb
+# Loading work.base_fsm
+do all.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 21:06:05 on Feb 17,2016
+# vlog -reportprogress 300 fsm/adv_book.v fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
+# -- Compiling module mult8
+# -- Compiling module mult8_rollup
+# -- Compiling module lowpassfir
+# -- Compiling module base_fsm
+# -- Compiling module sum_tb
+# ** Error: fsm/testbench_base_fsm.v(55): near "irq": syntax error, unexpected IDENTIFIER, expecting .* or '.'
+# End time: 21:06:05 on Feb 17,2016, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: /home/zaqwes/altera/15.0/modelsim_ase/linuxaloem/vlog failed.
+# Error in macro ./all.do line 1
+# /home/zaqwes/altera/15.0/modelsim_ase/linuxaloem/vlog failed.
+#     while executing
+# "vlog fsm/*.v"
+do all.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 21:06:18 on Feb 17,2016
+# vlog -reportprogress 300 fsm/adv_book.v fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
+# -- Compiling module mult8
+# -- Compiling module mult8_rollup
+# -- Compiling module lowpassfir
+# -- Compiling module base_fsm
+# -- Compiling module sum_tb
+# 
+# Top level modules:
+# 	mult8
+# 	mult8_rollup
+# 	lowpassfir
+# 	sum_tb
+# End time: 21:06:18 on Feb 17,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 21:06:19 on Feb 17,2016
+# Loading work.sum_tb
+# Loading work.base_fsm
+# ** Error: (vsim-3053) fsm/testbench_base_fsm.v(51): Illegal output or inout port connection for port 'irq'.
+#         Region: /sum_tb/s0
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./all.do PAUSED at line 2
+do all.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 21:06:57 on Feb 17,2016
+# vlog -reportprogress 300 fsm/adv_book.v fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
+# -- Compiling module mult8
+# -- Compiling module mult8_rollup
+# -- Compiling module lowpassfir
+# -- Compiling module base_fsm
+# -- Compiling module sum_tb
+# 
+# Top level modules:
+# 	mult8
+# 	mult8_rollup
+# 	lowpassfir
+# 	sum_tb
+# End time: 21:06:57 on Feb 17,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Loading work.sum_tb
+# Loading work.base_fsm
+do all.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 21:09:28 on Feb 17,2016
+# vlog -reportprogress 300 fsm/adv_book.v fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
+# -- Compiling module mult8
+# -- Compiling module mult8_rollup
+# -- Compiling module lowpassfir
+# -- Compiling module base_fsm
+# -- Compiling module sum_tb
+# 
+# Top level modules:
+# 	mult8
+# 	mult8_rollup
+# 	lowpassfir
+# 	sum_tb
+# End time: 21:09:28 on Feb 17,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 21:09:28 on Feb 17,2016
+# Loading work.sum_tb
+# Loading work.base_fsm
+do all.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 21:10:21 on Feb 17,2016
+# vlog -reportprogress 300 fsm/adv_book.v fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
+# -- Compiling module mult8
+# -- Compiling module mult8_rollup
+# -- Compiling module lowpassfir
+# -- Compiling module base_fsm
+# -- Compiling module sum_tb
+# 
+# Top level modules:
+# 	mult8
+# 	mult8_rollup
+# 	lowpassfir
+# 	sum_tb
+# End time: 21:10:21 on Feb 17,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 21:10:21 on Feb 17,2016
+# Loading work.sum_tb
+# Loading work.base_fsm
+do all.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 21:10:46 on Feb 17,2016
+# vlog -reportprogress 300 fsm/adv_book.v fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
+# -- Compiling module mult8
+# -- Compiling module mult8_rollup
+# -- Compiling module lowpassfir
+# -- Compiling module base_fsm
+# -- Compiling module sum_tb
+# 
+# Top level modules:
+# 	mult8
+# 	mult8_rollup
+# 	lowpassfir
+# 	sum_tb
+# End time: 21:10:46 on Feb 17,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 21:10:46 on Feb 17,2016
+# Loading work.sum_tb
+# Loading work.base_fsm
+do all.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 21:11:00 on Feb 17,2016
+# vlog -reportprogress 300 fsm/adv_book.v fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
+# -- Compiling module mult8
+# -- Compiling module mult8_rollup
+# -- Compiling module lowpassfir
+# -- Compiling module base_fsm
+# -- Compiling module sum_tb
+# 
+# Top level modules:
+# 	mult8
+# 	mult8_rollup
+# 	lowpassfir
+# 	sum_tb
+# End time: 21:11:00 on Feb 17,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 21:11:00 on Feb 17,2016
+# Loading work.sum_tb
+# Loading work.base_fsm
+do all.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 21:12:06 on Feb 17,2016
+# vlog -reportprogress 300 fsm/adv_book.v fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
+# -- Compiling module mult8
+# -- Compiling module mult8_rollup
+# -- Compiling module lowpassfir
+# -- Compiling module base_fsm
+# -- Compiling module sum_tb
+# 
+# Top level modules:
+# 	mult8
+# 	mult8_rollup
+# 	lowpassfir
+# 	sum_tb
+# End time: 21:12:06 on Feb 17,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 21:12:06 on Feb 17,2016
+# Loading work.sum_tb
+# Loading work.base_fsm
+do all.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 21:12:57 on Feb 17,2016
+# vlog -reportprogress 300 fsm/adv_book.v fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
+# -- Compiling module mult8
+# -- Compiling module mult8_rollup
+# -- Compiling module lowpassfir
+# -- Compiling module base_fsm
+# -- Compiling module sum_tb
+# 
+# Top level modules:
+# 	mult8
+# 	mult8_rollup
+# 	lowpassfir
+# 	sum_tb
+# End time: 21:12:57 on Feb 17,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 21:12:57 on Feb 17,2016
+# Loading work.sum_tb
+# Loading work.base_fsm
+do all.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 21:13:17 on Feb 17,2016
+# vlog -reportprogress 300 fsm/adv_book.v fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
+# -- Compiling module mult8
+# -- Compiling module mult8_rollup
+# -- Compiling module lowpassfir
+# -- Compiling module base_fsm
+# -- Compiling module sum_tb
+# 
+# Top level modules:
+# 	mult8
+# 	mult8_rollup
+# 	lowpassfir
+# 	sum_tb
+# End time: 21:13:17 on Feb 17,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 21:13:17 on Feb 17,2016
+# Loading work.sum_tb
+# Loading work.base_fsm
+do all.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 21:13:56 on Feb 17,2016
+# vlog -reportprogress 300 fsm/adv_book.v fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
+# -- Compiling module mult8
+# -- Compiling module mult8_rollup
+# -- Compiling module lowpassfir
+# -- Compiling module base_fsm
+# -- Compiling module sum_tb
+# 
+# Top level modules:
+# 	mult8
+# 	mult8_rollup
+# 	lowpassfir
+# 	sum_tb
+# End time: 21:13:56 on Feb 17,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 21:13:56 on Feb 17,2016
+# Loading work.sum_tb
+# Loading work.base_fsm
+do all.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 21:15:04 on Feb 17,2016
+# vlog -reportprogress 300 fsm/adv_book.v fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
+# -- Compiling module mult8
+# -- Compiling module mult8_rollup
+# -- Compiling module lowpassfir
+# -- Compiling module base_fsm
+# -- Compiling module sum_tb
+# 
+# Top level modules:
+# 	mult8
+# 	mult8_rollup
+# 	lowpassfir
+# 	sum_tb
+# End time: 21:15:04 on Feb 17,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 21:15:04 on Feb 17,2016
+# Loading work.sum_tb
+# Loading work.base_fsm
+do all.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 21:15:57 on Feb 17,2016
+# vlog -reportprogress 300 fsm/adv_book.v fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
+# -- Compiling module mult8
+# -- Compiling module mult8_rollup
+# -- Compiling module lowpassfir
+# -- Compiling module base_fsm
+# -- Compiling module sum_tb
+# 
+# Top level modules:
+# 	mult8
+# 	mult8_rollup
+# 	lowpassfir
+# 	sum_tb
+# End time: 21:15:57 on Feb 17,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 21:15:57 on Feb 17,2016
+# Loading work.sum_tb
+# Loading work.base_fsm
+do all.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 21:20:02 on Feb 17,2016
+# vlog -reportprogress 300 fsm/adv_book.v fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
+# -- Compiling module mult8
+# -- Compiling module mult8_rollup
+# -- Compiling module lowpassfir
+# -- Compiling module base_fsm
+# -- Compiling module sum_tb
+# 
+# Top level modules:
+# 	mult8
+# 	mult8_rollup
+# 	lowpassfir
+# 	sum_tb
+# End time: 21:20:02 on Feb 17,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 21:20:02 on Feb 17,2016
+# Loading work.sum_tb
+# Loading work.base_fsm
+do all.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 21:21:22 on Feb 17,2016
+# vlog -reportprogress 300 fsm/adv_book.v fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
+# -- Compiling module mult8
+# -- Compiling module mult8_rollup
+# -- Compiling module lowpassfir
+# -- Compiling module base_fsm
+# -- Compiling module sum_tb
+# 
+# Top level modules:
+# 	mult8
+# 	mult8_rollup
+# 	lowpassfir
+# 	sum_tb
+# End time: 21:21:22 on Feb 17,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 21:21:22 on Feb 17,2016
+# Loading work.sum_tb
+# Loading work.base_fsm
+do all.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 21:21:38 on Feb 17,2016
+# vlog -reportprogress 300 fsm/adv_book.v fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
+# -- Compiling module mult8
+# -- Compiling module mult8_rollup
+# -- Compiling module lowpassfir
+# -- Compiling module base_fsm
+# -- Compiling module sum_tb
+# 
+# Top level modules:
+# 	mult8
+# 	mult8_rollup
+# 	lowpassfir
+# 	sum_tb
+# End time: 21:21:38 on Feb 17,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 21:21:38 on Feb 17,2016
+# Loading work.sum_tb
+# Loading work.base_fsm
+do all.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 21:23:59 on Feb 17,2016
+# vlog -reportprogress 300 fsm/adv_book.v fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
+# -- Compiling module mult8
+# -- Compiling module mult8_rollup
+# -- Compiling module lowpassfir
+# -- Compiling module base_fsm
+# -- Compiling module sum_tb
+# 
+# Top level modules:
+# 	mult8
+# 	mult8_rollup
+# 	lowpassfir
+# 	sum_tb
+# End time: 21:23:59 on Feb 17,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 21:23:59 on Feb 17,2016
+# Loading work.sum_tb
+# Loading work.base_fsm
+do all.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 21:24:07 on Feb 17,2016
+# vlog -reportprogress 300 fsm/adv_book.v fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
+# -- Compiling module mult8
+# -- Compiling module mult8_rollup
+# -- Compiling module lowpassfir
+# -- Compiling module base_fsm
+# -- Compiling module sum_tb
+# 
+# Top level modules:
+# 	mult8
+# 	mult8_rollup
+# 	lowpassfir
+# 	sum_tb
+# End time: 21:24:07 on Feb 17,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 21:24:07 on Feb 17,2016
+# Loading work.sum_tb
+# Loading work.base_fsm
+do all.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 21:28:00 on Feb 17,2016
+# vlog -reportprogress 300 fsm/adv_book.v fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
+# -- Compiling module mult8
+# -- Compiling module mult8_rollup
+# -- Compiling module lowpassfir
+# -- Compiling module base_fsm
+# -- Compiling module sum_tb
+# 
+# Top level modules:
+# 	mult8
+# 	mult8_rollup
+# 	lowpassfir
+# 	sum_tb
+# End time: 21:28:00 on Feb 17,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 21:28:00 on Feb 17,2016
+# Loading work.sum_tb
+# Loading work.base_fsm
+do all.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 21:28:14 on Feb 17,2016
+# vlog -reportprogress 300 fsm/adv_book.v fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
+# -- Compiling module mult8
+# -- Compiling module mult8_rollup
+# -- Compiling module lowpassfir
+# -- Compiling module base_fsm
+# -- Compiling module sum_tb
+# 
+# Top level modules:
+# 	mult8
+# 	mult8_rollup
+# 	lowpassfir
+# 	sum_tb
+# End time: 21:28:14 on Feb 17,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 21:28:14 on Feb 17,2016
+# Loading work.sum_tb
+# Loading work.base_fsm
+do all.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 21:28:42 on Feb 17,2016
+# vlog -reportprogress 300 fsm/adv_book.v fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
+# -- Compiling module mult8
+# -- Compiling module mult8_rollup
+# -- Compiling module lowpassfir
+# -- Compiling module base_fsm
+# -- Compiling module sum_tb
+# 
+# Top level modules:
+# 	mult8
+# 	mult8_rollup
+# 	lowpassfir
+# 	sum_tb
+# End time: 21:28:42 on Feb 17,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 21:28:42 on Feb 17,2016
+# Loading work.sum_tb
+# Loading work.base_fsm
+do all.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 21:29:26 on Feb 17,2016
+# vlog -reportprogress 300 fsm/adv_book.v fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
+# -- Compiling module mult8
+# -- Compiling module mult8_rollup
+# -- Compiling module lowpassfir
+# -- Compiling module base_fsm
+# -- Compiling module sum_tb
+# 
+# Top level modules:
+# 	mult8
+# 	mult8_rollup
+# 	lowpassfir
+# 	sum_tb
+# End time: 21:29:26 on Feb 17,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 21:29:26 on Feb 17,2016
+# Loading work.sum_tb
+# Loading work.base_fsm
+do all.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 21:29:44 on Feb 17,2016
+# vlog -reportprogress 300 fsm/adv_book.v fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
+# -- Compiling module mult8
+# -- Compiling module mult8_rollup
+# -- Compiling module lowpassfir
+# -- Compiling module base_fsm
+# -- Compiling module sum_tb
+# 
+# Top level modules:
+# 	mult8
+# 	mult8_rollup
+# 	lowpassfir
+# 	sum_tb
+# End time: 21:29:44 on Feb 17,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 21:29:44 on Feb 17,2016
+# Loading work.sum_tb
+# Loading work.base_fsm
+do all.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 21:30:11 on Feb 17,2016
+# vlog -reportprogress 300 fsm/adv_book.v fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
+# -- Compiling module mult8
+# -- Compiling module mult8_rollup
+# -- Compiling module lowpassfir
+# -- Compiling module base_fsm
+# -- Compiling module sum_tb
+# 
+# Top level modules:
+# 	mult8
+# 	mult8_rollup
+# 	lowpassfir
+# 	sum_tb
+# End time: 21:30:11 on Feb 17,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 21:30:12 on Feb 17,2016
+# Loading work.sum_tb
+# Loading work.base_fsm
+do all.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 21:35:33 on Feb 17,2016
+# vlog -reportprogress 300 fsm/adv_book.v fsm/base_fsm.v fsm/const.v fsm/testbench_base_fsm.v 
+# -- Compiling module mult8
+# -- Compiling module mult8_rollup
+# -- Compiling module lowpassfir
+# -- Compiling module base_fsm
+# -- Compiling module sum_tb
+# 
+# Top level modules:
+# 	mult8
+# 	mult8_rollup
+# 	lowpassfir
+# 	sum_tb
+# End time: 21:35:33 on Feb 17,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 21:35:33 on Feb 17,2016
+# Loading work.sum_tb
+# Loading work.base_fsm
+# End time: 21:44:57 on Feb 17,2016, Elapsed time: 0:09:24
 # Errors: 0, Warnings: 0

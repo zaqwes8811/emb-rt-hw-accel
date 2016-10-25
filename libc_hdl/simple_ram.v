@@ -47,15 +47,35 @@ endmodule
 
 module memcpy(
 	input clk,
+	//input clear,  // ???
 	input [`_ADDR_WITH-1:0] dest,
 	input [`_ADDR_WITH-1:0] src,
 	input [8-1:0] num,
+	input mmcpy_ena,
+
+	// fixme: похоже нужен импльс старта
 
 	// how connect memory
+	output mmcpy_rd_ena,
+	output mmcpy_wr_ena,
+	output [7:0] addr
+
 
 	// result
-	output error
+	// output error,
+	// output done
 	);
+
+assign mmcpy_wr_ena = 1;
+assign mmcpy_rd_ena = 0;
+assign addr = dest;
+
+//reg [7:0] addr_ptr;
+
+always @(*) begin
+	//addr_ptr = 0;
+
+end
 
 endmodule
 

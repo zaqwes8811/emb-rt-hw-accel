@@ -2,17 +2,24 @@
 `default_nettype none
 module test;
 
+// $dump*
+// http://www.referencedesigner.com/tutorials/verilog/verilog_62.php
+
 
 // Outputs to DUT (DUT inputs)
 reg clk = 0;
 reg reset = 0;
 // Inputs from DUT (DUT outputs)
-reg [7:0] count;
+reg [7:0] tick;
 reg [7:0] addr;
 reg [7:0] rd_addr;
 reg [7:0] wr_addr;
 reg [7:0] q;
 wire [7:0] rd_q;
+
+wire [7:0] dest = 4;
+wire [7:0] src = 0;
+wire [7:0] num = 8;
 
 reg oe;
 reg we;
@@ -23,7 +30,7 @@ always #1 clk=~clk;
 
 initial
 begin
-	count = 0;
+	tick = 0;
 	we = 0;
 	oe = 0;
 	rd_addr = 0;
@@ -32,21 +39,21 @@ begin
 end
 
 always @(posedge clk) begin
-	count <= count + 1; 
-	wr_addr <= count;
-	q <= q + 2;
+	tick <= tick + 1; 
+	wr_addr <= tick;
+	q <= $random;
 end
 
 always @(posedge clk) begin
-	if (count == 0)
+	if (tick == 0)
 		we <= 1;
-	else if (count == 4)
+	else if (tick == 4)
 		we <= 0;
 end
 always @(posedge clk)
-	if (count == 4)
+	if (tick == 4)
 		oe <= 1;
-	else if (count == 12)
+	else if (tick == 8)
 		oe <= 0;
 
 always @(posedge clk)
@@ -60,5 +67,8 @@ always @(*) begin
 	if( oe && !we )
 		addr = rd_addr;	
 end
+
+//===========================================
+// connect to memcopy
 
 endmodule

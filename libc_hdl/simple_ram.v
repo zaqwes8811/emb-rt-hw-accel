@@ -1,5 +1,8 @@
- // How do better:
- // http://stackoverflow.com/questions/7630797/better-way-of-coding-a-ram-in-verilog
+// How do better:
+// http://stackoverflow.com/questions/7630797/better-way-of-coding-a-ram-in-verilog
+
+`define _ADDR_WITH 8
+
 
 module ram_sp_sr_sv(
 	clk,
@@ -37,3 +40,22 @@ always @(posedge clk)
 		rd_q <= 8'bz;
 
 endmodule
+
+//=======================================
+// void *memcpy(void *dest, const void *src, int num);
+// return ptr to dest
+
+module memcpy(
+	input clk,
+	input [`_ADDR_WITH-1:0] dest,
+	input [`_ADDR_WITH-1:0] src,
+	input [8-1:0] num,
+
+	// how connect memory
+
+	// result
+	output error
+	);
+
+endmodule
+

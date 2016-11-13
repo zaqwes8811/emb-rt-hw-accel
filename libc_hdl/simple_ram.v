@@ -10,8 +10,7 @@ module ram_sp_sr_sv(
 	q,
 	rd_q,
 	we,
-	oe
-	);
+	oe);
 
 parameter DATA_WITH = 8;
 parameter ADDR_WITH = 8;
@@ -21,21 +20,29 @@ input clk;
 input [ADDR_WITH-1:0] addr;
 input we, oe;
 
-//
+// //
 input [DATA_WITH-1:0] q;
 output reg [DATA_WITH-1:0] rd_q;
 
 //
-reg [DATA_WITH-1:0] mem [0:RAW_DEPTH-1]; // change order
+reg [DATA_WITH-1:0] ram [0:RAW_DEPTH-1]; // change order
+
+parameter MEM_INIT_FILE = "ddr.mif";
+
+initial begin
+  if (MEM_INIT_FILE != "") begin
+    $readmemh(MEM_INIT_FILE, ram);
+  end
+end
 
 // почему пишет сразу? похоже не сразу а по заднему фронту данных
 always @(posedge clk)
 	if ( we )
-		mem[addr] <= q;  // => ?
+		ram[addr] <= q;  // => ?
 
 always @(posedge clk)
 	if (!we && oe)
-		rd_q <= mem[addr];  // => ?
+		rd_q <= ram[addr];  // => ?
 	else 
 		rd_q <= 8'bz;
 

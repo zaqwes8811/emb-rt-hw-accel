@@ -1,12 +1,462 @@
 # vsim -t ns work.test 
-# Start time: 22:32:28 on Oct 25,2016
+# Start time: 19:23:03 on Nov 13,2016
 # Loading work.test
 # Loading work.ram_sp_sr_sv
-	# vlog *.v; vsim -t ns work.test; do waves.do
-
+# Loading work.memcpy
+vlog *.v
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 19:23:25 on Nov 13,2016
+# vlog -reportprogress 300 simple_ram.v simple_ram_testbench.v 
+# -- Compiling module ram_sp_sr_sv
+# -- Compiling module memcpy
+# -- Compiling module test
+# ** Error: simple_ram_testbench.v(113): near "endmodule": syntax error, unexpected endmodule, expecting ';' or ','
+# End time: 19:23:25 on Nov 13,2016, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# /home/zaqwes/altera/15.0/modelsim_ase/linuxaloem/vlog failed.
+vlog *.v
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 19:23:50 on Nov 13,2016
+# vlog -reportprogress 300 simple_ram.v simple_ram_testbench.v 
+# -- Compiling module ram_sp_sr_sv
+# -- Compiling module memcpy
+# -- Compiling module test
+# 
+# Top level modules:
+# 	test
+# End time: 19:23:50 on Nov 13,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog *.v
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 19:28:43 on Nov 13,2016
+# vlog -reportprogress 300 simple_ram.v simple_ram_testbench.v 
+# -- Compiling module ram_sp_sr_sv
+# -- Compiling module memcpy
+# -- Compiling module test
+# 
+# Top level modules:
+# 	test
+# End time: 19:28:43 on Nov 13,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog *.v
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 19:31:02 on Nov 13,2016
+# vlog -reportprogress 300 simple_ram.v simple_ram_testbench.v 
+# -- Compiling module ram_sp_sr_sv
+# ** Error: simple_ram_testbench.v(24): (vlog-2892) Net type of 'addr' must be explicitly declared.
+# ** Error: simple_ram_testbench.v(28): (vlog-2892) Net type of 'q' must be explicitly declared.
+# ** Error: simple_ram_testbench.v(23): (vlog-2892) Net type of 'clk' must be explicitly declared.
+# ** Error: simple_ram_testbench.v(25): (vlog-2892) Net type of 'we' must be explicitly declared.
+# ** Error: simple_ram_testbench.v(25): (vlog-2892) Net type of 'oe' must be explicitly declared.
+# -- Compiling module memcpy
+# ** Error: simple_ram_testbench.v(54): (vlog-2892) Net type of 'dest' must be explicitly declared.
+# ** Error: simple_ram_testbench.v(55): (vlog-2892) Net type of 'src' must be explicitly declared.
+# ** Error: simple_ram_testbench.v(56): (vlog-2892) Net type of 'num' must be explicitly declared.
+# ** Error: simple_ram_testbench.v(64): (vlog-2892) Net type of 'addr' must be explicitly declared.
+# ** Error: simple_ram_testbench.v(52): (vlog-2892) Net type of 'clk' must be explicitly declared.
+# ** Error: simple_ram_testbench.v(57): (vlog-2892) Net type of 'mmcpy_ena' must be explicitly declared.
+# ** Error: simple_ram_testbench.v(62): (vlog-2892) Net type of 'mmcpy_rd_ena' must be explicitly declared.
+# ** Error: simple_ram_testbench.v(63): (vlog-2892) Net type of 'mmcpy_wr_ena' must be explicitly declared.
+# -- Compiling module test
+# ** Error: simple_ram_testbench.v(201): (vlog-2730) Undefined variable: 'next_state'.
+# End time: 19:31:02 on Nov 13,2016, Elapsed time: 0:00:00
+# Errors: 14, Warnings: 0
+# /home/zaqwes/altera/15.0/modelsim_ase/linuxaloem/vlog failed.
+vlog *.v
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 19:33:32 on Nov 13,2016
+# vlog -reportprogress 300 simple_ram.v simple_ram_testbench.v 
+# -- Compiling module ram_sp_sr_sv
+# -- Compiling module memcpy
+# -- Compiling module test
+# ** Error: simple_ram_testbench.v(121): (vlog-2730) Undefined variable: 'next_state'.
+# End time: 19:33:32 on Nov 13,2016, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# /home/zaqwes/altera/15.0/modelsim_ase/linuxaloem/vlog failed.
+vlog *.v
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 19:33:33 on Nov 13,2016
+# vlog -reportprogress 300 simple_ram.v simple_ram_testbench.v 
+# -- Compiling module ram_sp_sr_sv
+# -- Compiling module memcpy
+# -- Compiling module test
+# ** Error: simple_ram_testbench.v(121): (vlog-2730) Undefined variable: 'next_state'.
+# End time: 19:33:33 on Nov 13,2016, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# /home/zaqwes/altera/15.0/modelsim_ase/linuxaloem/vlog failed.
+vlog *.v
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 19:33:41 on Nov 13,2016
+# vlog -reportprogress 300 simple_ram.v simple_ram_testbench.v 
+# -- Compiling module ram_sp_sr_sv
+# -- Compiling module memcpy
+# -- Compiling module test
+# 
+# Top level modules:
+# 	ram_sp_sr_sv
+# 	memcpy
+# 	test
+# End time: 19:33:41 on Nov 13,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+do waves.do
 vlog *.v; vsim -t ns work.test; do waves.do
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 22:32:43 on Oct 25,2016
+# Start time: 20:45:11 on Nov 13,2016
+# vlog -reportprogress 300 simple_ram.v simple_ram_testbench.v 
+# -- Compiling module ram_sp_sr_sv
+# -- Compiling module memcpy
+# -- Compiling module test
+# ** Warning: simple_ram_testbench.v(120): (vlog-2182) 'state' might be read before written in always_comb or always @* block.
+# 
+# Top level modules:
+# 	ram_sp_sr_sv
+# 	memcpy
+# 	test
+# End time: 20:45:11 on Nov 13,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# vsim 
+# Start time: 20:45:13 on Nov 13,2016
+# Loading work.test
+# ** Error: (vsim-3601) Iteration limit reached at time 5 ns.
+vlog *.v; vsim -t ns work.test; do waves.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 20:46:28 on Nov 13,2016
+# vlog -reportprogress 300 simple_ram.v simple_ram_testbench.v 
+# -- Compiling module ram_sp_sr_sv
+# -- Compiling module memcpy
+# -- Compiling module test
+# ** Warning: simple_ram_testbench.v(120): (vlog-2182) 'state' might be read before written in always_comb or always @* block.
+# 
+# Top level modules:
+# 	ram_sp_sr_sv
+# 	memcpy
+# 	test
+# End time: 20:46:28 on Nov 13,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# vsim 
+# Start time: 20:46:33 on Nov 13,2016
+# Loading work.test
+vlog *.v; vsim -t ns work.test; do waves.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 20:56:10 on Nov 13,2016
+# vlog -reportprogress 300 simple_ram.v simple_ram_testbench.v 
+# -- Compiling module ram_sp_sr_sv
+# -- Compiling module memcpy
+# -- Compiling module test
+# 
+# Top level modules:
+# 	ram_sp_sr_sv
+# 	memcpy
+# 	test
+# End time: 20:56:10 on Nov 13,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 20:56:10 on Nov 13,2016
+# Loading work.test
+vlog *.v; vsim -t ns work.test; do waves.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 21:06:19 on Nov 13,2016
+# vlog -reportprogress 300 simple_ram.v simple_ram_testbench.v 
+# -- Compiling module ram_sp_sr_sv
+# -- Compiling module memcpy
+# -- Compiling module test
+# ** Error: simple_ram_testbench.v(133): near "+=": Operator only allowed in SystemVerilog.
+# End time: 21:06:19 on Nov 13,2016, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# /home/zaqwes/altera/15.0/modelsim_ase/linuxaloem/vlog failed.
+vlog *.v; vsim -t ns work.test; do waves.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 21:06:28 on Nov 13,2016
+# vlog -reportprogress 300 simple_ram.v simple_ram_testbench.v 
+# -- Compiling module ram_sp_sr_sv
+# -- Compiling module memcpy
+# -- Compiling module test
+# 
+# Top level modules:
+# 	ram_sp_sr_sv
+# 	memcpy
+# 	test
+# End time: 21:06:28 on Nov 13,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 21:06:28 on Nov 13,2016
+# Loading work.test
+vlog *.v; vsim -t ns work.test; do waves.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 21:07:05 on Nov 13,2016
+# vlog -reportprogress 300 simple_ram.v simple_ram_testbench.v 
+# -- Compiling module ram_sp_sr_sv
+# -- Compiling module memcpy
+# -- Compiling module test
+# ** Error: simple_ram_testbench.v(54): (vlog-2730) Undefined variable: 'uwr_ena'.
+# ** Error: simple_ram_testbench.v(56): (vlog-2730) Undefined variable: 'gwr_ena'.
+# ** Error: simple_ram_testbench.v(57): (vlog-2730) Undefined variable: 'grd_ena'.
+# ** Error: simple_ram_testbench.v(59): (vlog-2730) Undefined variable: 'urd_addr'.
+# ** Error: simple_ram_testbench.v(60): (vlog-2730) Undefined variable: 'uwr_addr'.
+# ** Error: simple_ram_testbench.v(62): (vlog-2730) Undefined variable: 'q'.
+# ** Error: simple_ram_testbench.v(63): (vlog-2730) Undefined variable: 'mmcpy_ena'.
+# End time: 21:07:05 on Nov 13,2016, Elapsed time: 0:00:00
+# Errors: 7, Warnings: 0
+# /home/zaqwes/altera/15.0/modelsim_ase/linuxaloem/vlog failed.
+vlog *.v; vsim -t ns work.test; do waves.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 21:07:16 on Nov 13,2016
+# vlog -reportprogress 300 simple_ram.v simple_ram_testbench.v 
+# -- Compiling module ram_sp_sr_sv
+# -- Compiling module memcpy
+# -- Compiling module test
+# ** Error: simple_ram_testbench.v(70): (vlog-2730) Undefined variable: 'uwr_addr'.
+# ** Error: simple_ram_testbench.v(71): (vlog-2730) Undefined variable: 'q'.
+# End time: 21:07:16 on Nov 13,2016, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+# /home/zaqwes/altera/15.0/modelsim_ase/linuxaloem/vlog failed.
+vlog *.v; vsim -t ns work.test; do waves.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 21:07:28 on Nov 13,2016
+# vlog -reportprogress 300 simple_ram.v simple_ram_testbench.v 
+# -- Compiling module ram_sp_sr_sv
+# -- Compiling module memcpy
+# -- Compiling module test
+# 
+# Top level modules:
+# 	ram_sp_sr_sv
+# 	memcpy
+# 	test
+# End time: 21:07:29 on Nov 13,2016, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 21:07:29 on Nov 13,2016
+# Loading work.test
+vlog *.v; vsim -t ns work.test; do waves.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 21:09:03 on Nov 13,2016
+# vlog -reportprogress 300 simple_ram.v simple_ram_testbench.v 
+# -- Compiling module ram_sp_sr_sv
+# -- Compiling module memcpy
+# -- Compiling module test
+# 
+# Top level modules:
+# 	ram_sp_sr_sv
+# 	memcpy
+# 	test
+# End time: 21:09:03 on Nov 13,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 21:09:03 on Nov 13,2016
+# Loading work.test
+vlog *.v; vsim -t ns work.test; do waves.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 21:09:40 on Nov 13,2016
+# vlog -reportprogress 300 simple_ram.v simple_ram_testbench.v 
+# -- Compiling module ram_sp_sr_sv
+# -- Compiling module memcpy
+# -- Compiling module test
+# 
+# Top level modules:
+# 	ram_sp_sr_sv
+# 	memcpy
+# 	test
+# End time: 21:09:40 on Nov 13,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 21:09:40 on Nov 13,2016
+# Loading work.test
+vlog *.v; vsim -t ns work.test; do waves.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 21:10:07 on Nov 13,2016
+# vlog -reportprogress 300 simple_ram.v simple_ram_testbench.v 
+# -- Compiling module ram_sp_sr_sv
+# -- Compiling module memcpy
+# -- Compiling module test
+# 
+# Top level modules:
+# 	ram_sp_sr_sv
+# 	memcpy
+# 	test
+# End time: 21:10:07 on Nov 13,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 21:10:08 on Nov 13,2016
+# Loading work.test
+vlog *.v; vsim -t ns work.test; do waves.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 21:15:25 on Nov 13,2016
+# vlog -reportprogress 300 simple_ram.v simple_ram_testbench.v 
+# -- Compiling module ram_sp_sr_sv
+# -- Compiling module memcpy
+# -- Compiling module test
+# 
+# Top level modules:
+# 	ram_sp_sr_sv
+# 	memcpy
+# 	test
+# End time: 21:15:26 on Nov 13,2016, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 21:15:26 on Nov 13,2016
+# Loading work.test
+vlog *.v; vsim -t ns work.test; do waves.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 21:16:24 on Nov 13,2016
+# vlog -reportprogress 300 simple_ram.v simple_ram_testbench.v 
+# -- Compiling module ram_sp_sr_sv
+# -- Compiling module memcpy
+# -- Compiling module test
+# 
+# Top level modules:
+# 	ram_sp_sr_sv
+# 	memcpy
+# 	test
+# End time: 21:16:24 on Nov 13,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 21:16:24 on Nov 13,2016
+# Loading work.test
+vlog *.v; vsim -t ns work.test; do waves.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 21:22:03 on Nov 13,2016
+# vlog -reportprogress 300 simple_ram.v simple_ram_testbench.v 
+# -- Compiling module ram_sp_sr_sv
+# -- Compiling module memcpy
+# -- Compiling module test
+# 
+# Top level modules:
+# 	ram_sp_sr_sv
+# 	memcpy
+# 	test
+# End time: 21:22:03 on Nov 13,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 21:22:04 on Nov 13,2016
+# Loading work.test
+vlog *.v; vsim -t ns work.test; do waves.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 21:22:32 on Nov 13,2016
+# vlog -reportprogress 300 simple_ram.v simple_ram_testbench.v 
+# -- Compiling module ram_sp_sr_sv
+# -- Compiling module memcpy
+# -- Compiling module test
+# 
+# Top level modules:
+# 	ram_sp_sr_sv
+# 	memcpy
+# 	test
+# End time: 21:22:32 on Nov 13,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 21:22:32 on Nov 13,2016
+# Loading work.test
+vlog *.v; vsim -t ns work.test; do waves.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 21:23:31 on Nov 13,2016
+# vlog -reportprogress 300 simple_ram.v simple_ram_testbench.v 
+# -- Compiling module ram_sp_sr_sv
+# -- Compiling module memcpy
+# -- Compiling module test
+# 
+# Top level modules:
+# 	ram_sp_sr_sv
+# 	memcpy
+# 	test
+# End time: 21:23:31 on Nov 13,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 21:23:32 on Nov 13,2016
+# Loading work.test
+vlog *.v; vsim -t ns work.test; do waves.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 21:24:45 on Nov 13,2016
+# vlog -reportprogress 300 simple_ram.v simple_ram_testbench.v 
+# -- Compiling module ram_sp_sr_sv
+# -- Compiling module memcpy
+# -- Compiling module test
+# 
+# Top level modules:
+# 	ram_sp_sr_sv
+# 	memcpy
+# 	test
+# End time: 21:24:45 on Nov 13,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 21:24:45 on Nov 13,2016
+# Loading work.test
+vlog *.v; vsim -t ns work.test; do waves.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 21:39:24 on Nov 13,2016
+# vlog -reportprogress 300 simple_ram.v simple_ram_testbench.v 
+# -- Compiling module ram_sp_sr_sv
+# -- Compiling module memcpy
+# -- Compiling module test
+# 
+# Top level modules:
+# 	ram_sp_sr_sv
+# 	memcpy
+# 	test
+# End time: 21:39:24 on Nov 13,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 21:39:25 on Nov 13,2016
+# Loading work.test
+vlog *.v; vsim -t ns work.test; do waves.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 22:02:07 on Nov 13,2016
+# vlog -reportprogress 300 simple_ram.v simple_ram_testbench.v 
+# -- Compiling module ram_sp_sr_sv
+# ** Error: simple_ram.v(9): (vlog-2730) Undefined variable: 'ADDR_WITH'.
+# ** Error: simple_ram.v(9): (vlog-2388) 'addr' already declared in this scope (ram_sp_sr_sv).
+# ** Error: simple_ram.v(10): (vlog-2730) Undefined variable: 'DATA_WITH'.
+# ** Error: simple_ram.v(10): (vlog-2388) 'q' already declared in this scope (ram_sp_sr_sv).
+# ** Error: simple_ram.v(15): 'DATA_WITH' already declared in this scope.
+# ** Error: simple_ram.v(16): 'ADDR_WITH' already declared in this scope.
+# ** Error: simple_ram.v(9): Identifier must be declared with a port mode: addr.
+# ** Error: simple_ram.v(10): Identifier must be declared with a port mode: q.
+# -- Compiling module memcpy
+# -- Compiling module test
+# End time: 22:02:07 on Nov 13,2016, Elapsed time: 0:00:00
+# Errors: 8, Warnings: 0
+# /home/zaqwes/altera/15.0/modelsim_ase/linuxaloem/vlog failed.
+vlog *.v; vsim -t ns work.test; do waves.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 22:03:04 on Nov 13,2016
+# vlog -reportprogress 300 simple_ram.v simple_ram_testbench.v 
+# -- Compiling module ram_sp_sr_sv
+# ** Error: simple_ram.v(25): (vlog-2388) 'rd_q' already declared in this scope (ram_sp_sr_sv).
+# -- Compiling module memcpy
+# -- Compiling module test
+# End time: 22:03:04 on Nov 13,2016, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# /home/zaqwes/altera/15.0/modelsim_ase/linuxaloem/vlog failed.
+vlog *.v; vsim -t ns work.test; do waves.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 22:03:35 on Nov 13,2016
+# vlog -reportprogress 300 simple_ram.v simple_ram_testbench.v 
+# -- Compiling module ram_sp_sr_sv
+# ** Error: simple_ram.v(25): (vlog-2388) 'rd_q' already declared in this scope (ram_sp_sr_sv).
+# -- Compiling module memcpy
+# -- Compiling module test
+# End time: 22:03:35 on Nov 13,2016, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# /home/zaqwes/altera/15.0/modelsim_ase/linuxaloem/vlog failed.
+vlog *.v; vsim -t ns work.test; do waves.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 22:04:12 on Nov 13,2016
+# vlog -reportprogress 300 simple_ram.v simple_ram_testbench.v 
+# -- Compiling module ram_sp_sr_sv
+# -- Compiling module memcpy
+# -- Compiling module test
+# 
+# Top level modules:
+# 	ram_sp_sr_sv
+# 	memcpy
+# 	test
+# End time: 22:04:12 on Nov 13,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 22:04:13 on Nov 13,2016
+# Loading work.test
+vlog *.v; vsim -t ns work.test; do waves.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 22:06:23 on Nov 13,2016
 # vlog -reportprogress 300 simple_ram.v simple_ram_testbench.v 
 # -- Compiling module ram_sp_sr_sv
 # -- Compiling module memcpy
@@ -15,15 +465,15 @@ vlog *.v; vsim -t ns work.test; do waves.do
 # Top level modules:
 # 	memcpy
 # 	test
-# End time: 22:32:43 on Oct 25,2016, Elapsed time: 0:00:00
+# End time: 22:06:23 on Nov 13,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim 
-# Start time: 22:32:44 on Oct 25,2016
+# Start time: 22:06:23 on Nov 13,2016
 # Loading work.test
 # Loading work.ram_sp_sr_sv
 vlog *.v; vsim -t ns work.test; do waves.do
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 22:33:16 on Oct 25,2016
+# Start time: 22:07:19 on Nov 13,2016
 # vlog -reportprogress 300 simple_ram.v simple_ram_testbench.v 
 # -- Compiling module ram_sp_sr_sv
 # -- Compiling module memcpy
@@ -32,15 +482,15 @@ vlog *.v; vsim -t ns work.test; do waves.do
 # Top level modules:
 # 	memcpy
 # 	test
-# End time: 22:33:16 on Oct 25,2016, Elapsed time: 0:00:00
+# End time: 22:07:19 on Nov 13,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim 
-# Start time: 22:33:17 on Oct 25,2016
+# Start time: 22:07:19 on Nov 13,2016
 # Loading work.test
 # Loading work.ram_sp_sr_sv
 vlog *.v; vsim -t ns work.test; do waves.do
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 22:36:36 on Oct 25,2016
+# Start time: 22:07:37 on Nov 13,2016
 # vlog -reportprogress 300 simple_ram.v simple_ram_testbench.v 
 # -- Compiling module ram_sp_sr_sv
 # -- Compiling module memcpy
@@ -49,258 +499,206 @@ vlog *.v; vsim -t ns work.test; do waves.do
 # Top level modules:
 # 	memcpy
 # 	test
-# End time: 22:36:36 on Oct 25,2016, Elapsed time: 0:00:00
+# End time: 22:07:37 on Nov 13,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim 
-# Start time: 22:36:36 on Oct 25,2016
+# Start time: 22:07:38 on Nov 13,2016
 # Loading work.test
 # Loading work.ram_sp_sr_sv
 vlog *.v; vsim -t ns work.test; do waves.do
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 22:51:17 on Oct 25,2016
+# Start time: 22:19:33 on Nov 13,2016
 # vlog -reportprogress 300 simple_ram.v simple_ram_testbench.v 
 # -- Compiling module ram_sp_sr_sv
 # -- Compiling module memcpy
 # -- Compiling module test
 # 
 # Top level modules:
+# 	memcpy
 # 	test
-# End time: 22:51:17 on Oct 25,2016, Elapsed time: 0:00:00
+# End time: 22:19:33 on Nov 13,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim 
-# Start time: 22:51:18 on Oct 25,2016
+# Start time: 22:19:33 on Nov 13,2016
 # Loading work.test
 # Loading work.ram_sp_sr_sv
-# Loading work.memcpy
-vlog *.v; vsim -t ns work.test; do waves.do
-# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 22:51:45 on Oct 25,2016
-# vlog -reportprogress 300 simple_ram.v simple_ram_testbench.v 
-# -- Compiling module ram_sp_sr_sv
-# -- Compiling module memcpy
-# -- Compiling module test
-# 
-# Top level modules:
-# 	test
-# End time: 22:51:45 on Oct 25,2016, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vsim 
-# Start time: 22:51:45 on Oct 25,2016
-# Loading work.test
-# Loading work.ram_sp_sr_sv
-# Loading work.memcpy
-vlog *.v; vsim -t ns work.test; do waves.do
-# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 23:00:30 on Oct 25,2016
-# vlog -reportprogress 300 simple_ram.v simple_ram_testbench.v 
-# -- Compiling module ram_sp_sr_sv
-# -- Compiling module memcpy
-# -- Compiling module test
-# 
-# Top level modules:
-# 	test
-# End time: 23:00:30 on Oct 25,2016, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vsim 
-# Start time: 23:00:30 on Oct 25,2016
-# Loading work.test
-# Loading work.ram_sp_sr_sv
-# Loading work.memcpy
-# ** Error: (vsim-3053) simple_ram_testbench.v(39): Illegal output or inout port connection for port 'addr'.
-#         Region: /test/mc
+# ** Error: (vsim-3043) simple_ram.v(34): Unresolved reference to 'ram'.
+#         Region: /test/ddr
 # Error loading design
 # ** Error: No Design Loaded!
 # Error in macro ./waves.do line 2
 # No Design Loaded!
 #     while executing
-# "run 80"
-# Error opening /home/zaqwes/git/hdl-fpga/libc_hdl/(vsim-3053) simple_ram_testbench.v
-# Path name '/home/zaqwes/git/hdl-fpga/libc_hdl/(vsim-3053) simple_ram_testbench.v' doesn't exist.
-# A time value could not be extracted from the current line
+# "run 400"
 vlog *.v; vsim -t ns work.test; do waves.do
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 23:01:02 on Oct 25,2016
+# Start time: 22:19:54 on Nov 13,2016
 # vlog -reportprogress 300 simple_ram.v simple_ram_testbench.v 
 # -- Compiling module ram_sp_sr_sv
 # -- Compiling module memcpy
 # -- Compiling module test
 # 
 # Top level modules:
+# 	memcpy
 # 	test
-# End time: 23:01:02 on Oct 25,2016, Elapsed time: 0:00:00
+# End time: 22:19:54 on Nov 13,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim 
-# Start time: 23:01:02 on Oct 25,2016
+# Start time: 22:19:54 on Nov 13,2016
 # Loading work.test
 # Loading work.ram_sp_sr_sv
-# Loading work.memcpy
 vlog *.v; vsim -t ns work.test; do waves.do
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 23:02:39 on Oct 25,2016
+# Start time: 22:20:27 on Nov 13,2016
 # vlog -reportprogress 300 simple_ram.v simple_ram_testbench.v 
 # -- Compiling module ram_sp_sr_sv
 # -- Compiling module memcpy
 # -- Compiling module test
 # 
 # Top level modules:
+# 	memcpy
 # 	test
-# End time: 23:02:39 on Oct 25,2016, Elapsed time: 0:00:00
+# End time: 22:20:27 on Nov 13,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim 
-# Start time: 23:02:39 on Oct 25,2016
+# Start time: 22:20:27 on Nov 13,2016
 # Loading work.test
 # Loading work.ram_sp_sr_sv
-# Loading work.memcpy
 vlog *.v; vsim -t ns work.test; do waves.do
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 23:03:30 on Oct 25,2016
-# vlog -reportprogress 300 simple_ram.v simple_ram_testbench.v 
-# -- Compiling module ram_sp_sr_sv
-# -- Compiling module memcpy
-# ** Error: simple_ram.v(68): (vlog-LRM-2401) Extra semicolon found. This is permitted in SystemVerilog, but not permitted in Verilog.
-# -- Compiling module test
-# End time: 23:03:30 on Oct 25,2016, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-# /home/zaqwes/altera/15.0/modelsim_ase/linuxaloem/vlog failed.
-vlog *.v; vsim -t ns work.test; do waves.do
-# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 23:03:36 on Oct 25,2016
+# Start time: 22:20:44 on Nov 13,2016
 # vlog -reportprogress 300 simple_ram.v simple_ram_testbench.v 
 # -- Compiling module ram_sp_sr_sv
 # -- Compiling module memcpy
 # -- Compiling module test
 # 
 # Top level modules:
+# 	memcpy
 # 	test
-# End time: 23:03:36 on Oct 25,2016, Elapsed time: 0:00:00
+# End time: 22:20:44 on Nov 13,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim 
-# Start time: 23:03:36 on Oct 25,2016
+# Start time: 22:20:45 on Nov 13,2016
 # Loading work.test
 # Loading work.ram_sp_sr_sv
-# Loading work.memcpy
 vlog *.v; vsim -t ns work.test; do waves.do
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 23:04:19 on Oct 25,2016
+# Start time: 22:24:18 on Nov 13,2016
 # vlog -reportprogress 300 simple_ram.v simple_ram_testbench.v 
 # -- Compiling module ram_sp_sr_sv
 # -- Compiling module memcpy
 # -- Compiling module test
 # 
 # Top level modules:
+# 	memcpy
 # 	test
-# End time: 23:04:19 on Oct 25,2016, Elapsed time: 0:00:00
+# End time: 22:24:18 on Nov 13,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim 
-# Start time: 23:04:19 on Oct 25,2016
+# Start time: 22:24:18 on Nov 13,2016
 # Loading work.test
 # Loading work.ram_sp_sr_sv
-# Loading work.memcpy
 vlog *.v; vsim -t ns work.test; do waves.do
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 23:04:29 on Oct 25,2016
+# Start time: 22:25:00 on Nov 13,2016
 # vlog -reportprogress 300 simple_ram.v simple_ram_testbench.v 
 # -- Compiling module ram_sp_sr_sv
 # -- Compiling module memcpy
 # -- Compiling module test
 # 
 # Top level modules:
+# 	memcpy
 # 	test
-# End time: 23:04:29 on Oct 25,2016, Elapsed time: 0:00:00
+# End time: 22:25:00 on Nov 13,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim 
-# Start time: 23:04:29 on Oct 25,2016
+# Start time: 22:25:00 on Nov 13,2016
 # Loading work.test
 # Loading work.ram_sp_sr_sv
-# Loading work.memcpy
 vlog *.v; vsim -t ns work.test; do waves.do
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 23:09:50 on Oct 25,2016
-# vlog -reportprogress 300 simple_ram.v simple_ram_testbench.v 
-# -- Compiling module ram_sp_sr_sv
-# -- Compiling module memcpy
-# ** Error: simple_ram.v(75): near ")": syntax error, unexpected ')', expecting *) or ';' or ','
-# ** Error: simple_ram_testbench.v(2): Compiler directive `default_nettype is not allowed inside a module.
-# ** Error: simple_ram_testbench.v(10): (vlog-2388) 'clk' already declared in this scope (memcpy).
-# ** Error: simple_ram_testbench.v(28): (vlog-2388) 'mmcpy_ena' already declared in this scope (memcpy).
-# ** Error: simple_ram_testbench.v(29): (vlog-2388) 'dest' already declared in this scope (memcpy).
-# ** Error: simple_ram_testbench.v(30): (vlog-2388) 'src' already declared in this scope (memcpy).
-# ** Error: simple_ram_testbench.v(31): (vlog-2388) 'num' already declared in this scope (memcpy).
-# ** Error: simple_ram_testbench.v(32): (vlog-2388) 'mmcpy_rd_ena' already declared in this scope (memcpy).
-# ** Error: simple_ram_testbench.v(33): (vlog-2388) 'mmcpy_wr_ena' already declared in this scope (memcpy).
-# ** Error: simple_ram_testbench.v(94): (vlog-2730) Undefined variable: 'urd_ena'.
-# End time: 23:09:50 on Oct 25,2016, Elapsed time: 0:00:00
-# Errors: 10, Warnings: 0
-# /home/zaqwes/altera/15.0/modelsim_ase/linuxaloem/vlog failed.
-vlog *.v; vsim -t ns work.test; do waves.do
-# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 23:10:04 on Oct 25,2016
-# vlog -reportprogress 300 simple_ram.v simple_ram_testbench.v 
-# -- Compiling module ram_sp_sr_sv
-# -- Compiling module memcpy
-# ** Error: simple_ram.v(71): (vlog-2730) Undefined variable: 'addr_ptr'.
-# ** Error: simple_ram.v(73): (vlog-2388) 'addr_ptr' already declared in this scope (memcpy).
-# ** Error: simple_ram.v(75): near ")": syntax error, unexpected ')', expecting *) or ';' or ','
-# ** Error: simple_ram_testbench.v(2): Compiler directive `default_nettype is not allowed inside a module.
-# ** Error: simple_ram_testbench.v(10): (vlog-2388) 'clk' already declared in this scope (memcpy).
-# ** Error: simple_ram_testbench.v(28): (vlog-2388) 'mmcpy_ena' already declared in this scope (memcpy).
-# ** Error: simple_ram_testbench.v(29): (vlog-2388) 'dest' already declared in this scope (memcpy).
-# ** Error: simple_ram_testbench.v(30): (vlog-2388) 'src' already declared in this scope (memcpy).
-# ** Error: simple_ram_testbench.v(31): (vlog-2388) 'num' already declared in this scope (memcpy).
-# ** Error: simple_ram_testbench.v(32): (vlog-2388) 'mmcpy_rd_ena' already declared in this scope (memcpy).
-# ** Error: simple_ram_testbench.v(33): (vlog-2388) 'mmcpy_wr_ena' already declared in this scope (memcpy).
-# ** Error: simple_ram_testbench.v(94): (vlog-2730) Undefined variable: 'urd_ena'.
-# End time: 23:10:04 on Oct 25,2016, Elapsed time: 0:00:00
-# Errors: 12, Warnings: 0
-# /home/zaqwes/altera/15.0/modelsim_ase/linuxaloem/vlog failed.
-	# vlog *.v; vsim -t ns work.test; do waves.do
-	# vlog *.v; vsim -t ns work.test; do waves.do
-vlog *.v; vsim -t ns work.test; do waves.do
-# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 23:11:00 on Oct 25,2016
-# vlog -reportprogress 300 simple_ram.v simple_ram_testbench.v 
-# -- Compiling module ram_sp_sr_sv
-# -- Compiling module memcpy
-# ** Error: simple_ram.v(75): near ")": syntax error, unexpected ')', expecting *) or ';' or ','
-# ** Error: simple_ram_testbench.v(2): Compiler directive `default_nettype is not allowed inside a module.
-# ** Error: simple_ram_testbench.v(10): (vlog-2388) 'clk' already declared in this scope (memcpy).
-# ** Error: simple_ram_testbench.v(28): (vlog-2388) 'mmcpy_ena' already declared in this scope (memcpy).
-# ** Error: simple_ram_testbench.v(29): (vlog-2388) 'dest' already declared in this scope (memcpy).
-# ** Error: simple_ram_testbench.v(30): (vlog-2388) 'src' already declared in this scope (memcpy).
-# ** Error: simple_ram_testbench.v(31): (vlog-2388) 'num' already declared in this scope (memcpy).
-# ** Error: simple_ram_testbench.v(32): (vlog-2388) 'mmcpy_rd_ena' already declared in this scope (memcpy).
-# ** Error: simple_ram_testbench.v(33): (vlog-2388) 'mmcpy_wr_ena' already declared in this scope (memcpy).
-# ** Error: simple_ram_testbench.v(94): (vlog-2730) Undefined variable: 'urd_ena'.
-# End time: 23:11:00 on Oct 25,2016, Elapsed time: 0:00:00
-# Errors: 10, Warnings: 0
-# /home/zaqwes/altera/15.0/modelsim_ase/linuxaloem/vlog failed.
-vlog *.v; vsim -t ns work.test; do waves.do
-# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 23:11:15 on Oct 25,2016
-# vlog -reportprogress 300 simple_ram.v simple_ram_testbench.v 
-# -- Compiling module ram_sp_sr_sv
-# -- Compiling module memcpy
-# -- Compiling module test
-# ** Error: simple_ram_testbench.v(94): (vlog-2730) Undefined variable: 'urd_ena'.
-# End time: 23:11:15 on Oct 25,2016, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-# /home/zaqwes/altera/15.0/modelsim_ase/linuxaloem/vlog failed.
-vlog *.v; vsim -t ns work.test; do waves.do
-# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 23:11:39 on Oct 25,2016
+# Start time: 22:25:25 on Nov 13,2016
 # vlog -reportprogress 300 simple_ram.v simple_ram_testbench.v 
 # -- Compiling module ram_sp_sr_sv
 # -- Compiling module memcpy
 # -- Compiling module test
 # 
 # Top level modules:
+# 	memcpy
 # 	test
-# End time: 23:11:39 on Oct 25,2016, Elapsed time: 0:00:00
+# End time: 22:25:25 on Nov 13,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim 
-# Start time: 23:11:39 on Oct 25,2016
+# Start time: 22:25:25 on Nov 13,2016
 # Loading work.test
 # Loading work.ram_sp_sr_sv
-# Loading work.memcpy
-# End time: 23:12:23 on Oct 25,2016, Elapsed time: 0:00:44
+vlog *.v; vsim -t ns work.test; do waves.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 22:25:53 on Nov 13,2016
+# vlog -reportprogress 300 simple_ram.v simple_ram_testbench.v 
+# -- Compiling module ram_sp_sr_sv
+# -- Compiling module memcpy
+# -- Compiling module test
+# 
+# Top level modules:
+# 	memcpy
+# 	test
+# End time: 22:25:53 on Nov 13,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 22:25:53 on Nov 13,2016
+# Loading work.test
+# Loading work.ram_sp_sr_sv
+vlog *.v; vsim -t ns work.test; do waves.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 22:26:11 on Nov 13,2016
+# vlog -reportprogress 300 simple_ram.v simple_ram_testbench.v 
+# -- Compiling module ram_sp_sr_sv
+# -- Compiling module memcpy
+# -- Compiling module test
+# 
+# Top level modules:
+# 	memcpy
+# 	test
+# End time: 22:26:11 on Nov 13,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 22:26:11 on Nov 13,2016
+# Loading work.test
+# Loading work.ram_sp_sr_sv
+vlog *.v; vsim -t ns work.test; do waves.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 22:26:19 on Nov 13,2016
+# vlog -reportprogress 300 simple_ram.v simple_ram_testbench.v 
+# -- Compiling module ram_sp_sr_sv
+# -- Compiling module memcpy
+# -- Compiling module test
+# 
+# Top level modules:
+# 	memcpy
+# 	test
+# End time: 22:26:19 on Nov 13,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 22:26:19 on Nov 13,2016
+# Loading work.test
+# Loading work.ram_sp_sr_sv
+vlog *.v; vsim -t ns work.test; do waves.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 22:26:43 on Nov 13,2016
+# vlog -reportprogress 300 simple_ram.v simple_ram_testbench.v 
+# -- Compiling module ram_sp_sr_sv
+# -- Compiling module memcpy
+# -- Compiling module test
+# 
+# Top level modules:
+# 	memcpy
+# 	test
+# End time: 22:26:43 on Nov 13,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 22:26:43 on Nov 13,2016
+# Loading work.test
+# Loading work.ram_sp_sr_sv
+# End time: 22:27:15 on Nov 13,2016, Elapsed time: 0:00:32
 # Errors: 0, Warnings: 0

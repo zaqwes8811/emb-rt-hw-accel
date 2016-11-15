@@ -1,0 +1,17 @@
+Metadata-Version: 1.0
+Name: deModel
+Version: 0.2
+Summary: Package to model fixed point arithmetic algorithms.
+Home-page: http://www.dilloneng.com
+Author: Dillon Engineering
+Author-email: info@dilloneng.com
+License: LGPL
+Download-URL: http://www.dilloneng.com/documents/downloads
+Description: The Python package deModel provides a fixed point data
+        type for Python, allowing the development of algorithm models in fixed
+        point arithmetic. The basic data type is represented by the class
+        DeFixedInt, which stores data as an integer and keeps information about
+        the decimal point. When performing basic arithmetic operations with this
+        data type, the decimal point is adjusted based on some fundamental rules
+        of fixed point arithmetic.
+Platform: Any

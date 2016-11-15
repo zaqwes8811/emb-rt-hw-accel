@@ -15,3 +15,5 @@ http://biorob2.epfl.ch/pages/studproj/birg67936/rapport.pdf
 
 Need:
 - Image proc - ML (classifiers/ANN)
+
+# thinks

@@ -1,0 +1,7 @@
+
+# Знаковые операции
+http://www.uccs.edu/~gtumbush/published_papers/Tumbush%20DVCon%2005.pdf
+http://web.mit.edu/6.111/www/f2012/handouts/L08.pdf  - from MIT
+
+# Gotchas
+http://www.sutherland-hdl.com/papers/2006-SNUG-Boston_standard_gotchas_presentation.pdf

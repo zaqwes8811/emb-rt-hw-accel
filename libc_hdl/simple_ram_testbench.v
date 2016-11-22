@@ -1,44 +1,76 @@
 // trick: сперва писать в тестбенче, а потом выделить модуль
+// vlog *.v; vsim -t ns work.test; do waves.do
 
 `timescale 10ns/1ps
-`default_nettype none
+//`default_nettype none
+
+
+//============== Memories ===============================
+
+module Mats(
+	clk, addr, q, rd_q,	we,	oe);
+
+parameter ADDR_WITH = 8;
+parameter RAW_DEPTH = 1 << ADDR_WITH;
+
+input clk;
+input [ADDR_WITH-1:0] addr;
+input we, oe;
+
+// //
+input [8-1:0] q;
+output reg [8-1:0] rd_q;
+
+//
+reg [8-1:0] ram [0:RAW_DEPTH-1]; // change order
+
+parameter MEM_INIT_FILE = "src.mif";
+
+initial begin
+	if (MEM_INIT_FILE != "") begin
+		$readmemh(MEM_INIT_FILE, ram);
+	end
+end
+
+// почему пишет сразу? похоже не сразу а по заднему фронту данных
+always @(posedge clk)
+	if ( we )
+		ram[addr] <= q;  // => ?
+
+always @(posedge clk)
+	if (!we && oe)
+		rd_q <= ram[addr];  // => ?
+	else 
+		rd_q <= 8'bz;
+
+endmodule
+
+
+//=====================================================
+
 module test;
+
+`define DELAY_SIZE 4  // fixme: -1?? сколько триггеров?
 
 // $dump*
 // http://www.referencedesigner.com/tutorials/verilog/verilog_62.php
 
-
-// Outputs to DUT (DUT inputs)
 reg clk = 0;
-// Inputs from DUT (DUT outputs)
 reg [7:0] tick;
-
-// Data
 reg [7:0] q;
+reg [7:0] q0;
 
-// // Util
-// reg uwr_ena;
-// reg urd_ena;
-// reg [7:0] urd_addr;
-// reg [7:0] uwr_addr;
-
-// // memcopy
-// reg mmcpy_ena;
-// wire [7:0] dest = 4;
-// wire [7:0] src = 0;
-// wire [7:0] num = 8;
-// wire mmcpy_rd_ena;
-// wire mmcpy_wr_ena;
-// wire [7:0] mmcpy_addr;
-
-
-// Instances
-// ram_sp_sr_sv dut(clk, ddr_addr, q, ddr_out, ddr_wr_ena, ddr_rd_ena);
-// memcpy mc(
-// 	clk, 
-// 	dest, src, num, mmcpy_ena,
-// 	mmcpy_rd_ena, mmcpy_wr_ena, mmcpy_addr
-// );
+// Vars
+wire [7:0] store_time = 5;
+// Mats
+// fixme: image shape - cols, rows
+reg [7:0] src [0 : (1 << 8) - 1];
+reg [7:0] dst [0 : (1 << 8) - 1];
+reg [7:0] src_addr;
+reg [7:0] dst_addr;
+reg data_valid;
+reg [7:0] tapped_line0[`DELAY_SIZE-1:0];
+reg [8:0] sum;  // fixme: signed?
 
 //=======================================================
 
@@ -46,156 +78,69 @@ always #1 clk=~clk;
 
 initial
 begin
-	// uwr_ena = 0;
 	tick = 0;
-	// ddr_wr_ena = 0;
-	// ddr_rd_ena = 0;
-
-	// urd_addr = 0;
-	// uwr_addr = 0;
-	
 	q = 0;
-	// mmcpy_ena = 0;
+	$readmemh("src.mif", src);
+	src_addr = 0;
+	dst_addr = 0;
+	data_valid = 0;
 end
 
 //=======================================================
 
 always @(posedge clk) begin
+	// fixme: как быть с переполнениями?
 	tick <= tick + 1; 
-	// uwr_addr <= tick;
-	q <= $random;
+	// q <= $random;
+	data_valid <= 1;
+	
+	if (data_valid)
+		dst_addr <= dst_addr + 1;
 end
 
-// always @(posedge clk)
-// 	if (tick == 0)
-// 		uwr_ena <= 1;
-// 	else if (tick == 4)
-// 		uwr_ena <= 0;
+always @(posedge clk) begin
+	if (data_valid)
+		dst[dst_addr] <= q;  
 
-// // fixme: for urd_ena
-
-// always @(posedge clk)
-//  	if (tick == 5)
-//  		mmcpy_ena <= 1;
-//  	else if (tick == 9)
-//  		mmcpy_ena <= 0;
-
-// always @(*) begin
-// 	if(mmcpy_ena) begin
-// 		// connect memcopy
-// 		ddr_addr = mmcpy_addr;
-// 		ddr_wr_ena = mmcpy_wr_ena;
-// 		ddr_rd_ena = mmcpy_rd_ena;
-// 	end
-// 	else begin
-// 		// for util ops
-// 		ddr_addr = uwr_addr;
-// 		ddr_wr_ena = uwr_ena;
-// 		ddr_rd_ena = urd_ena;
-// 	end
-
-// end
-
-//================== ddr ====================
-// Mem interface
-reg [7:0] ddr_addr;
-reg ddr_rd_ena;
-reg ddr_wr_ena;
-wire [7:0] ddr_out;
-
-ram_sp_sr_sv ddr(clk, ddr_addr, q, ddr_out, ddr_wr_ena, ddr_rd_ena);
-
-//=============== copy fsm ==================
-
-reg [1:0] state, next_state;
-reg start;  // input
-reg done;  // output
-wire [7:0] src = 4;  // in
-wire [7:0] dst = 7;  // in
-wire [7:0] num = 5;  // in
-reg hard_fault;  // fixme: higher level check?
-reg [7:0] src_ptr;
-reg [7:0] dst_ptr;
-parameter IDLE = 2'b00, 
-	WAIT_COPY_RES = 2'b01,
-	READ_MEM = 2'b10;
-
-initial
-begin
-	state = IDLE;
-	next_state = IDLE;
-	start = 0;
-	done = 0;
-	//src_ptr = 0;  // never mind
-
-	hard_fault = 0;
-
-	ddr_rd_ena = 1;
-	ddr_wr_ena = 0;
+	q0 <= src[src_addr];
 end
 
-
-always @(*) begin
-	next_state = state;
-	case ( state )
-		IDLE: begin
-			if( start ) begin
-				src_ptr = src;
-				dst_ptr = dst;
-				done = 1'b0;
-				next_state = WAIT_COPY_RES;
-			end
-		end
-
-		WAIT_COPY_RES: begin
-			if( src_ptr == src + num )
-				done = 1'b1;
-
-			if( done ) begin
-				next_state = READ_MEM;
-			end
-		end
-		READ_MEM: begin
-			next_state = IDLE;
-		end
-	endcase
-end
-
-always @(*) begin
-	if (tick == 3)
-		start = 1;
-	else
-		start = 0;
-
-	// when done	
-
-	ddr_addr = src_ptr;
-end
-
-// transitions
-always @ (posedge clk) 
-	state <= next_state;
-
-always @ (posedge clk)
-	if ( !done ) begin
-		src_ptr <= src_ptr + 1;
-		dst_ptr <= dst_ptr + 1;
+always @ (posedge clk) begin
+	if (dst_addr == store_time) begin
+		$writememh("dst.mif",dst);
 	end
+end
 
-//===========================================
-// connect to memcopy
+always @(*) begin
+	// dst_addr = tick;
+	src_addr = tick;
+	q = tapped_line0[`DELAY_SIZE-1];
+	//q0 = 
+
+	tapped_line0[0] = q0;
+end
+
+//=====================================================
+
+// Gotchas:
+//http://www.sutherland-hdl.com/papers/2007-SNUG-SanJose_gotcha_again_presentation.pdf
+integer i;
+always @ (posedge clk) begin
+	for(i = 1; i < `DELAY_SIZE; i = i+1)
+		tapped_line0[i] <= tapped_line0[i-1];
+end
+
+integer j;
+integer tmp;
+always @(*) begin
+	// for(j = 0; j < 3; j = j + 1) begin
+	// 	tmp = tmp + tapped_line0[j];
+	// end
+	sum = tapped_line0[0] + tapped_line0[1] + tapped_line0[2];
+end
 
 endmodule
 
-// always @(posedge clk)
-// 	if (tick == 4)
-// 		ddr_rd_ena <= 1;
-// 	else if (tick == 8)
-// 		ddr_rd_ena <= 0;
-// always @(posedge clk)
-// 	if (ddr_rd_ena)
-// 		urd_addr <= urd_addr + 1;
-// 	else if(ddr_wr_ena)
-// 		urd_addr <= 0;
-// if( ddr_rd_ena && !ddr_wr_ena )
-// 	ddr_addr = urd_addr;	
+
+
+

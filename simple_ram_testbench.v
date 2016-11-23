@@ -4,9 +4,71 @@
 `timescale 10ns/1ps
 //`default_nettype none
 
+//=================== int ariphm 2001 ==============
+// fixme: px to unsigned for calc? How?
+
+// Verilog:
+// http://www.uccs.edu/~gtumbush/published_papers/Tumbush%20DVCon%2005.pdf
+// !!! http://amakersblog.blogspot.ru/2008/07/fixed-point-arithmetic-with-verilog.html
+// fixme: похоже кодят в ручню, не надясь на Verilog
+
+// Math:
+// http://courses.cs.washington.edu/courses/cse467/08au/pdfs/lectures/11-FixedPointArithmetic.pdf
+// http://www.superkits.net/whitepapers/Fixed%20Point%20Representation%20&%20Fractional%20Math.pdf
+// https://groups.google.com/forum/#!topic/comp.lang.verilog/rRMKVkc8SjQ
+
+// Other:
+// http://stackoverflow.com/questions/28942318/16bit-fixed-point-arithmetic-multiplication
+
+module add_signed_2001 (
+	input signed [2:0] A,
+	input signed [2:0] B,
+	output signed [3:0] Sum  // size !!
+	);
+	assign Sum = A + B;
+endmodule
+
+module add_carry_signed_final(
+	input signed [2:0] A,
+	input signed [2:0] B,
+	input carry_in,
+	output signed [3:0] Sum  // size !!
+	);
+
+	assign Sum = A + B + $signed({1'b0, carry_in});
+endmodule
+
+module mult_signed_2001 (
+	input signed [2:0] a,
+	input signed [2:0] b,
+	output signed [5:0] prod  // size(a) + size(b) + 1
+	);
+	assign prod = a*b;
+endmodule
+
+// "However, recall the rule that if any operand of an operation 
+// is unsigned the entire operation is unsigned. "
+module mult_signed_unsigned_2001 (
+		input signed [2:0] a,
+		input [2:0] b,
+		output signed [5:0] prod
+	);
+	assign prod = a*$signed({1'b0, b});
+endmodule
+
+// expr - "What is an expression? "
+
+//Signed Shifting
+//Signed Saturation
 
 //============== Memories ===============================
 
+// fixme: можно добавить параметры в args
+// #(
+// 	//Parameterized values
+// 	parameter Q = 15,
+// 	parameter N = 32
+// 	)
 module Mats(
 	clk, addr, q, rd_q,	we,	oe);
 

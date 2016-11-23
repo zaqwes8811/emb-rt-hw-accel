@@ -1,0 +1,4 @@
+
+Image:
+rot90
+https://www.scarabhardware.com/forums/topic/live-video-rotation/

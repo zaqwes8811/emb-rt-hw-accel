@@ -1,0 +1,20 @@
+# vsim -t ns work.test 
+# Start time: 19:45:22 on Nov 23,2016
+# Loading work.test
+vlog *.v; vsim -t ns work.test; do waves.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 19:45:34 on Nov 23,2016
+# vlog -reportprogress 300 simple_ram_testbench.v 
+# -- Compiling module Mats
+# -- Compiling module test
+# 
+# Top level modules:
+# 	Mats
+# 	test
+# End time: 19:45:34 on Nov 23,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 19:45:35 on Nov 23,2016
+# Loading work.test
+# End time: 20:20:46 on Nov 23,2016, Elapsed time: 0:35:11
+# Errors: 0, Warnings: 0

@@ -1,5 +1,5 @@
-add wave * 
+# add wave * 
 run 400
-#property wave -radix hexadecimal /test/count
-#property wave -radix unsigned /test/count
-property wave -radix unsigned /test/*
+
+#property wave -radix unsigned /test/*
+#property wave -radix signed /test/y2

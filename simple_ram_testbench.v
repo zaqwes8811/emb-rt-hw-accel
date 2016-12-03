@@ -1,3 +1,7 @@
+// Attention!! Кеши важны и тут
+// "FPGAs are very good at streaming models, 
+// while GPUs are better at burst mode models."
+
 // trick: сперва писать в тестбенче, а потом выделить модуль
 // vlog *.v; vsim -t ns work.test; do waves.do
 

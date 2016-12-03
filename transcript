@@ -1451,3 +1451,5 @@ vlog *.v; vsim -t ns work.test_math; do waves.do
 # Loading work.test_math
 # z3   = -122
 # s_ovf   = 1
+# End time: 19:17:11 on Dec 03,2016, Elapsed time: 0:42:42
+# Errors: 0, Warnings: 0

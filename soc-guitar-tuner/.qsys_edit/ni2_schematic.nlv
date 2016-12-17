@@ -1,0 +1,19 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst ni2.cpu.cpu -pg 1
+preplace inst ni2.onchip_memory2 -pg 1 -lvl 2 -y 170
+preplace inst ni2.jtag_uart -pg 1 -lvl 2 -y 30
+preplace inst ni2.cpu.reset_bridge -pg 1
+preplace inst ni2.clk -pg 1 -lvl 2 -y 350
+preplace inst ni2.cpu.clock_bridge -pg 1
+preplace inst ni2.sys_timer -pg 1 -lvl 3 -y 170
+preplace inst ni2.cpu -pg 1 -lvl 1 -y 180
+preplace inst ni2 -pg 1 -lvl 1 -y 40 -regy -20
+preplace netloc FAN_OUT<net_container>ni2</net_container>(SLAVE)jtag_uart.clk,(SLAVE)onchip_memory2.clk1,(MASTER)clk.clk,(SLAVE)cpu.clk,(SLAVE)sys_timer.clk) 1 0 3 100 120 540 260 770
+preplace netloc POINT_TO_POINT<net_container>ni2</net_container>(SLAVE)clk.clk_in_reset,(MASTER)cpu.debug_reset_request) 1 1 1 460
+preplace netloc POINT_TO_POINT<net_container>ni2</net_container>(MASTER)cpu.irq,(SLAVE)sys_timer.irq) 1 1 2 NJ 300 790
+preplace netloc INTERCONNECT<net_container>ni2</net_container>(SLAVE)onchip_memory2.s1,(MASTER)cpu.data_master,(SLAVE)sys_timer.s1,(SLAVE)jtag_uart.avalon_jtag_slave,(SLAVE)cpu.debug_mem_slave,(MASTER)cpu.instruction_master) 1 0 3 60 100 500 280 810
+preplace netloc FAN_OUT<net_container>ni2</net_container>(SLAVE)cpu.reset,(SLAVE)jtag_uart.reset,(MASTER)clk.clk_reset,(SLAVE)onchip_memory2.reset1,(SLAVE)sys_timer.reset) 1 0 3 80 140 520 320 830
+preplace netloc EXPORT<net_container>ni2</net_container>(SLAVE)clk.clk_in,(SLAVE)ni2.clk) 1 0 2 NJ 360 NJ
+levelinfo -pg 1 0 30 980
+levelinfo -hier ni2 40 220 600 880 970

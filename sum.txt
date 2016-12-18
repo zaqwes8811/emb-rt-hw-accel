@@ -1,3 +1,62 @@
+############################# apps
+
+Image:
+rot90
+https://www.scarabhardware.com/forums/topic/live-video-rotation/
+
+############################## math
+
+# Знаковые операции
+http://www.uccs.edu/~gtumbush/published_papers/Tumbush%20DVCon%2005.pdf
+http://web.mit.edu/6.111/www/f2012/handouts/L08.pdf  - from MIT
+
+# Gotchas
+http://www.sutherland-hdl.com/papers/2006-SNUG-Boston_standard_gotchas_presentation.pdf
+
+# Altera hdl code styles
+http://www.gstitt.ece.ufl.edu/courses/spring10/eel4712/lectures/vhdl/qts_qii51007.pdf
+
+##################### Impl spec
+mem burst? ddr
+
+###################### OpenCL
+https://streamcomputing.eu/blog/2014-09-16/use-opencl-fpgas/
+
+Space is used for the BSP and Verilog is generated, so it is not fully optimised for space. Still 95% of max performance is reachable, and that within a lot less development time. Altera describes OpenCL to do system-design and Verilog to do IP-design.
+
+Pro:
+https://www.quora.com/How-is-the-prospect-of-OpenCL-on-FPGA
+
+"steep learning curve"
+
+Кажется для GPU-CPU-cluster - good enough(?)
+http://www.openclblog.com/
+
+http://ersaconf.org/ersa12/papers/Brown-opencl-for-fpgas.pdf
+
+######################## design flow
+
+# image processing
+https://www.quora.com/How-do-I-do-image-processing-using-Verilog-on-FPGA
+
+Read bitmap
+https://fpga4student.blogspot.ru/2016/11/image-processing-on-fpga-verilog.html
+
+Blurring
+http://blog.teledynedalsa.com/2012/05/image-filtering-in-fpgas/
+
+Arch:
+http://biorob2.epfl.ch/pages/studproj/birg67936/rapport.pdf
+- наши записывают дексрипторы с размерами и адресами куда положить
+- http://www.eit.lth.se/fileadmin/eit/home/scd.vow/theses/Thesis-Hugo.pdf
+
+
+Need:
+- Image proc - ML (classifiers/ANN)
+
+# thinks
+
+################################ de0 nano
 //
 //
 // Global target

@@ -1,5 +1,8 @@
 // trick: сперва писать в тестбенче, а потом выделить модуль
+
+//
 // vlog *.v; vsim -t ns work.test_math; do waves.do
+//
 
 `timescale 10ns/1ps
 //`default_nettype none
@@ -68,7 +71,7 @@ endmodule
 //Signed Shifting
 //Signed Saturation
 
-module test_math;
+module math_tb;
 // Tasks:
 // fixme: average - comb -> pipelining -> real mem access
 

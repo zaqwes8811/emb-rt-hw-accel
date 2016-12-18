@@ -2,14 +2,57 @@
 // "FPGAs are very good at streaming models, 
 // while GPUs are better at burst mode models."
 
-// trick: сперва писать в тестбенче, а потом выделить модуль
-// vlog *.v; vsim -t ns work.test; do waves.do
+// Choose:
+// http://electronics.stackexchange.com/questions/56302/how-to-access-ram-for-use-with-an-fpga-for-high-performance-computing
+
+// fixme: internal (small peaces? as cache?) external (ddr, big)
+
+// !!! "For the money, it is hard to beat an Intel i7 
+// based quad-core machine with a reasonable GPU card. Just warning you, in case all you really care about is math speed."
+
+
+//
+// vlog *.v; vsim -t ns work.ram_tb; do waves.do
+//
+
+// Ram inference:
+// http://quartushelp.altera.com/14.1/mergedProjects/hdl/vlog/vlog_pro_ram_inferred.htm
+//
+// " Altera recommends that you create RAM 
+// blocks in separate entities or modules that contain only the RAM logic."
+//
+
 
 `timescale 10ns/1ps
 //`default_nettype none
 
 
 //============== Memories ===============================
+
+// "Altera recommends that you use the Old Data Read-During-Write coding
+// style for most RAM blocks as long as"
+module single_clk_ram(
+		output reg [15:0] q,
+		input [15:0] d,
+		input [6:0] write_address, read_address,
+		input we, clk);
+
+reg [15:0] mem [127:0];  // data size, count elems
+
+parameter MEM_INIT_FILE = "src.mif";
+
+initial begin
+	if (MEM_INIT_FILE != "") begin
+		$readmemh(MEM_INIT_FILE, ram);
+	end
+end
+
+always @ (posedge clk) begin
+	if (we)
+		mem[write_address] <= d;
+	q <= mem[read_address]; // q doesn't get d in this clock cycle
+end
+endmodule
 
 // fixme: можно добавить параметры в args
 // #(
@@ -58,7 +101,7 @@ endmodule
 
 //=====================================================
 
-module test;
+module ram_tb;
 
 `define DELAY_SIZE 4  // fixme: -1?? сколько триггеров?
 

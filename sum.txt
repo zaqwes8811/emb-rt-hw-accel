@@ -8,7 +8,14 @@ https://www.scarabhardware.com/forums/topic/live-video-rotation/
 
 https://docs.numato.com/kbcategory/embedded-linux/
 
-############################## math
+############################## verilog
+
+// fixme: можно добавить параметры в args
+// #(
+// 	//Parameterized values
+// 	parameter Q = 15,
+// 	parameter N = 32
+// 	)
 
 # Знаковые операции
 http://www.uccs.edu/~gtumbush/published_papers/Tumbush%20DVCon%2005.pdf

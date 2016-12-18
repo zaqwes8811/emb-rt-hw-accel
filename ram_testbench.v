@@ -77,16 +77,45 @@
 `timescale 10ns/1ps
 //`default_nettype none
 
-
 //============== Memories ===============================
 
 // form all needs - on board ddr
 // fixme: 64 байта(???) за раз? DATA - x32 - биты - prefetch может быть на 64 байта
 // 8 * 2 * 4 = 64 - burst(8) ddr x32
 // fixme: 32 bit - addr - 4 Gb (?) biiig
-module on_board_ddr_controller();
+//
+// http://frankdenneman.nl/2015/02/19/memory-deep-dive-memory-subsystem-bandwidth/
+// data: 32 bytes = lines_per_clock * (bits_per_line / 8) * burst = (2 * 16 / 2) * 4
+//
+// addr: 256 / 32 = 8 = 2**3
+`define DDR_ADDR_WIDTH 3
+`define DDR_DATA_WIDTH 32
+module on_board_ddr_controller(
+		output reg [`DDR_DATA_WIDTH-1:0] q,
+		input [`DDR_DATA_WIDTH-1:0] d,
+		input [`DDR_ADDR_WIDTH-1:0] write_address, read_address,  // !! different !! 
+		input we, clk);
+
+// data size, count elems
+reg [`DDR_DATA_WIDTH-1:0] mem [2**`DDR_ADDR_WIDTH-1:0];  
+
+parameter MEM_INIT_FILE = "src.mif";
+
+initial begin
+	if (MEM_INIT_FILE != "") begin
+		$readmemh(MEM_INIT_FILE, mem);
+	end
+end
+
+always @ (posedge clk) begin
+	if (we)
+		mem[write_address] <= d;
+	q <= mem[read_address]; // q doesn't get d in this clock cycle
+end
 
 endmodule
+
+//================= on-chip ====================
 
 // !!! диапазоны ширин и глубин зависят от чипа
 
@@ -115,124 +144,52 @@ always @ (posedge clk) begin
 end
 endmodule
 
-// fixme: можно добавить параметры в args
-// #(
-// 	//Parameterized values
-// 	parameter Q = 15,
-// 	parameter N = 32
-// 	)
-module Mats(
-	clk, addr, q, rd_q,	we,	oe);
-
-parameter ADDR_WITH = 8;
-parameter RAW_DEPTH = 1 << ADDR_WITH;
-
-input clk;
-input [ADDR_WITH-1:0] addr;
-input we, oe;
-
-// //
-input [8-1:0] q;
-output reg [8-1:0] rd_q;
-
-//
-reg [8-1:0] ram [0:RAW_DEPTH-1]; // change order
-
-parameter MEM_INIT_FILE = "src.mif";
-
-initial begin
-	if (MEM_INIT_FILE != "") begin
-		$readmemh(MEM_INIT_FILE, ram);
-	end
-end
-
-// почему пишет сразу? похоже не сразу а по заднему фронту данных
-always @(posedge clk)
-	if ( we )
-		ram[addr] <= q;  // => ?
-
-always @(posedge clk)
-	if (!we && oe)
-		rd_q <= ram[addr];  // => ?
-	else 
-		rd_q <= 8'bz;
-
-endmodule
-
 
 //=====================================================
 
 module ram_tb;
+
+// Task0:
+// read bunch -> write back this bunch
 
 `define DELAY_SIZE 4  // fixme: -1?? сколько триггеров?
 
 // $dump*
 // http://www.referencedesigner.com/tutorials/verilog/verilog_62.php
 
-// reg clk = 0;
-// reg [7:0] tick;
-// reg [7:0] q;
-// reg [7:0] q0;
+reg clk = 0;
+reg [7:0] tick;
+reg [`DDR_ADDR_WIDTH-1:0] ddr_rd_addr;
+reg [`DDR_ADDR_WIDTH-1:0] ddr_wr_addr;
+wire [`DDR_DATA_WIDTH-1:0] ddr_q;
+reg [`DDR_DATA_WIDTH-1:0] ddr_d;
+wire [7:0] ddr_byte0_q;  // fixme: to array !!
+wire we = 0;
 
-// // Vars
-// wire [7:0] store_time = 5;
-// // Mats
-// // fixme: image shape - cols, rows
-// reg [7:0] src [0 : (1 << 8) - 1];
-// reg [7:0] dst [0 : (1 << 8) - 1];
-// reg [7:0] src_addr;
-// reg [7:0] dst_addr;
-// reg data_valid;
-// reg [7:0] tapped_line0[`DELAY_SIZE-1:0];
-// reg [8:0] sum;  // fixme: signed?
+//=======================================================
 
-// //=======================================================
+assign ddr_byte0_q = ddr_q[7:0];
 
-// always #1 clk=~clk;
+on_board_ddr_controller i0__on_board_ddr_controller (
+  	ddr_q, ddr_d,  ddr_wr_addr, ddr_rd_addr, we, clk );
 
-// initial
-// begin
-// 	tick = 0;
-// 	q = 0;
-// 	$readmemh("src.mif", src);
-// 	src_addr = 0;
-// 	dst_addr = 0;
-// 	data_valid = 0;
-// end
+always #1 clk=~clk;
 
-// //=======================================================
+initial
+begin
+	tick = 0;
+	ddr_rd_addr = 0;
+	ddr_wr_addr = 0;
+end
 
-// always @(posedge clk) begin
-// 	// fixme: как быть с переполнениями?
-// 	tick <= tick + 1; 
-// 	// q <= $random;
-// 	data_valid <= 1;
-	
-// 	if (data_valid)
-// 		dst_addr <= dst_addr + 1;
-// end
+always @(posedge clk) begin
+	tick <= tick + 1; 
+end
 
-// always @(posedge clk) begin
-// 	if (data_valid)
-// 		dst[dst_addr] <= q;  
+always @(posedge clk) begin
+	ddr_rd_addr <= ddr_rd_addr + 1; 
+end
 
-// 	q0 <= src[src_addr];
-// end
-
-// always @ (posedge clk) begin
-// 	if (dst_addr == store_time) begin
-// 		$writememh("dst.mif",dst);
-// 	end
-// end
-
-// always @(*) begin
-// 	// dst_addr = tick;
-// 	src_addr = tick;
-// 	q = tapped_line0[`DELAY_SIZE-1];
-// 	//q0 = 
-
-// 	tapped_line0[0] = q0;
-// end
 
 // //=====================================================
 

@@ -42,3 +42,380 @@ vlog *.v; vsim -t ns work.ram_tb; do waves.do
 # vsim 
 # Start time: 12:54:53 on Dec 18,2016
 # Loading work.ram_tb
+vlog *.v; vsim -t ns work.ram_tb; do waves.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 17:16:11 on Dec 18,2016
+# vlog -reportprogress 300 math_testbench.v ram_testbench.v templ.v 
+# -- Compiling module fixed_convertof
+# -- Compiling module add_signed_2001
+# -- Compiling module add_carry_signed_final
+# -- Compiling module mult_signed_2001
+# -- Compiling module mult_signed_unsigned_2001
+# -- Compiling module math_tb
+# -- Compiling module on_board_ddr_controller
+# -- Compiling module single_clk_ram
+# -- Compiling module Mats
+# -- Compiling module ram_tb
+# ** Error: ram_testbench.v(210): (vlog-2730) Undefined variable: 'q'.
+# ** Error: ram_testbench.v(214): (vlog-2730) Undefined variable: 'data_valid'.
+# End time: 17:16:11 on Dec 18,2016, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+# /home/zaqwes/altera/15.0/modelsim_ase/linuxaloem/vlog failed.
+vlog *.v; vsim -t ns work.ram_tb; do waves.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 17:16:29 on Dec 18,2016
+# vlog -reportprogress 300 math_testbench.v ram_testbench.v templ.v 
+# -- Compiling module fixed_convertof
+# -- Compiling module add_signed_2001
+# -- Compiling module add_carry_signed_final
+# -- Compiling module mult_signed_2001
+# -- Compiling module mult_signed_unsigned_2001
+# -- Compiling module math_tb
+# -- Compiling module on_board_ddr_controller
+# -- Compiling module single_clk_ram
+# -- Compiling module Mats
+# -- Compiling module ram_tb
+# ** Error: ram_testbench.v(217): (vlog-2730) Undefined variable: 'data_valid'.
+# End time: 17:16:29 on Dec 18,2016, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# /home/zaqwes/altera/15.0/modelsim_ase/linuxaloem/vlog failed.
+vlog *.v; vsim -t ns work.ram_tb; do waves.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 17:16:41 on Dec 18,2016
+# vlog -reportprogress 300 math_testbench.v ram_testbench.v templ.v 
+# -- Compiling module fixed_convertof
+# -- Compiling module add_signed_2001
+# -- Compiling module add_carry_signed_final
+# -- Compiling module mult_signed_2001
+# -- Compiling module mult_signed_unsigned_2001
+# -- Compiling module math_tb
+# -- Compiling module on_board_ddr_controller
+# -- Compiling module single_clk_ram
+# -- Compiling module Mats
+# -- Compiling module ram_tb
+# 
+# Top level modules:
+# 	fixed_convertof
+# 	add_signed_2001
+# 	add_carry_signed_final
+# 	mult_signed_2001
+# 	mult_signed_unsigned_2001
+# 	math_tb
+# 	on_board_ddr_controller
+# 	single_clk_ram
+# 	Mats
+# 	ram_tb
+# End time: 17:16:42 on Dec 18,2016, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 17:16:42 on Dec 18,2016
+# Loading work.ram_tb
+# ** Error: (vsim-3043) ram_testbench.v(210): Unresolved reference to 'src'.
+#         Region: /ram_tb
+# Error loading design
+# ** Error: No Design Loaded!
+# Error in macro ./waves.do line 2
+# No Design Loaded!
+#     while executing
+# "run 400"
+vlog *.v; vsim -t ns work.ram_tb; do waves.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 17:16:58 on Dec 18,2016
+# vlog -reportprogress 300 math_testbench.v ram_testbench.v templ.v 
+# -- Compiling module fixed_convertof
+# -- Compiling module add_signed_2001
+# -- Compiling module add_carry_signed_final
+# -- Compiling module mult_signed_2001
+# -- Compiling module mult_signed_unsigned_2001
+# -- Compiling module math_tb
+# -- Compiling module on_board_ddr_controller
+# -- Compiling module single_clk_ram
+# -- Compiling module Mats
+# -- Compiling module ram_tb
+# 
+# Top level modules:
+# 	fixed_convertof
+# 	add_signed_2001
+# 	add_carry_signed_final
+# 	mult_signed_2001
+# 	mult_signed_unsigned_2001
+# 	math_tb
+# 	on_board_ddr_controller
+# 	single_clk_ram
+# 	Mats
+# 	ram_tb
+# End time: 17:16:58 on Dec 18,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 17:16:58 on Dec 18,2016
+# Loading work.ram_tb
+vlog *.v; vsim -t ns work.ram_tb; do waves.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 17:26:24 on Dec 18,2016
+# vlog -reportprogress 300 math_testbench.v ram_testbench.v templ.v 
+# -- Compiling module fixed_convertof
+# -- Compiling module add_signed_2001
+# -- Compiling module add_carry_signed_final
+# -- Compiling module mult_signed_2001
+# -- Compiling module mult_signed_unsigned_2001
+# -- Compiling module math_tb
+# -- Compiling module on_board_ddr_controller
+# -- Compiling module single_clk_ram
+# -- Compiling module ram_tb
+# 
+# Top level modules:
+# 	fixed_convertof
+# 	add_signed_2001
+# 	add_carry_signed_final
+# 	mult_signed_2001
+# 	mult_signed_unsigned_2001
+# 	math_tb
+# 	single_clk_ram
+# 	ram_tb
+# End time: 17:26:24 on Dec 18,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 17:26:24 on Dec 18,2016
+# Loading work.ram_tb
+# Loading work.on_board_ddr_controller
+# ** Warning: (vsim-3015) ram_testbench.v(170): [PCDPC] - Port size (32) does not match connection size (1) for port 'q'. The port definition is at: ram_testbench.v(94).
+#         Region: /ram_tb/i0__on_board_ddr_controller
+# ** Warning: (vsim-3015) ram_testbench.v(170): [PCDPC] - Port size (32) does not match connection size (1) for port 'd'. The port definition is at: ram_testbench.v(95).
+#         Region: /ram_tb/i0__on_board_ddr_controller
+# ** Error: (vsim-3043) ram_testbench.v(106): Unresolved reference to 'ram'.
+#         Region: /ram_tb/i0__on_board_ddr_controller
+# Error loading design
+# ** Error: No Design Loaded!
+# Error in macro ./waves.do line 2
+# No Design Loaded!
+#     while executing
+# "run 400"
+vlog *.v; vsim -t ns work.ram_tb; do waves.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 17:26:44 on Dec 18,2016
+# vlog -reportprogress 300 math_testbench.v ram_testbench.v templ.v 
+# -- Compiling module fixed_convertof
+# -- Compiling module add_signed_2001
+# -- Compiling module add_carry_signed_final
+# -- Compiling module mult_signed_2001
+# -- Compiling module mult_signed_unsigned_2001
+# -- Compiling module math_tb
+# -- Compiling module on_board_ddr_controller
+# -- Compiling module single_clk_ram
+# -- Compiling module ram_tb
+# 
+# Top level modules:
+# 	fixed_convertof
+# 	add_signed_2001
+# 	add_carry_signed_final
+# 	mult_signed_2001
+# 	mult_signed_unsigned_2001
+# 	math_tb
+# 	single_clk_ram
+# 	ram_tb
+# End time: 17:26:44 on Dec 18,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 17:26:44 on Dec 18,2016
+# Loading work.ram_tb
+# Loading work.on_board_ddr_controller
+# ** Error: (vsim-3053) ram_testbench.v(170): Illegal output or inout port connection for port 'q'.
+#         Region: /ram_tb/i0__on_board_ddr_controller
+# ** Error: (vsim-3043) ram_testbench.v(106): Unresolved reference to 'ram'.
+#         Region: /ram_tb/i0__on_board_ddr_controller
+# Error loading design
+# ** Error: No Design Loaded!
+# Error in macro ./waves.do line 2
+# No Design Loaded!
+#     while executing
+# "run 400"
+vlog *.v; vsim -t ns work.ram_tb; do waves.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 17:26:57 on Dec 18,2016
+# vlog -reportprogress 300 math_testbench.v ram_testbench.v templ.v 
+# -- Compiling module fixed_convertof
+# -- Compiling module add_signed_2001
+# -- Compiling module add_carry_signed_final
+# -- Compiling module mult_signed_2001
+# -- Compiling module mult_signed_unsigned_2001
+# -- Compiling module math_tb
+# -- Compiling module on_board_ddr_controller
+# -- Compiling module single_clk_ram
+# -- Compiling module ram_tb
+# 
+# Top level modules:
+# 	fixed_convertof
+# 	add_signed_2001
+# 	add_carry_signed_final
+# 	mult_signed_2001
+# 	mult_signed_unsigned_2001
+# 	math_tb
+# 	single_clk_ram
+# 	ram_tb
+# End time: 17:26:57 on Dec 18,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 17:26:57 on Dec 18,2016
+# Loading work.ram_tb
+# Loading work.on_board_ddr_controller
+# ** Error: (vsim-3053) ram_testbench.v(170): Illegal output or inout port connection for port 'q'.
+#         Region: /ram_tb/i0__on_board_ddr_controller
+# Error loading design
+# ** Error: No Design Loaded!
+# Error in macro ./waves.do line 2
+# No Design Loaded!
+#     while executing
+# "run 400"
+vlog *.v; vsim -t ns work.ram_tb; do waves.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 17:27:24 on Dec 18,2016
+# vlog -reportprogress 300 math_testbench.v ram_testbench.v templ.v 
+# -- Compiling module fixed_convertof
+# -- Compiling module add_signed_2001
+# -- Compiling module add_carry_signed_final
+# -- Compiling module mult_signed_2001
+# -- Compiling module mult_signed_unsigned_2001
+# -- Compiling module math_tb
+# -- Compiling module on_board_ddr_controller
+# -- Compiling module single_clk_ram
+# -- Compiling module ram_tb
+# 
+# Top level modules:
+# 	fixed_convertof
+# 	add_signed_2001
+# 	add_carry_signed_final
+# 	mult_signed_2001
+# 	mult_signed_unsigned_2001
+# 	math_tb
+# 	single_clk_ram
+# 	ram_tb
+# End time: 17:27:24 on Dec 18,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 17:27:24 on Dec 18,2016
+# Loading work.ram_tb
+# Loading work.on_board_ddr_controller
+vlog *.v; vsim -t ns work.ram_tb; do waves.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 17:28:08 on Dec 18,2016
+# vlog -reportprogress 300 math_testbench.v ram_testbench.v templ.v 
+# -- Compiling module fixed_convertof
+# -- Compiling module add_signed_2001
+# -- Compiling module add_carry_signed_final
+# -- Compiling module mult_signed_2001
+# -- Compiling module mult_signed_unsigned_2001
+# -- Compiling module math_tb
+# -- Compiling module on_board_ddr_controller
+# -- Compiling module single_clk_ram
+# -- Compiling module ram_tb
+# 
+# Top level modules:
+# 	fixed_convertof
+# 	add_signed_2001
+# 	add_carry_signed_final
+# 	mult_signed_2001
+# 	mult_signed_unsigned_2001
+# 	math_tb
+# 	single_clk_ram
+# 	ram_tb
+# End time: 17:28:08 on Dec 18,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 17:28:08 on Dec 18,2016
+# Loading work.ram_tb
+# Loading work.on_board_ddr_controller
+vlog *.v; vsim -t ns work.ram_tb; do waves.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 17:28:29 on Dec 18,2016
+# vlog -reportprogress 300 math_testbench.v ram_testbench.v templ.v 
+# -- Compiling module fixed_convertof
+# -- Compiling module add_signed_2001
+# -- Compiling module add_carry_signed_final
+# -- Compiling module mult_signed_2001
+# -- Compiling module mult_signed_unsigned_2001
+# -- Compiling module math_tb
+# -- Compiling module on_board_ddr_controller
+# -- Compiling module single_clk_ram
+# -- Compiling module ram_tb
+# 
+# Top level modules:
+# 	fixed_convertof
+# 	add_signed_2001
+# 	add_carry_signed_final
+# 	mult_signed_2001
+# 	mult_signed_unsigned_2001
+# 	math_tb
+# 	single_clk_ram
+# 	ram_tb
+# End time: 17:28:29 on Dec 18,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 17:28:30 on Dec 18,2016
+# Loading work.ram_tb
+# Loading work.on_board_ddr_controller
+# ** Error: could not find wave window
+# Error in macro ./waves.do line 4
+# could not find wave window
+#     while executing
+# "property wave -radix unsigned /ram_tb/*"
+
+vlog *.v; vsim -t ns work.ram_tb; do waves.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 17:28:46 on Dec 18,2016
+# vlog -reportprogress 300 math_testbench.v ram_testbench.v templ.v 
+# -- Compiling module fixed_convertof
+# -- Compiling module add_signed_2001
+# -- Compiling module add_carry_signed_final
+# -- Compiling module mult_signed_2001
+# -- Compiling module mult_signed_unsigned_2001
+# -- Compiling module math_tb
+# -- Compiling module on_board_ddr_controller
+# -- Compiling module single_clk_ram
+# -- Compiling module ram_tb
+# 
+# Top level modules:
+# 	fixed_convertof
+# 	add_signed_2001
+# 	add_carry_signed_final
+# 	mult_signed_2001
+# 	mult_signed_unsigned_2001
+# 	math_tb
+# 	single_clk_ram
+# 	ram_tb
+# End time: 17:28:46 on Dec 18,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 17:28:46 on Dec 18,2016
+# Loading work.ram_tb
+# Loading work.on_board_ddr_controller
+vlog *.v; vsim -t ns work.ram_tb; do waves.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 17:31:59 on Dec 18,2016
+# vlog -reportprogress 300 math_testbench.v ram_testbench.v templ.v 
+# -- Compiling module fixed_convertof
+# -- Compiling module add_signed_2001
+# -- Compiling module add_carry_signed_final
+# -- Compiling module mult_signed_2001
+# -- Compiling module mult_signed_unsigned_2001
+# -- Compiling module math_tb
+# -- Compiling module on_board_ddr_controller
+# -- Compiling module single_clk_ram
+# -- Compiling module ram_tb
+# 
+# Top level modules:
+# 	fixed_convertof
+# 	add_signed_2001
+# 	add_carry_signed_final
+# 	mult_signed_2001
+# 	mult_signed_unsigned_2001
+# 	math_tb
+# 	single_clk_ram
+# 	ram_tb
+# End time: 17:31:59 on Dec 18,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 17:32:00 on Dec 18,2016
+# Loading work.ram_tb
+# Loading work.on_board_ddr_controller
+# End time: 17:32:43 on Dec 18,2016, Elapsed time: 0:00:43
+# Errors: 0, Warnings: 0

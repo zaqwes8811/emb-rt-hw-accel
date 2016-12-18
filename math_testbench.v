@@ -1,5 +1,5 @@
 // trick: сперва писать в тестбенче, а потом выделить модуль
-// vlog *.v; vsim -t ns work.test; do waves.do
+// vlog *.v; vsim -t ns work.test_math; do waves.do
 
 `timescale 10ns/1ps
 //`default_nettype none
@@ -71,6 +71,8 @@ endmodule
 module test_math;
 // Tasks:
 // fixme: average - comb -> pipelining -> real mem access
+
+reg clk;
 
 always #1 clk=~clk;
 
@@ -182,6 +184,52 @@ initial begin // _try_name
   		vec[i] = i;
   		// $display("data_8bit   = %0d", -i);
   	end
+end
+
+
+// - Line interpol
+
+
+// https://code.zmaw.de/boards/1/topics/27
+// http://math.stackexchange.com/questions/828392/spatial-interpolation-for-irregular-grid
+
+// Attention!!!
+// Opencv remap calc dst -> src
+// fixme: не понял что имелось ввиду
+
+// http://www.cs.tut.fi/~dkuva2/Lecture7_SamplingAndInterpolation_v3.pdf
+
+// Triangulation
+// http://stackoverflow.com/questions/17478551/2d-interpolation-irregular-grid-fortran
+//
+// https://classes.soe.ucsc.edu/cmps160/Fall10/resources/barycentricInterpolation.pdf
+
+// Barycentric interpolation
+// https://dahtah.wordpress.com/2013/03/06/barycentric-interpolation-fast-interpolation-on-arbitrary-grids/
+//
+// - Bilinear - 2D
+// https://en.wikipedia.org/wiki/Bilinear_interpolation
+// fixme: if not quad
+// !!!
+// Non-regular grid - scattered data
+// fixme: Bilinear not working - strange...
+// Works say: http://stackoverflow.com/questions/23920976/bilinear-interpolation-with-non-aligned-input-points
+// Trouble0: sqrt, div - но можно предвычислить
+
+// More info
+// !!! http://graphics.stanford.edu/courses/cs148-09/lectures/interpolation.pdf
+// Trouble0: div, но можно предвычислить
+
+// 0:50
+reg [7:-3] div_1d [15:0];
+
+initial begin
+	$readmemh("src.mif", div_1d);
+
+	for (i = 0; i < 10; i = i + 1) begin
+  		$display("div_1d   = %0d", div_1d[i]);
+  	end
+
 end
 
 endmodule

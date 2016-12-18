@@ -4,18 +4,69 @@
 
 // Choose:
 // http://electronics.stackexchange.com/questions/56302/how-to-access-ram-for-use-with-an-fpga-for-high-performance-computing
-
-// fixme: internal (small peaces? as cache?) external (ddr, big)
+// https://www.altera.com/en_US/pdfs/literature/hb/nios2/edh_ed51008.pdf - from Altera
+// fixme: internal (small peaces(15k - 2M)? as cache?) external (ddr, big)
 
 // !!! "For the money, it is hard to beat an Intel i7 
 // based quad-core machine with a reasonable GPU card. Just warning you, in case all you really care about is math speed."
 
 
+// DDR:
+// https://docs.numato.com/kb/learning-fpga-verilog-beginners-guide-part-6-ddr-sdram/
+// External RAM from Altera:
+// https://www.altera.com/content/dam/altera-www/global/en_US/pdfs/literature/hb/external-memory/emi.pdf
+//
+// Overview:
+// https://www.altera.com/content/dam/altera-www/global/en_US/pdfs/literature/wp/wp_ddr2.pdf
+//
+// ddr3: http://airccse.org/journal/jcsit/0811csit08.pdf
+//
+
+
+//================= Burst ====================
+
+// "But when all you need it a single 8-bit byte, and the next 
+// memory access is another 8-bit byte somewhere else in memory, you can
+// never take advantage of SDRAM bursting. You will always have the 
+// worst case access time (about 70ns in my case, based on the SDRAM I was using.)"
+
+// https://www.altera.com/support/support-resources/knowledge-base/solutions/rd09182009_504.html
+// "Understanding Avalon MM Bursting" youtube
+// https://en.wikipedia.org/wiki/Burst_mode_(computing)
+
+//================================= Impls =======================
+// http://hackaday.com/2013/10/11/sdram-controller-for-low-end-fpgas/ - see comments
+// https://people.ece.cornell.edu/land/courses/eceprojectsland/STUDENTPROJ/2007to2008/dp239/Denis-MEng-Final-nocode.pdf
+//
+// ddr3 arbiter
+// https://web.wpi.edu/Pubs/E-project/Available/E-project-031212-183607/unrestricted/FPGA_Design_for_DDR3_Memory.pdf
+// "Only one address and command is sent for every 512 bits sent." - 64 байта
+//
+// Q: записть куском, но если в блоке не наши данные?
+// A: (?) "When the arbiter_block enters its Arbiter-to-Memory execution branch, 
+// it first executes all buffered write commands."
+// loop accel:
+// http://cas.ee.ic.ac.uk/people/gac1/pubs/SamFPGA12.pdf
+// "Considering only a single bank within the device, each memory address within that
+//bank can be divided into three bit fields, corresponding to SDRAM
+//Row, Burst, and Byte Within Burst, as shown in Fig. 2. These three
+//fields can be represented as vectors in Z
+//3"
+//
+// !! detailed Good!!
+// http://codehackcreate.com/archives/444
+
+//====================== Q ==================
+
+// refrech cucle?
+
+//====================================
+
 //
 // vlog *.v; vsim -t ns work.ram_tb; do waves.do
 //
 
-// Ram inference:
+//=================== Ram inference ==========================
 // http://quartushelp.altera.com/14.1/mergedProjects/hdl/vlog/vlog_pro_ram_inferred.htm
 //
 // " Altera recommends that you create RAM 
@@ -29,12 +80,22 @@
 
 //============== Memories ===============================
 
+// form all needs - on board ddr
+// fixme: 64 байта(???) за раз? DATA - x32 - биты - prefetch может быть на 64 байта
+// 8 * 2 * 4 = 64 - burst(8) ddr x32
+// fixme: 32 bit - addr - 4 Gb (?) biiig
+module on_board_ddr_controller();
+
+endmodule
+
+// !!! диапазоны ширин и глубин зависят от чипа
+
 // "Altera recommends that you use the Old Data Read-During-Write coding
 // style for most RAM blocks as long as"
 module single_clk_ram(
 		output reg [15:0] q,
 		input [15:0] d,
-		input [6:0] write_address, read_address,
+		input [6:0] write_address, read_address,  // !! different !! 
 		input we, clk);
 
 reg [15:0] mem [127:0];  // data size, count elems

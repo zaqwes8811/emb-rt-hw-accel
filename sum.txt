@@ -4,6 +4,10 @@ Image:
 rot90
 https://www.scarabhardware.com/forums/topic/live-video-rotation/
 
+#################### links
+
+https://docs.numato.com/kbcategory/embedded-linux/
+
 ############################## math
 
 # Знаковые операции
